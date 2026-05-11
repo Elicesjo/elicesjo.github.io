@@ -6,12 +6,13 @@ website:
   title: "Josy Elices-Diez"
   favicon: assets/favicon.png
   navbar:
-    background: "#2C3E50"
-    foreground: "#FFFFFF"
+    pinned: true
+    background: white
+    foreground: "#4A4A6A"
     left:
-      - text: "Accueil / Home"
+      - text: "Présentation"
         href: index.qmd
-      - text: "Projets / Projects"
+      - text: "Data Analyst"
         href: projets.qmd
     right:
       - icon: github
@@ -22,9 +23,9 @@ website:
         aria-label: LinkedIn
 
   page-footer:
-    center: "Josy Elices-Diez — Data Analyst · [GitHub](https://github.com/Elicesjo)"
-    background: "#2C3E50"
-    foreground: "#FFFFFF"
+    center: "Josy Elices-Diez · Data Analyst · [GitHub](https://github.com/Elicesjo)"
+    background: white
+    foreground: "#94A3B8"
 
 format:
   html:

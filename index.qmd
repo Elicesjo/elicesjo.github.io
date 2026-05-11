@@ -3,87 +3,52 @@ title: ""
 page-layout: full
 ---
 
-::: {.hero}
+::: {.about-hero}
+::: {.avatar-placeholder}
+JE
+:::
+
 # Josy Elices-Diez
 
-::: {.tagline}
-Data Analyst
-:::
-
-::: {.subtitle}
-Formation Data Analyst · OpenClassrooms × ENSAE Paris
-:::
-
-::: {.badges}
-[Python]{.badge-skill} [SQL]{.badge-skill} [dbt]{.badge-skill} [Power BI]{.badge-skill} [Pandas]{.badge-skill} [Statistiques]{.badge-skill} [Quarto]{.badge-skill} [Visualisation]{.badge-skill}
-:::
-
-::: {.hero-cta}
-[Voir mes projets](projets.qmd){.cta-btn}
-[GitHub](https://github.com/Elicesjo){.cta-ghost}
+::: {.job-title}
+Data Analyst · OpenClassrooms × ENSAE Paris
 :::
 :::
 
-::: {.stats-bar}
-::: {.stat}
-::: {.stat-number}
-7
-:::
-::: {.stat-label}
-Projets réalisés
-:::
-:::
-
-::: {.stat}
-::: {.stat-number}
-3
-:::
-::: {.stat-label}
-Langages
-:::
-:::
-
-::: {.stat}
-::: {.stat-number}
-2
-:::
-::: {.stat-label}
-Types de BDD
-:::
-:::
-
-::: {.stat}
-::: {.stat-number}
-1
-:::
-::: {.stat-label}
-Pipeline dbt
-:::
-:::
-:::
+::: {.about-content}
 
 ::: {.panel-tabset}
 ## Français
 
-::: {.about-section}
-## À propos
+**Data Analyst** diplômée de la formation d'OpenClassrooms en partenariat avec l'ENSAE Paris, je maîtrise l'ensemble de la chaîne de traitement de la donnée — de la collecte et la modélisation SQL jusqu'à la visualisation et la communication des résultats.
 
-Data Analyst diplômée de la formation **Data Analyst d'OpenClassrooms en partenariat avec l'ENSAE Paris**, je maîtrise l'ensemble de la chaîne de traitement de la donnée — de la collecte et la modélisation SQL jusqu'à la visualisation et la communication des résultats.
-
-Mes projets couvrent des domaines variés : santé publique, immobilier, e-commerce et socio-démographie. Je travaille principalement avec **Python** (pandas, matplotlib, seaborn), **SQL** (PostgreSQL, SQLite) et **dbt** pour la modélisation analytique.
-
-Disponible pour des missions en **Data Analyst** ou **Data Engineer** junior.
-:::
+Mes projets couvrent des domaines variés : santé publique, immobilier, e-commerce et socio-démographie. Je travaille avec **Python**, **SQL**, **dbt** et **Power BI**. Je suis disponible pour des missions en **Data Analyst** ou **Data Engineer** junior.
 
 ## English
 
-::: {.about-section}
-## About me
+**Data Analyst** with a diploma from OpenClassrooms in partnership with ENSAE Paris. I cover the full data pipeline — from SQL modelling to visualization and communicating insights to stakeholders.
 
-Data Analyst with a diploma from **OpenClassrooms' Data Analyst programme in partnership with ENSAE Paris**, I cover the full data pipeline — from collection and SQL modelling to visualization and communicating insights to stakeholders.
-
-My projects span diverse domains: public health, real estate, e-commerce, and sociodemographics. I primarily work with **Python** (pandas, matplotlib, seaborn), **SQL** (PostgreSQL, SQLite) and **dbt** for analytical modelling.
-
-Open to **Data Analyst** or junior **Data Engineer** roles.
+My projects span public health, real estate, e-commerce, and sociodemographics. I work with **Python**, **SQL**, **dbt** and **Power BI**. Open to **Data Analyst** or junior **Data Engineer** roles.
 :::
+
+---
+
+::: {.skill-group}
+#### Languages & outils
+
+[Python]{.skill-badge} [SQL]{.skill-badge} [dbt]{.skill-badge} [Power BI]{.skill-badge} [Quarto]{.skill-badge}
+:::
+
+::: {.skill-group}
+#### Librairies Python
+
+[Pandas]{.skill-badge} [Matplotlib]{.skill-badge} [Seaborn]{.skill-badge} [SciPy]{.skill-badge} [Jupyter]{.skill-badge}
+:::
+
+::: {.skill-group}
+#### Bases de données
+
+[PostgreSQL]{.skill-badge} [SQLite]{.skill-badge} [DBeaver]{.skill-badge}
+:::
+
 :::

@@ -1,286 +1,282 @@
 /*-- scss:defaults --*/
-$primary: #0F172A;
-$link-color: #4F46E5;
-$font-family-sans-serif: "Inter", "Segoe UI", system-ui, sans-serif;
-$headings-font-weight: 700;
-$body-bg: #F8FAFC;
-$body-color: #1E293B;
+$primary: #4A4A6A;
+$link-color: #6B6BA8;
+$font-family-sans-serif: "Lato", "Segoe UI", system-ui, sans-serif;
+$headings-font-weight: 600;
+$body-bg: white;
+$body-color: #3A3A5C;
 
 /*-- scss:rules --*/
 
-body { line-height: 1.65; }
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600;700&display=swap');
 
-/* ── Navbar ──────────────────────────────────────────────────────────────── */
+body { line-height: 1.7; background: white; }
+
+/* ── Navbar ── centré, style onglets ────────────────────────────────────── */
 .navbar {
   background: white !important;
-  border-bottom: 1px solid #E2E8F0;
-  box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+  border-bottom: 1px solid #EBEBF5 !important;
+  box-shadow: 0 1px 8px rgba(106,106,168,0.08) !important;
+  padding: 0.5rem 1.5rem !important;
+
   .navbar-brand {
-    font-weight: 800;
+    font-weight: 700;
     font-size: 1rem;
-    color: #0F172A !important;
-    letter-spacing: -0.01em;
-  }
-  .nav-link {
-    font-weight: 500;
-    font-size: 0.88rem;
-    color: #475569 !important;
-    &:hover { color: #4F46E5 !important; }
-  }
-}
-
-/* ── Hero ────────────────────────────────────────────────────────────────── */
-.hero {
-  padding: 5.5rem 2rem 5rem;
-  background: #0F172A;
-  color: white;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    right: 0;
-    height: 40px;
-    background: #F8FAFC;
-    clip-path: ellipse(55% 100% at 50% 100%);
+    color: #3A3A5C !important;
   }
 
-  h1 {
-    font-size: 3rem;
-    font-weight: 800;
-    margin-bottom: 0.2rem;
-    letter-spacing: -0.03em;
-    color: white;
-  }
-
-  .tagline {
-    font-size: 0.78rem;
-    font-weight: 600;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: #4F46E5;
-    margin-bottom: 0.8rem;
-  }
-
-  .subtitle {
-    font-size: 1rem;
-    color: #94A3B8;
-    margin-bottom: 2.5rem;
-    max-width: 520px;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.7;
-  }
-
-  .badges {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem;
-    justify-content: center;
-    margin-bottom: 2.5rem;
-  }
-
-  .badge-skill {
-    background: rgba(79,70,229,0.15);
-    border: 1px solid rgba(79,70,229,0.3);
-    color: #A5B4FC;
-    padding: 0.28rem 0.9rem;
-    border-radius: 20px;
-    font-size: 0.78rem;
-    font-weight: 500;
-  }
-
-  .hero-cta {
-    display: flex;
-    gap: 0.9rem;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .cta-btn {
-    display: inline-block;
-    background: #4F46E5;
-    color: white !important;
-    padding: 0.75rem 2rem;
-    border-radius: 8px;
-    font-weight: 600;
+  .navbar-nav .nav-link {
+    color: #7A7A9A !important;
     font-size: 0.9rem;
-    text-decoration: none !important;
-    transition: background 0.18s, transform 0.15s;
-    &:hover { background: #4338CA; transform: translateY(-2px); }
-  }
-
-  .cta-ghost {
-    display: inline-block;
-    background: transparent;
-    color: #94A3B8 !important;
-    padding: 0.75rem 2rem;
-    border-radius: 8px;
     font-weight: 500;
-    font-size: 0.9rem;
-    text-decoration: none !important;
-    border: 1px solid #334155;
-    transition: all 0.18s;
-    &:hover { border-color: #4F46E5; color: white !important; }
-  }
-}
-
-/* ── Stats bar ───────────────────────────────────────────────────────────── */
-.stats-bar {
-  background: white;
-  padding: 2rem 1rem;
-  display: flex;
-  justify-content: center;
-  gap: 5rem;
-  flex-wrap: wrap;
-  border-bottom: 1px solid #E2E8F0;
-
-  .stat {
-    text-align: center;
-    .stat-number {
-      font-size: 2rem;
-      font-weight: 800;
-      color: #4F46E5;
-      line-height: 1;
-    }
-    .stat-label {
-      font-size: 0.75rem;
-      color: #94A3B8;
-      text-transform: uppercase;
-      letter-spacing: 0.07em;
-      margin-top: 0.3rem;
-    }
-  }
-}
-
-/* ── About section ───────────────────────────────────────────────────────── */
-.about-section {
-  max-width: 760px;
-  margin: 3.5rem auto;
-  padding: 0 1.5rem;
-  text-align: center;
-
-  h2 {
-    font-size: 1.5rem;
-    color: #0F172A;
-    margin-bottom: 1rem;
-    &::after {
-      content: "";
-      display: block;
-      width: 36px;
-      height: 3px;
-      background: #4F46E5;
-      margin: 0.4rem auto 0;
-      border-radius: 2px;
-    }
-  }
-
-  p { font-size: 1rem; line-height: 1.8; color: #475569; }
-}
-
-/* ── Projects listing title ──────────────────────────────────────────────── */
-#quarto-content h1.title,
-.quarto-title h1 {
-  font-size: 1.7rem !important;
-  color: #0F172A !important;
-  font-weight: 800 !important;
-  border: none !important;
-  margin-bottom: 0.25rem !important;
-}
-
-/* ── Category filter → style as tab bar ─────────────────────────────────── */
-.quarto-listing-category {
-  position: sticky;
-  top: 56px;
-  z-index: 100;
-  background: #F8FAFC;
-  padding: 0.75rem 0 0.75rem;
-  border-bottom: 1px solid #E2E8F0;
-  margin-bottom: 1.5rem !important;
-
-  .quarto-listing-category-title {
-    display: none !important;
-  }
-
-  .category-title-item {
-    display: none !important;
-  }
-
-  a.category {
-    display: inline-block !important;
-    background: white !important;
-    color: #475569 !important;
-    border: 1px solid #E2E8F0 !important;
-    border-radius: 20px !important;
-    padding: 0.3rem 1rem !important;
-    font-size: 0.8rem !important;
-    font-weight: 600 !important;
-    margin: 0.2rem 0.2rem !important;
-    transition: all 0.15s !important;
-    text-decoration: none !important;
+    padding: 0.6rem 1.2rem !important;
+    border-radius: 6px;
+    transition: all 0.15s;
+    margin: 0 0.1rem;
 
     &:hover {
-      border-color: #4F46E5 !important;
-      color: #4F46E5 !important;
-      background: #EEF2FF !important;
+      color: #4A4A6A !important;
+      background: #F5F5FF !important;
     }
 
     &.active {
-      background: #4F46E5 !important;
-      color: white !important;
-      border-color: #4F46E5 !important;
+      color: #4A4A6A !important;
+      background: #EEEEFF !important;
+      font-weight: 600;
     }
   }
+}
+
+/* ── Page hero ───────────────────────────────────────────────────────────── */
+.page-hero {
+  text-align: center;
+  padding: 3.5rem 1rem 1rem;
+
+  h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #3A3A5C;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.01em;
+  }
+
+  .underline-bar {
+    width: 60px;
+    height: 3px;
+    margin: 0 auto 2.5rem;
+    border-radius: 2px;
+    background: linear-gradient(90deg, #E89090, #9B9BD4);
+  }
+}
+
+/* ── Stat cards ──────────────────────────────────────────────────────────── */
+.stat-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  max-width: 860px;
+  margin: 0 auto 2.5rem;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(100,100,160,0.12);
+
+  @media (max-width: 640px) { grid-template-columns: 1fr; }
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 1.5rem;
+  color: white;
+  text-align: center;
+
+  .stat-icon {
+    font-size: 2.2rem;
+    margin-bottom: 0.8rem;
+    opacity: 0.9;
+  }
+
+  .stat-number {
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 0.2rem;
+  }
+
+  .stat-label {
+    font-size: 0.85rem;
+    opacity: 0.88;
+    font-weight: 400;
+  }
+
+  .stat-sub {
+    font-size: 0.8rem;
+    opacity: 0.75;
+    margin-top: 0.1rem;
+  }
+
+  &.pink    { background: linear-gradient(145deg, #E89090, #D47070); }
+  &.purple  { background: linear-gradient(145deg, #9B9BD4, #7B7BB8); }
+  &.blue    { background: linear-gradient(145deg, #8BAED4, #6B94C0); }
+}
+
+/* ── Section intro text ──────────────────────────────────────────────────── */
+.section-intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+  padding: 0 1rem;
+  color: #7A7A9A;
+  font-size: 1rem;
+  line-height: 1.8;
+
+  a { color: #6B6BA8; }
 }
 
 /* ── Project cards ───────────────────────────────────────────────────────── */
 #quarto-content .quarto-listing .card,
 .quarto-listing-default .card {
-  border: 1px solid #E2E8F0 !important;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.05) !important;
-  border-radius: 12px !important;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease !important;
+  border: 1px solid #EBEBF5 !important;
+  box-shadow: 0 2px 10px rgba(100,100,160,0.07) !important;
+  border-radius: 14px !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
   overflow: hidden;
   background: white !important;
 
   &:hover {
-    transform: translateY(-4px) !important;
-    box-shadow: 0 8px 24px rgba(79,70,229,0.12) !important;
-    border-color: #C7D2FE !important;
+    transform: translateY(-5px) !important;
+    box-shadow: 0 10px 30px rgba(100,100,160,0.15) !important;
   }
 
   .card-img-top {
-    height: 185px !important;
+    height: 190px !important;
     object-fit: cover !important;
-    border-bottom: 1px solid #F1F5F9;
+    border-bottom: 1px solid #F5F5FF;
   }
 
   .card-body { padding: 1.1rem 1.2rem 1rem; }
 
   .card-title {
-    font-size: 0.95rem !important;
+    font-size: 0.93rem !important;
     font-weight: 700 !important;
-    color: #0F172A !important;
+    color: #3A3A5C !important;
     margin-bottom: 0.4rem !important;
     line-height: 1.35 !important;
   }
 
   .card-text {
-    font-size: 0.82rem !important;
-    color: #64748B !important;
+    font-size: 0.81rem !important;
+    color: #7A7A9A !important;
     line-height: 1.5 !important;
   }
 }
 
-/* ── Tool badges ─────────────────────────────────────────────────────────── */
+/* ── Category pills ──────────────────────────────────────────────────────── */
+.quarto-listing-category {
+  .quarto-listing-category-title { display: none !important; }
+  .category-title-item { display: none !important; }
+
+  a.category {
+    display: inline-block !important;
+    background: white !important;
+    color: #7A7A9A !important;
+    border: 1px solid #DDDDF0 !important;
+    border-radius: 20px !important;
+    padding: 0.28rem 1rem !important;
+    font-size: 0.78rem !important;
+    font-weight: 600 !important;
+    margin: 0.15rem !important;
+    text-decoration: none !important;
+    transition: all 0.15s !important;
+
+    &:hover {
+      color: #4A4A6A !important;
+      border-color: #9B9BD4 !important;
+      background: #F5F5FF !important;
+    }
+
+    &.active {
+      background: #9B9BD4 !important;
+      color: white !important;
+      border-color: #9B9BD4 !important;
+    }
+  }
+}
+
+/* ── About page ──────────────────────────────────────────────────────────── */
+.about-hero {
+  text-align: center;
+  padding: 4rem 2rem 2rem;
+
+  .avatar-placeholder {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #E89090, #9B9BD4);
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: white;
+    font-weight: 700;
+  }
+
+  h1 {
+    font-size: 2rem;
+    color: #3A3A5C;
+    margin-bottom: 0.3rem;
+  }
+
+  .job-title {
+    color: #9B9BD4;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.about-content {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 1.5rem 3rem;
+}
+
+.skill-group {
+  margin-bottom: 1.5rem;
+
+  h4 {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #9B9BD4;
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+  }
+}
+
+.skill-badge {
+  display: inline-block;
+  background: #F5F5FF;
+  color: #4A4A6A;
+  border: 1px solid #DDDDF0;
+  padding: 0.25rem 0.9rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin: 0.2rem;
+}
+
+/* ── Tool badges (project pages) ─────────────────────────────────────────── */
 .tool-badge {
   display: inline-block;
-  background: #EEF2FF;
-  color: #4F46E5;
+  background: #F5F5FF;
+  color: #4A4A6A;
+  border: 1px solid #DDDDF0;
   padding: 0.2rem 0.8rem;
   border-radius: 5px;
   font-size: 0.78rem;
@@ -290,34 +286,39 @@ body { line-height: 1.65; }
 
 /* ── Key results ─────────────────────────────────────────────────────────── */
 .key-result {
-  background: #F8FAFC;
-  border-left: 3px solid #4F46E5;
-  padding: 0.7rem 1rem;
-  margin: 0.45rem 0;
+  background: #FAFAFF;
+  border-left: 3px solid #9B9BD4;
+  padding: 0.65rem 1rem;
+  margin: 0.4rem 0;
   border-radius: 0 8px 8px 0;
-  font-size: 0.93rem;
-  color: #1E293B;
+  font-size: 0.92rem;
+  color: #3A3A5C;
 }
 
 /* ── CTA button ──────────────────────────────────────────────────────────── */
 a.cta-btn {
   display: inline-block !important;
-  background: #4F46E5 !important;
+  background: linear-gradient(135deg, #9B9BD4, #7B7BB8) !important;
   color: white !important;
   padding: 0.65rem 1.7rem !important;
-  border-radius: 7px !important;
+  border-radius: 8px !important;
   font-weight: 600 !important;
   font-size: 0.88rem !important;
   text-decoration: none !important;
   margin-top: 1rem !important;
-  transition: background 0.18s, transform 0.15s !important;
-  &:hover { background: #4338CA !important; transform: translateY(-2px) !important; }
+  box-shadow: 0 4px 12px rgba(155,155,212,0.35) !important;
+  transition: transform 0.15s, box-shadow 0.15s !important;
+  &:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 18px rgba(155,155,212,0.45) !important;
+    color: white !important;
+  }
 }
 
 /* ── Footer ──────────────────────────────────────────────────────────────── */
 .nav-footer {
   background: white !important;
-  border-top: 1px solid #E2E8F0 !important;
-  font-size: 0.82rem !important;
-  color: #94A3B8 !important;
+  border-top: 1px solid #EBEBF5 !important;
+  font-size: 0.8rem !important;
+  color: #AAAACC !important;
 }
