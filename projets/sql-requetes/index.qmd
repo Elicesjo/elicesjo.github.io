@@ -1,0 +1,65 @@
+---
+title: "Requête d'une base de données SQL"
+description: "Jointures et analyse des ventes d'un marchand de vin via SQL"
+categories: [SQL, Bases de données, Analyse exploratoire]
+image: thumbnail.png
+order: 1
+---
+
+::: {.panel-tabset}
+## Français
+
+### Contexte
+
+Base de données relationnelle d'un marchand de vin. L'objectif était d'explorer la structure des données, d'écrire des requêtes SQL progressivement complexes et de produire une analyse des ventes.
+
+### Outils
+
+[SQL]{.tool-badge} [SQLite]{.tool-badge} [DBeaver]{.tool-badge}
+
+### Méthodologie
+
+- Prise en main du schéma relationnel (ERD)
+- Rédaction de requêtes : SELECT, JOIN, GROUP BY, sous-requêtes
+- Analyse des ventes par produit, région, période
+- Documentation des résultats en PDF
+
+### Résultats clés
+
+::: {.key-result}
+Identification des produits les plus rentables et des clients à fort potentiel
+:::
+::: {.key-result}
+Maîtrise des jointures multi-tables et des agrégations SQL
+:::
+
+[Voir le repo GitHub](https://github.com/Elicesjo/PROJET-2-){.cta-btn style="display:inline-block;margin-top:1rem;"}
+
+## English
+
+### Context
+
+Relational database for a wine merchant. The goal was to explore the data structure, write progressively complex SQL queries, and produce a sales analysis.
+
+### Tools
+
+[SQL]{.tool-badge} [SQLite]{.tool-badge} [DBeaver]{.tool-badge}
+
+### Methodology
+
+- Understanding the relational schema (ERD)
+- Writing queries: SELECT, JOIN, GROUP BY, subqueries
+- Sales analysis by product, region, and time period
+- Results documented in PDF
+
+### Key results
+
+::: {.key-result}
+Identification of most profitable products and high-value customers
+:::
+::: {.key-result}
+Mastery of multi-table joins and SQL aggregations
+:::
+
+[View GitHub repo](https://github.com/Elicesjo/PROJET-2-){.cta-btn style="display:inline-block;margin-top:1rem;"}
+:::

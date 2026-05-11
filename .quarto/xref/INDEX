@@ -1,0 +1,29 @@
+{
+  "index.qmd": {
+    "index.html": "210cc119"
+  },
+  "projets.qmd": {
+    "projets.html": "a101b0b0"
+  },
+  "projets/ecommerce-lapage/index.qmd": {
+    "index.html": "a744f458"
+  },
+  "projets/sql-requetes/index.qmd": {
+    "index.html": "65d9919c"
+  },
+  "projets/immo-sql/index.qmd": {
+    "index.html": "a4a28e3f"
+  },
+  "projets/sante-publique/index.qmd": {
+    "index.html": "31c2ee7d"
+  },
+  "projets/ecommerce-python/index.qmd": {
+    "index.html": "ea3c45d9"
+  },
+  "projets/socio-demo-dbt/index.qmd": {
+    "index.html": "b51765ce"
+  },
+  "projets/powerbi-dashboard/index.qmd": {
+    "index.html": "23d347fc"
+  }
+}

@@ -1,0 +1,67 @@
+---
+title: "Tableau de bord dynamique Power BI"
+description: "Création d'un dashboard interactif pour le suivi des indicateurs santé d'une entreprise"
+categories: [Power BI, Visualisation, Dashboard, DAX]
+image: thumbnail.png
+order: 5
+---
+
+::: {.panel-tabset}
+## Français
+
+### Contexte
+
+Conception d'un tableau de bord dynamique sous Power BI pour un suivi des indicateurs de santé d'une entreprise (Sanitoral). Le dashboard permet au management de piloter les KPIs clés en temps réel.
+
+### Outils
+
+[Power BI]{.tool-badge} [DAX]{.tool-badge} [Excel]{.tool-badge}
+
+### Méthodologie
+
+- Analyse du besoin métier et conception du mockup
+- Chargement et transformation des données dans Power BI
+- Création des mesures DAX pour les KPIs
+- Design du tableau de bord : filtres dynamiques, drill-down, segments
+- Documentation utilisateur
+
+### Résultats clés
+
+::: {.key-result}
+Dashboard interactif avec filtres temporels, géographiques et par catégorie
+:::
+::: {.key-result}
+Visualisations claires permettant l'identification rapide des tendances
+:::
+
+[Voir le repo GitHub](https://github.com/Elicesjo/PROJET-6-){.cta-btn style="display:inline-block;margin-top:1rem;"}
+
+## English
+
+### Context
+
+Design of a dynamic Power BI dashboard for monitoring health indicators at a company (Sanitoral). The dashboard enables management to track key KPIs in real time.
+
+### Tools
+
+[Power BI]{.tool-badge} [DAX]{.tool-badge} [Excel]{.tool-badge}
+
+### Methodology
+
+- Business requirement analysis and mockup design
+- Data loading and transformation in Power BI
+- DAX measures for KPIs
+- Dashboard design: dynamic filters, drill-down, slicers
+- User documentation
+
+### Key results
+
+::: {.key-result}
+Interactive dashboard with time, geographic, and category filters
+:::
+::: {.key-result}
+Clear visualizations enabling quick identification of trends
+:::
+
+[View GitHub repo](https://github.com/Elicesjo/PROJET-6-){.cta-btn style="display:inline-block;margin-top:1rem;"}
+:::

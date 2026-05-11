@@ -1,0 +1,12 @@
+---
+title: "Projets / Projects"
+listing:
+  contents: projets
+  type: grid
+  grid-columns: 3
+  fields: [image, title, description, categories]
+  categories: true
+  sort: "order"
+  image-height: "200px"
+page-layout: full
+---

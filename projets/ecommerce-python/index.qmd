@@ -1,0 +1,65 @@
+---
+title: "Optimisation de la gestion des données e-commerce"
+description: "Nettoyage, jointures et analyse des ventes d'une boutique en ligne avec Python"
+categories: [Python, Pandas, Jupyter, E-commerce]
+image: thumbnail.png
+order: 4
+---
+
+::: {.panel-tabset}
+## Français
+
+### Contexte
+
+Optimisation de la gestion des données d'une boutique en ligne de vins. Travail sur la qualité des données, les jointures entre tables (ERP, web, liaison) et la production d'analyses métier.
+
+### Outils
+
+[Python]{.tool-badge} [Pandas]{.tool-badge} [Jupyter]{.tool-badge} [Matplotlib]{.tool-badge}
+
+### Méthodologie
+
+- Audit qualité des 3 fichiers sources (ERP, web, liaison)
+- Identification et traitement des anomalies (doublons, valeurs manquantes, incohérences)
+- Jointures et constitution d'un dataset consolidé
+- Analyse des ventes par produit et par période
+
+### Résultats clés
+
+::: {.key-result}
+Dataset nettoyé et consolidé, prêt pour l'analyse et le reporting
+:::
+::: {.key-result}
+Identification des principales anomalies de données et de leur impact sur les ventes
+:::
+
+[Voir le repo GitHub](https://github.com/Elicesjo/PROJET-5-){.cta-btn style="display:inline-block;margin-top:1rem;"}
+
+## English
+
+### Context
+
+Data management optimization for an online wine shop. Work on data quality, table joins (ERP, web, liaison) and business analysis.
+
+### Tools
+
+[Python]{.tool-badge} [Pandas]{.tool-badge} [Jupyter]{.tool-badge} [Matplotlib]{.tool-badge}
+
+### Methodology
+
+- Data quality audit of 3 source files (ERP, web, liaison)
+- Detection and treatment of anomalies (duplicates, missing values, inconsistencies)
+- Joins and consolidated dataset creation
+- Sales analysis by product and time period
+
+### Key results
+
+::: {.key-result}
+Clean, consolidated dataset ready for analysis and reporting
+:::
+::: {.key-result}
+Identification of key data anomalies and their impact on sales figures
+:::
+
+[View GitHub repo](https://github.com/Elicesjo/PROJET-5-){.cta-btn style="display:inline-block;margin-top:1rem;"}
+:::

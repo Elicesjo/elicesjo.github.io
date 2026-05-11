@@ -1,0 +1,35 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Josy Elices-Diez"
+  favicon: assets/favicon.png
+  navbar:
+    background: "#2C3E50"
+    foreground: "#FFFFFF"
+    left:
+      - text: "Accueil / Home"
+        href: index.qmd
+      - text: "Projets / Projects"
+        href: projets.qmd
+    right:
+      - icon: github
+        href: https://github.com/Elicesjo
+        aria-label: GitHub
+      - icon: linkedin
+        href: "https://www.linkedin.com/in/josy-elices-diez"
+        aria-label: LinkedIn
+
+  page-footer:
+    center: "Josy Elices-Diez — Data Analyst · [GitHub](https://github.com/Elicesjo)"
+    background: "#2C3E50"
+    foreground: "#FFFFFF"
+
+format:
+  html:
+    theme:
+      - cosmo
+      - assets/styles.scss
+    toc: false
+    smooth-scroll: true

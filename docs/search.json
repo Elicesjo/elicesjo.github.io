@@ -1,0 +1,79 @@
+[
+  {
+    "objectID": "projets/powerbi-dashboard/index.html",
+    "href": "projets/powerbi-dashboard/index.html",
+    "title": "Tableau de bord dynamique Power BI",
+    "section": "",
+    "text": "FrançaisEnglish\n\n\n\nContexte\nConception d’un tableau de bord dynamique sous Power BI pour un suivi des indicateurs de santé d’une entreprise (Sanitoral). Le dashboard permet au management de piloter les KPIs clés en temps réel.\n\n\nOutils\nPower BI DAX Excel\n\n\nMéthodologie\n\nAnalyse du besoin métier et conception du mockup\nChargement et transformation des données dans Power BI\nCréation des mesures DAX pour les KPIs\nDesign du tableau de bord : filtres dynamiques, drill-down, segments\nDocumentation utilisateur\n\n\n\nRésultats clés\n\nDashboard interactif avec filtres temporels, géographiques et par catégorie\n\n\nVisualisations claires permettant l’identification rapide des tendances\n\nVoir le repo GitHub\n\n\n\n\nContext\nDesign of a dynamic Power BI dashboard for monitoring health indicators at a company (Sanitoral). The dashboard enables management to track key KPIs in real time.\n\n\nTools\nPower BI DAX Excel\n\n\nMethodology\n\nBusiness requirement analysis and mockup design\nData loading and transformation in Power BI\nDAX measures for KPIs\nDashboard design: dynamic filters, drill-down, slicers\nUser documentation\n\n\n\nKey results\n\nInteractive dashboard with time, geographic, and category filters\n\n\nClear visualizations enabling quick identification of trends\n\nView GitHub repo"
+  },
+  {
+    "objectID": "projets/ecommerce-python/index.html",
+    "href": "projets/ecommerce-python/index.html",
+    "title": "Optimisation de la gestion des données e-commerce",
+    "section": "",
+    "text": "FrançaisEnglish\n\n\n\nContexte\nOptimisation de la gestion des données d’une boutique en ligne de vins. Travail sur la qualité des données, les jointures entre tables (ERP, web, liaison) et la production d’analyses métier.\n\n\nOutils\nPython Pandas Jupyter Matplotlib\n\n\nMéthodologie\n\nAudit qualité des 3 fichiers sources (ERP, web, liaison)\nIdentification et traitement des anomalies (doublons, valeurs manquantes, incohérences)\nJointures et constitution d’un dataset consolidé\nAnalyse des ventes par produit et par période\n\n\n\nRésultats clés\n\nDataset nettoyé et consolidé, prêt pour l’analyse et le reporting\n\n\nIdentification des principales anomalies de données et de leur impact sur les ventes\n\nVoir le repo GitHub\n\n\n\n\nContext\nData management optimization for an online wine shop. Work on data quality, table joins (ERP, web, liaison) and business analysis.\n\n\nTools\nPython Pandas Jupyter Matplotlib\n\n\nMethodology\n\nData quality audit of 3 source files (ERP, web, liaison)\nDetection and treatment of anomalies (duplicates, missing values, inconsistencies)\nJoins and consolidated dataset creation\nSales analysis by product and time period\n\n\n\nKey results\n\nClean, consolidated dataset ready for analysis and reporting\n\n\nIdentification of key data anomalies and their impact on sales figures\n\nView GitHub repo"
+  },
+  {
+    "objectID": "projets/immo-sql/index.html",
+    "href": "projets/immo-sql/index.html",
+    "title": "Création d’une base de données immobilière",
+    "section": "",
+    "text": "FrançaisEnglish\n\n\n\nContexte\nCréation d’une base de données relationnelle pour un réseau d’agences immobilières, à partir des données de valeurs foncières (DVF) publiées par le gouvernement français.\n\n\nOutils\nSQL PostgreSQL DBeaver Excel\n\n\nMéthodologie\n\nAnalyse du dictionnaire de données DVF\nConception du modèle entité-relation (ERD)\nNormalisation du schéma (3NF)\nAlimentation de la BDD depuis les fichiers sources\nRequêtes d’analyse du marché immobilier\n\n\n\nRésultats clés\n\nBase de données normalisée intégrant communes, biens et transactions foncières\n\n\nSchéma documenté et requêtes d’analyse prêtes à l’emploi\n\nVoir le repo GitHub\n\n\n\n\nContext\nCreation of a relational database for a real estate agency network, using French government land value data (DVF).\n\n\nTools\nSQL PostgreSQL DBeaver Excel\n\n\nMethodology\n\nAnalysis of the DVF data dictionary\nEntity-relationship model design (ERD)\nSchema normalization (3NF)\nDatabase population from source files\nReal estate market analysis queries\n\n\n\nKey results\n\nNormalized database integrating municipalities, properties, and land transactions\n\n\nDocumented schema with ready-to-use analysis queries\n\nView GitHub repo"
+  },
+  {
+    "objectID": "projets/ecommerce-lapage/index.html",
+    "href": "projets/ecommerce-lapage/index.html",
+    "title": "Analyse e-commerce — La Page",
+    "section": "",
+    "text": "FrançaisEnglish\n\n\n\nContexte\nAnalyse complète des données de vente d’une librairie en ligne (La Page) : CA, comportement des clients, segmentation RFM, analyses statistiques (tests non-paramétriques, courbe de Lorenz, cohortes de rétention).\n\n\nOutils\nPython Pandas Matplotlib Seaborn SciPy Jupyter\n\n\nMéthodologie\n\nNettoyage des 3 tables (clients, produits, transactions)\nAnalyse temporelle du CA et des volumes de vente\nSegmentation RFM (Récence, Fréquence, Montant)\nTests statistiques : Mann-Whitney, Kruskal-Wallis, Chi²\nCourbe de Lorenz pour l’analyse de la concentration des ventes\nCohortes de rétention clients\n\n\n\nRésultats clés\n\nSegmentation RFM identifiant 5 profils clients distincts avec CA par segment\n\n\n20% des produits génèrent 80% du CA (loi de Pareto confirmée)\n\n\nDifférences significatives H/F sur le panier moyen (Mann-Whitney, p &lt; 0.05)\n\nVoir le repo GitHub\n\n\n\n\nContext\nFull analysis of sales data for an online bookstore (La Page): revenue, customer behaviour, RFM segmentation, and statistical analyses (non-parametric tests, Lorenz curve, retention cohorts).\n\n\nTools\nPython Pandas Matplotlib Seaborn SciPy Jupyter\n\n\nMethodology\n\nCleaning of 3 tables (customers, products, transactions)\nTime series analysis of revenue and sales volume\nRFM segmentation (Recency, Frequency, Monetary)\nStatistical tests: Mann-Whitney, Kruskal-Wallis, Chi²\nLorenz curve for sales concentration analysis\nCustomer retention cohorts\n\n\n\nKey results\n\nRFM segmentation identifying 5 distinct customer profiles with revenue per segment\n\n\n20% of products generate 80% of revenue (Pareto confirmed)\n\n\nSignificant M/F differences in average basket (Mann-Whitney, p &lt; 0.05)\n\nView GitHub repo"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Josy Elices-Diez",
+    "section": "",
+    "text": "Data Analyst · OpenClassrooms × ENSAE\n\n\nPython SQL Power BI dbt Pandas Quarto Statistiques\n\nVoir mes projets / See my projects"
+  },
+  {
+    "objectID": "index.html#à-propos",
+    "href": "index.html#à-propos",
+    "title": "Josy Elices-Diez",
+    "section": "À propos",
+    "text": "À propos\nData Analyst diplômée de la formation Data Analyst d’OpenClassrooms en partenariat avec l’ENSAE, je maîtrise l’ensemble de la chaîne de traitement de la donnée — de la collecte et la modélisation SQL jusqu’à la visualisation et la communication de résultats.\nMes projets couvrent des domaines variés : analyse de ventes, santé publique, immobilier, e-commerce et socio-démographie. Je travaille principalement avec Python (pandas, matplotlib, seaborn), SQL (PostgreSQL, SQLite, dbt) et Power BI.\nJe suis disponible pour des missions en Data Analyst ou Data Engineer junior."
+  },
+  {
+    "objectID": "index.html#about-me",
+    "href": "index.html#about-me",
+    "title": "Josy Elices-Diez",
+    "section": "About me",
+    "text": "About me\nData Analyst with a diploma from OpenClassrooms’ Data Analyst program in partnership with ENSAE, I cover the full data pipeline — from collection and SQL modelling to visualization and communicating insights.\nMy projects span diverse domains: sales analysis, public health, real estate, e-commerce, and sociodemographics. I work primarily with Python (pandas, matplotlib, seaborn), SQL (PostgreSQL, SQLite, dbt) and Power BI.\nOpen to Data Analyst or junior Data Engineer roles."
+  },
+  {
+    "objectID": "projets.html",
+    "href": "projets.html",
+    "title": "Projets / Projects",
+    "section": "",
+    "text": "Requête d’une base de données SQL\n\n\n\nSQL\n\nBases de données\n\nAnalyse exploratoire\n\n\n\nJointures et analyse des ventes d’un marchand de vin via SQL\n\n\n\n\n\n\n\n\n\n\n\n\nÉtude de santé publique avec Python\n\n\n\nPython\n\nPandas\n\nVisualisation\n\nSanté publique\n\n\n\nAnalyse de la sous-nutrition mondiale et des capacités de production alimentaire\n\n\n\n\n\n\n\n\n\n\n\n\nCréation d’une base de données immobilière\n\n\n\nSQL\n\nModélisation\n\nPostgreSQL\n\nBases de données\n\n\n\nModélisation et alimentation d’une base SQL pour le marché immobilier français\n\n\n\n\n\n\n\n\n\n\n\n\nOptimisation de la gestion des données e-commerce\n\n\n\nPython\n\nPandas\n\nJupyter\n\nE-commerce\n\n\n\nNettoyage, jointures et analyse des ventes d’une boutique en ligne avec Python\n\n\n\n\n\n\n\n\n\n\n\n\nTableau de bord dynamique Power BI\n\n\n\nPower BI\n\nVisualisation\n\nDashboard\n\nDAX\n\n\n\nCréation d’un dashboard interactif pour le suivi des indicateurs santé d’une entreprise\n\n\n\n\n\n\n\n\n\n\n\n\nAnalyse socio-démographique avec dbt\n\n\n\nPython\n\ndbt\n\nSQL\n\nData Engineering\n\nStatistiques\n\n\n\nModélisation des profils des apprenants OpenClassrooms face au marché du travail national\n\n\n\n\n\n\n\n\n\n\n\n\nAnalyse e-commerce — La Page\n\n\n\nPython\n\nStatistiques\n\nRFM\n\nE-commerce\n\nVisualisation\n\n\n\nAnalyse du chiffre d’affaires, comportement client et segmentation RFM d’une librairie en ligne\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "projets/sql-requetes/index.html",
+    "href": "projets/sql-requetes/index.html",
+    "title": "Requête d’une base de données SQL",
+    "section": "",
+    "text": "FrançaisEnglish\n\n\n\nContexte\nBase de données relationnelle d’un marchand de vin. L’objectif était d’explorer la structure des données, d’écrire des requêtes SQL progressivement complexes et de produire une analyse des ventes.\n\n\nOutils\nSQL SQLite DBeaver\n\n\nMéthodologie\n\nPrise en main du schéma relationnel (ERD)\nRédaction de requêtes : SELECT, JOIN, GROUP BY, sous-requêtes\nAnalyse des ventes par produit, région, période\nDocumentation des résultats en PDF\n\n\n\nRésultats clés\n\nIdentification des produits les plus rentables et des clients à fort potentiel\n\n\nMaîtrise des jointures multi-tables et des agrégations SQL\n\nVoir le repo GitHub\n\n\n\n\nContext\nRelational database for a wine merchant. The goal was to explore the data structure, write progressively complex SQL queries, and produce a sales analysis.\n\n\nTools\nSQL SQLite DBeaver\n\n\nMethodology\n\nUnderstanding the relational schema (ERD)\nWriting queries: SELECT, JOIN, GROUP BY, subqueries\nSales analysis by product, region, and time period\nResults documented in PDF\n\n\n\nKey results\n\nIdentification of most profitable products and high-value customers\n\n\nMastery of multi-table joins and SQL aggregations\n\nView GitHub repo"
+  },
+  {
+    "objectID": "projets/sante-publique/index.html",
+    "href": "projets/sante-publique/index.html",
+    "title": "Étude de santé publique avec Python",
+    "section": "",
+    "text": "FrançaisEnglish\n\n\n\nContexte\nÉtude mondiale sur la sous-alimentation menée pour la FAO. Analyse de la répartition de la sous-nutrition, des capacités de production alimentaire par pays et des causes possibles de déficits nutritionnels.\n\n\nOutils\nPython Pandas Matplotlib Jupyter\n\n\nMéthodologie\n\nNettoyage et fusion de 4 datasets CSV (population, disponibilité alimentaire, aide alimentaire, sous-nutrition)\nCalcul d’indicateurs par pays et par région\nCartographie mondiale de la sous-nutrition\nAnalyse des corrélations entre production et malnutrition\n\n\n\nRésultats clés\n\nIdentification des zones géographiques les plus vulnérables à la sous-alimentation\n\n\nMise en évidence de l’écart entre production alimentaire disponible et besoins réels\n\nVoir le repo GitHub\n\n\n\n\nContext\nGlobal study on undernourishment conducted for the FAO. Analysis of the distribution of malnutrition, food production capacities by country, and potential causes of nutritional deficits.\n\n\nTools\nPython Pandas Matplotlib Jupyter\n\n\nMethodology\n\nCleaning and merging 4 CSV datasets (population, food availability, food aid, malnutrition)\nComputing indicators by country and region\nWorld map of undernourishment\nCorrelation analysis between production and malnutrition\n\n\n\nKey results\n\nIdentification of the most vulnerable geographic areas to food insecurity\n\n\nHighlighted gap between available food production and actual nutritional needs\n\nView GitHub repo"
+  },
+  {
+    "objectID": "projets/socio-demo-dbt/index.html",
+    "href": "projets/socio-demo-dbt/index.html",
+    "title": "Analyse socio-démographique avec dbt",
+    "section": "",
+    "text": "FrançaisEnglish\n\n\n\nContexte\nAnalyse de l’évolution des profils socio-démographiques des apprenants OpenClassrooms en les confrontant aux données nationales du marché du travail (chômage, emploi, population active).\n\n\nOutils\nPython dbt SQL Pandas Matplotlib Quarto\n\n\nMéthodologie\n\nPipeline dbt : staging → marts (modèles SQL documentés et testés)\nSources : données chômage, taux d’emploi, population, dataset OC\nScripts Python pour l’analyse exploratoire et les visualisations\nRapport Quarto et présentation des résultats\n\n\n\nRésultats clés\n\nPipeline dbt structuré en 2 couches (staging + marts) avec schémas documentés\n\n\nÉcarts H/F et taux de pénétration OC visualisés par région et tranche d’âge\n\n\nPyramide des âges et répartition géographique des apprenants vs population nationale\n\nVoir le repo GitHub\n\n\n\n\nContext\nAnalysis of the sociodemographic profile evolution of OpenClassrooms learners, benchmarked against national labour market data (unemployment, employment rates, active population).\n\n\nTools\nPython dbt SQL Pandas Matplotlib Quarto\n\n\nMethodology\n\ndbt pipeline: staging → marts (documented and tested SQL models)\nSources: unemployment, employment rate, population, OC dataset\nPython scripts for exploratory analysis and visualizations\nQuarto report and results presentation\n\n\n\nKey results\n\nStructured dbt pipeline with 2 layers (staging + marts) and documented schemas\n\n\nGender gaps and OC penetration rates visualized by region and age group\n\n\nAge pyramid and geographic distribution of learners vs. national population\n\nView GitHub repo"
+  }
+]

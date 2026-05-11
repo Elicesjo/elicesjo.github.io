@@ -1,0 +1,73 @@
+---
+title: ""
+page-layout: full
+---
+
+::: {.hero}
+# Josy Elices-Diez
+
+::: {.subtitle}
+Data Analyst · OpenClassrooms × ENSAE
+:::
+
+::: {.badges}
+[Python]{.badge-skill} [SQL]{.badge-skill} [Power BI]{.badge-skill} [dbt]{.badge-skill} [Pandas]{.badge-skill} [Quarto]{.badge-skill} [Statistiques]{.badge-skill}
+:::
+
+[Voir mes projets / See my projects](projets.qmd){.cta-btn}
+:::
+
+::: {.stats-bar}
+::: {.stat}
+::: {.stat-number}
+7
+:::
+::: {.stat-label}
+Projets / Projects
+:::
+:::
+
+::: {.stat}
+::: {.stat-number}
+3
+:::
+::: {.stat-label}
+Langages / Languages
+:::
+:::
+
+::: {.stat}
+::: {.stat-number}
+2
+:::
+::: {.stat-label}
+Bases de données / Databases
+:::
+:::
+:::
+
+::: {.panel-tabset}
+## Français
+
+::: {.about-section}
+## À propos
+
+Data Analyst diplômée de la formation **Data Analyst d'OpenClassrooms en partenariat avec l'ENSAE**, je maîtrise l'ensemble de la chaîne de traitement de la donnée — de la collecte et la modélisation SQL jusqu'à la visualisation et la communication de résultats.
+
+Mes projets couvrent des domaines variés : analyse de ventes, santé publique, immobilier, e-commerce et socio-démographie. Je travaille principalement avec **Python** (pandas, matplotlib, seaborn), **SQL** (PostgreSQL, SQLite, dbt) et **Power BI**.
+
+Je suis disponible pour des missions en **Data Analyst** ou **Data Engineer** junior.
+:::
+
+## English
+
+::: {.about-section}
+## About me
+
+Data Analyst with a diploma from **OpenClassrooms' Data Analyst program in partnership with ENSAE**, I cover the full data pipeline — from collection and SQL modelling to visualization and communicating insights.
+
+My projects span diverse domains: sales analysis, public health, real estate, e-commerce, and sociodemographics. I work primarily with **Python** (pandas, matplotlib, seaborn), **SQL** (PostgreSQL, SQLite, dbt) and **Power BI**.
+
+Open to **Data Analyst** or junior **Data Engineer** roles.
+:::
+:::

@@ -1,0 +1,65 @@
+---
+title: "Étude de santé publique avec Python"
+description: "Analyse de la sous-nutrition mondiale et des capacités de production alimentaire"
+categories: [Python, Pandas, Visualisation, Santé publique]
+image: thumbnail.png
+order: 2
+---
+
+::: {.panel-tabset}
+## Français
+
+### Contexte
+
+Étude mondiale sur la sous-alimentation menée pour la FAO. Analyse de la répartition de la sous-nutrition, des capacités de production alimentaire par pays et des causes possibles de déficits nutritionnels.
+
+### Outils
+
+[Python]{.tool-badge} [Pandas]{.tool-badge} [Matplotlib]{.tool-badge} [Jupyter]{.tool-badge}
+
+### Méthodologie
+
+- Nettoyage et fusion de 4 datasets CSV (population, disponibilité alimentaire, aide alimentaire, sous-nutrition)
+- Calcul d'indicateurs par pays et par région
+- Cartographie mondiale de la sous-nutrition
+- Analyse des corrélations entre production et malnutrition
+
+### Résultats clés
+
+::: {.key-result}
+Identification des zones géographiques les plus vulnérables à la sous-alimentation
+:::
+::: {.key-result}
+Mise en évidence de l'écart entre production alimentaire disponible et besoins réels
+:::
+
+[Voir le repo GitHub](https://github.com/Elicesjo/PROJET-3-){.cta-btn style="display:inline-block;margin-top:1rem;"}
+
+## English
+
+### Context
+
+Global study on undernourishment conducted for the FAO. Analysis of the distribution of malnutrition, food production capacities by country, and potential causes of nutritional deficits.
+
+### Tools
+
+[Python]{.tool-badge} [Pandas]{.tool-badge} [Matplotlib]{.tool-badge} [Jupyter]{.tool-badge}
+
+### Methodology
+
+- Cleaning and merging 4 CSV datasets (population, food availability, food aid, malnutrition)
+- Computing indicators by country and region
+- World map of undernourishment
+- Correlation analysis between production and malnutrition
+
+### Key results
+
+::: {.key-result}
+Identification of the most vulnerable geographic areas to food insecurity
+:::
+::: {.key-result}
+Highlighted gap between available food production and actual nutritional needs
+:::
+
+[View GitHub repo](https://github.com/Elicesjo/PROJET-3-){.cta-btn style="display:inline-block;margin-top:1rem;"}
+:::

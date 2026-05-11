@@ -1,0 +1,71 @@
+---
+title: "Analyse socio-démographique avec dbt"
+description: "Modélisation des profils des apprenants OpenClassrooms face au marché du travail national"
+categories: [Python, dbt, SQL, Data Engineering, Statistiques]
+image: thumbnail.png
+order: 6
+---
+
+::: {.panel-tabset}
+## Français
+
+### Contexte
+
+Analyse de l'évolution des profils socio-démographiques des apprenants OpenClassrooms en les confrontant aux données nationales du marché du travail (chômage, emploi, population active).
+
+### Outils
+
+[Python]{.tool-badge} [dbt]{.tool-badge} [SQL]{.tool-badge} [Pandas]{.tool-badge} [Matplotlib]{.tool-badge} [Quarto]{.tool-badge}
+
+### Méthodologie
+
+- Pipeline dbt : staging → marts (modèles SQL documentés et testés)
+- Sources : données chômage, taux d'emploi, population, dataset OC
+- Scripts Python pour l'analyse exploratoire et les visualisations
+- Rapport Quarto et présentation des résultats
+
+### Résultats clés
+
+::: {.key-result}
+Pipeline dbt structuré en 2 couches (staging + marts) avec schémas documentés
+:::
+::: {.key-result}
+Écarts H/F et taux de pénétration OC visualisés par région et tranche d'âge
+:::
+::: {.key-result}
+Pyramide des âges et répartition géographique des apprenants vs population nationale
+:::
+
+[Voir le repo GitHub](https://github.com/Elicesjo/PROJET-8-){.cta-btn style="display:inline-block;margin-top:1rem;"}
+
+## English
+
+### Context
+
+Analysis of the sociodemographic profile evolution of OpenClassrooms learners, benchmarked against national labour market data (unemployment, employment rates, active population).
+
+### Tools
+
+[Python]{.tool-badge} [dbt]{.tool-badge} [SQL]{.tool-badge} [Pandas]{.tool-badge} [Matplotlib]{.tool-badge} [Quarto]{.tool-badge}
+
+### Methodology
+
+- dbt pipeline: staging → marts (documented and tested SQL models)
+- Sources: unemployment, employment rate, population, OC dataset
+- Python scripts for exploratory analysis and visualizations
+- Quarto report and results presentation
+
+### Key results
+
+::: {.key-result}
+Structured dbt pipeline with 2 layers (staging + marts) and documented schemas
+:::
+::: {.key-result}
+Gender gaps and OC penetration rates visualized by region and age group
+:::
+::: {.key-result}
+Age pyramid and geographic distribution of learners vs. national population
+:::
+
+[View GitHub repo](https://github.com/Elicesjo/PROJET-8-){.cta-btn style="display:inline-block;margin-top:1rem;"}
+:::

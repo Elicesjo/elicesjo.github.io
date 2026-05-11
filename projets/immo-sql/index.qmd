@@ -1,0 +1,67 @@
+---
+title: "Création d'une base de données immobilière"
+description: "Modélisation et alimentation d'une base SQL pour le marché immobilier français"
+categories: [SQL, Modélisation, PostgreSQL, Bases de données]
+image: thumbnail.png
+order: 3
+---
+
+::: {.panel-tabset}
+## Français
+
+### Contexte
+
+Création d'une base de données relationnelle pour un réseau d'agences immobilières, à partir des données de valeurs foncières (DVF) publiées par le gouvernement français.
+
+### Outils
+
+[SQL]{.tool-badge} [PostgreSQL]{.tool-badge} [DBeaver]{.tool-badge} [Excel]{.tool-badge}
+
+### Méthodologie
+
+- Analyse du dictionnaire de données DVF
+- Conception du modèle entité-relation (ERD)
+- Normalisation du schéma (3NF)
+- Alimentation de la BDD depuis les fichiers sources
+- Requêtes d'analyse du marché immobilier
+
+### Résultats clés
+
+::: {.key-result}
+Base de données normalisée intégrant communes, biens et transactions foncières
+:::
+::: {.key-result}
+Schéma documenté et requêtes d'analyse prêtes à l'emploi
+:::
+
+[Voir le repo GitHub](https://github.com/Elicesjo/PROJET-4-){.cta-btn style="display:inline-block;margin-top:1rem;"}
+
+## English
+
+### Context
+
+Creation of a relational database for a real estate agency network, using French government land value data (DVF).
+
+### Tools
+
+[SQL]{.tool-badge} [PostgreSQL]{.tool-badge} [DBeaver]{.tool-badge} [Excel]{.tool-badge}
+
+### Methodology
+
+- Analysis of the DVF data dictionary
+- Entity-relationship model design (ERD)
+- Schema normalization (3NF)
+- Database population from source files
+- Real estate market analysis queries
+
+### Key results
+
+::: {.key-result}
+Normalized database integrating municipalities, properties, and land transactions
+:::
+::: {.key-result}
+Documented schema with ready-to-use analysis queries
+:::
+
+[View GitHub repo](https://github.com/Elicesjo/PROJET-4-){.cta-btn style="display:inline-block;margin-top:1rem;"}
+:::

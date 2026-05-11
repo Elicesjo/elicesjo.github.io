@@ -1,0 +1,75 @@
+---
+title: "Analyse e-commerce — La Page"
+description: "Analyse du chiffre d'affaires, comportement client et segmentation RFM d'une librairie en ligne"
+categories: [Python, Statistiques, RFM, E-commerce, Visualisation]
+image: thumbnail.png
+order: 7
+---
+
+::: {.panel-tabset}
+## Français
+
+### Contexte
+
+Analyse complète des données de vente d'une librairie en ligne (La Page) : CA, comportement des clients, segmentation RFM, analyses statistiques (tests non-paramétriques, courbe de Lorenz, cohortes de rétention).
+
+### Outils
+
+[Python]{.tool-badge} [Pandas]{.tool-badge} [Matplotlib]{.tool-badge} [Seaborn]{.tool-badge} [SciPy]{.tool-badge} [Jupyter]{.tool-badge}
+
+### Méthodologie
+
+- Nettoyage des 3 tables (clients, produits, transactions)
+- Analyse temporelle du CA et des volumes de vente
+- Segmentation RFM (Récence, Fréquence, Montant)
+- Tests statistiques : Mann-Whitney, Kruskal-Wallis, Chi²
+- Courbe de Lorenz pour l'analyse de la concentration des ventes
+- Cohortes de rétention clients
+
+### Résultats clés
+
+::: {.key-result}
+Segmentation RFM identifiant 5 profils clients distincts avec CA par segment
+:::
+::: {.key-result}
+20% des produits génèrent 80% du CA (loi de Pareto confirmée)
+:::
+::: {.key-result}
+Différences significatives H/F sur le panier moyen (Mann-Whitney, p < 0.05)
+:::
+
+[Voir le repo GitHub](https://github.com/Elicesjo/PROJET-9-){.cta-btn style="display:inline-block;margin-top:1rem;"}
+
+## English
+
+### Context
+
+Full analysis of sales data for an online bookstore (La Page): revenue, customer behaviour, RFM segmentation, and statistical analyses (non-parametric tests, Lorenz curve, retention cohorts).
+
+### Tools
+
+[Python]{.tool-badge} [Pandas]{.tool-badge} [Matplotlib]{.tool-badge} [Seaborn]{.tool-badge} [SciPy]{.tool-badge} [Jupyter]{.tool-badge}
+
+### Methodology
+
+- Cleaning of 3 tables (customers, products, transactions)
+- Time series analysis of revenue and sales volume
+- RFM segmentation (Recency, Frequency, Monetary)
+- Statistical tests: Mann-Whitney, Kruskal-Wallis, Chi²
+- Lorenz curve for sales concentration analysis
+- Customer retention cohorts
+
+### Key results
+
+::: {.key-result}
+RFM segmentation identifying 5 distinct customer profiles with revenue per segment
+:::
+::: {.key-result}
+20% of products generate 80% of revenue (Pareto confirmed)
+:::
+::: {.key-result}
+Significant M/F differences in average basket (Mann-Whitney, p < 0.05)
+:::
+
+[View GitHub repo](https://github.com/Elicesjo/PROJET-9-){.cta-btn style="display:inline-block;margin-top:1rem;"}
+:::

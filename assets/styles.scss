@@ -1,0 +1,180 @@
+/*-- scss:defaults --*/
+$primary: #2C3E50;
+$link-color: #E67E22;
+$font-family-sans-serif: "Inter", "Segoe UI", sans-serif;
+$headings-font-weight: 700;
+
+/*-- scss:rules --*/
+
+/* Hero section */
+.hero {
+  padding: 5rem 2rem 4rem;
+  background: linear-gradient(135deg, #2C3E50 0%, #34495E 60%, #E67E22 100%);
+  color: white;
+  text-align: center;
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+  }
+
+  .subtitle {
+    font-size: 1.3rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+  }
+
+  .badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+
+  .badge-skill {
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    color: white;
+    padding: 0.3rem 0.9rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+
+  .cta-btn {
+    display: inline-block;
+    background: #E67E22;
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s;
+    &:hover { background: #CF6D17; color: white; }
+  }
+}
+
+/* About section */
+.about-section {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+  text-align: center;
+
+  h2 { color: $primary; margin-bottom: 1rem; }
+  p { font-size: 1.05rem; line-height: 1.7; color: #444; }
+}
+
+/* Stats bar */
+.stats-bar {
+  background: #F8F9FA;
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+  border-top: 1px solid #E9ECEF;
+  border-bottom: 1px solid #E9ECEF;
+
+  .stat {
+    text-align: center;
+    .stat-number {
+      font-size: 2rem;
+      font-weight: 800;
+      color: $link-color;
+    }
+    .stat-label {
+      font-size: 0.85rem;
+      color: #666;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+  }
+}
+
+/* Project listing */
+.quarto-listing-default .card {
+  border: none;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  border-radius: 10px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  overflow: hidden;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.14);
+  }
+
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .card-body {
+    padding: 1.2rem;
+  }
+
+  .card-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: $primary;
+    margin-bottom: 0.4rem;
+  }
+
+  .card-text {
+    font-size: 0.88rem;
+    color: #555;
+    line-height: 1.5;
+  }
+}
+
+/* Category pills */
+.quarto-category {
+  background: #EEF2FF !important;
+  color: #3B3F99 !important;
+  border-radius: 20px !important;
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+  padding: 0.2rem 0.7rem !important;
+}
+
+/* Project page */
+.project-header {
+  background: linear-gradient(135deg, #2C3E50, #34495E);
+  color: white;
+  padding: 3rem 2rem 2rem;
+  margin-bottom: 2rem;
+  border-radius: 0 0 12px 12px;
+
+  h1 { color: white; font-size: 1.8rem; }
+  .project-meta { opacity: 0.85; font-size: 0.9rem; margin-top: 0.5rem; }
+}
+
+.tool-badge {
+  display: inline-block;
+  background: #E67E22;
+  color: white;
+  padding: 0.2rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin: 0.2rem;
+}
+
+.key-result {
+  background: #F8F9FA;
+  border-left: 4px solid #E67E22;
+  padding: 0.8rem 1rem;
+  margin: 0.5rem 0;
+  border-radius: 0 6px 6px 0;
+  font-size: 0.95rem;
+}
+
+/* Navbar */
+.navbar-brand { font-weight: 700; font-size: 1.1rem; }
+
+/* Footer */
+.nav-footer { font-size: 0.85rem; }

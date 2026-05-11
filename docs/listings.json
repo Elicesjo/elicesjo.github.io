@@ -1,0 +1,14 @@
+[
+  {
+    "listing": "/projets.html",
+    "items": [
+      "/projets/sql-requetes/index.html",
+      "/projets/sante-publique/index.html",
+      "/projets/immo-sql/index.html",
+      "/projets/ecommerce-python/index.html",
+      "/projets/powerbi-dashboard/index.html",
+      "/projets/socio-demo-dbt/index.html",
+      "/projets/ecommerce-lapage/index.html"
+    ]
+  }
+]
