@@ -18,34 +18,6 @@ listing:
 :::
 :::
 
-::: {.stat-cards .stat-cards-2}
-::: {.stat-card .pink}
-::: {.stat-icon}
-{{< bi folder2 >}}
-:::
-::: {.stat-number}
-7
-:::
-::: {.stat-label}
-Projets réalisés
-:::
-:::
-
-::: {.stat-card .blue}
-::: {.stat-icon}
-{{< bi mortarboard >}}
-:::
-::: {.stat-label}
-Titre RNCP
-:::
-::: {.stat-number}
-Niveau 6
-:::
-::: {.stat-sub}
-(bac+3)
-:::
-:::
-:::
 
 ::: {.section-intro}
 Vous trouverez ici les répertoires GitHub de mes différents projets
