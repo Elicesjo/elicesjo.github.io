@@ -23,3 +23,38 @@ listing:
 Vous trouverez ici les répertoires GitHub de mes différents projets
 issus de la formation **Data Analyst d'OpenClassrooms** en partenariat avec **l'ENSAE**.
 :::
+
+```{=html}
+<div class="category-dropdown-wrap">
+  <select id="cat-select" onchange="filterCategory(this.value)">
+    <option value="all">Toutes les catégories</option>
+  </select>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const select = document.getElementById("cat-select");
+  const links = document.querySelectorAll(".quarto-listing-category a.category");
+  links.forEach(function (link) {
+    const val = link.getAttribute("data-listing-category") || link.textContent.trim();
+    const opt = document.createElement("option");
+    opt.value = val;
+    opt.textContent = val;
+    select.appendChild(opt);
+  });
+});
+
+function filterCategory(val) {
+  if (val === "all") {
+    const allLink = document.querySelector(".quarto-listing-category a.category[data-listing-category='']") ||
+                    document.querySelector(".quarto-listing-category a.category");
+    if (allLink) { allLink.click(); }
+    return;
+  }
+  const links = document.querySelectorAll(".quarto-listing-category a.category");
+  links.forEach(function (link) {
+    const cat = link.getAttribute("data-listing-category") || link.textContent.trim();
+    if (cat === val) { link.click(); }
+  });
+}
+</script>
+```

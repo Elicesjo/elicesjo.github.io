@@ -180,35 +180,28 @@ body { line-height: 1.7; background: white; }
   }
 }
 
-/* ── Category pills ──────────────────────────────────────────────────────── */
-.quarto-listing-category {
-  .quarto-listing-category-title { display: none !important; }
-  .category-title-item { display: none !important; }
+/* ── Category sidebar — masquée, remplacée par le dropdown ───────────────── */
+.quarto-listing-category { display: none !important; }
 
-  a.category {
-    display: inline-block !important;
-    background: white !important;
-    color: #7A7A9A !important;
-    border: 1px solid #DDDDF0 !important;
-    border-radius: 20px !important;
-    padding: 0.28rem 1rem !important;
-    font-size: 0.78rem !important;
-    font-weight: 600 !important;
-    margin: 0.15rem !important;
-    text-decoration: none !important;
-    transition: all 0.15s !important;
+/* ── Category dropdown ───────────────────────────────────────────────────── */
+.category-dropdown-wrap {
+  max-width: 860px;
+  margin: 0 auto 1.5rem;
+  padding: 0 1rem;
 
-    &:hover {
-      color: #4A4A6A !important;
-      border-color: #9B9BD4 !important;
-      background: #F5F5FF !important;
-    }
+  select {
+    font-size: 10px;
+    font-family: $font-family-sans-serif;
+    color: #4A4A6A;
+    background: white;
+    border: 1px solid #DDDDF0;
+    border-radius: 8px;
+    padding: 0.3rem 0.8rem;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.15s;
 
-    &.active {
-      background: #9B9BD4 !important;
-      color: white !important;
-      border-color: #9B9BD4 !important;
-    }
+    &:hover, &:focus { border-color: #9B9BD4; }
   }
 }
 

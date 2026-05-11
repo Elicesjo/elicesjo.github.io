@@ -44,7 +44,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-81eba15a78d3d58b38baae1a1d638956.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-1e9d13e8ca670662c86729647af22d10.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -200,6 +200,38 @@ window.Quarto = {
 <div class="section-intro">
 <p>Vous trouverez ici les répertoires GitHub de mes différents projets issus de la formation <strong>Data Analyst d’OpenClassrooms</strong> en partenariat avec <strong>l’ENSAE</strong>.</p>
 </div>
+<div class="category-dropdown-wrap">
+  <select id="cat-select" onchange="filterCategory(this.value)">
+    <option value="all">Toutes les catégories</option>
+  </select>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const select = document.getElementById("cat-select");
+  const links = document.querySelectorAll(".quarto-listing-category a.category");
+  links.forEach(function (link) {
+    const val = link.getAttribute("data-listing-category") || link.textContent.trim();
+    const opt = document.createElement("option");
+    opt.value = val;
+    opt.textContent = val;
+    select.appendChild(opt);
+  });
+});
+
+function filterCategory(val) {
+  if (val === "all") {
+    const allLink = document.querySelector(".quarto-listing-category a.category[data-listing-category='']") ||
+                    document.querySelector(".quarto-listing-category a.category");
+    if (allLink) { allLink.click(); }
+    return;
+  }
+  const links = document.querySelectorAll(".quarto-listing-category a.category");
+  links.forEach(function (link) {
+    const cat = link.getAttribute("data-listing-category") || link.textContent.trim();
+    if (cat === val) { link.click(); }
+  });
+}
+</script>
 
 
 
