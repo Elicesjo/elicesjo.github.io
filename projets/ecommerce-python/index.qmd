@@ -1,7 +1,7 @@
 ---
-title: "Optimisation de la gestion des données e-commerce"
-description: "Auditer et consolider les données d'une boutique e-commerce pour fiabiliser le reporting"
-categories: [Python, Pandas, Jupyter, E-commerce]
+title: "Audit de données e-commerce — Python"
+description: "Détecter et corriger les doublons, valeurs manquantes et incohérences dans les données d'une boutique de vins en ligne"
+categories: [Python, Nettoyage de données]
 image: thumbnail.png
 order: 4
 ---

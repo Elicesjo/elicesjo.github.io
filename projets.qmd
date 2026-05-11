@@ -12,49 +12,58 @@ listing:
 ---
 
 ::: {.page-hero}
-# Data Analyst
+# Mes Projets
 
 ::: {.underline-bar}
 :::
 :::
 
-
-::: {.section-intro}
-Vous trouverez ici les répertoires GitHub de mes différents projets
-issus de la formation **Data Analyst d'OpenClassrooms** en partenariat avec **l'ENSAE**.
+::: {.filter-bar}
+::: {.filter-label}
+Filtrer par catégorie
 :::
-
+::: {.filter-right}
 ```{=html}
-<div class="category-dropdown-wrap">
-  <select id="cat-select" onchange="filterCategory(this.value)">
-    <option value="all">Toutes les catégories</option>
-  </select>
-</div>
+<select id="cat-select" onchange="filterCategory(this.value)">
+  <option value="all">Toutes les catégories</option>
+</select>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  const select = document.getElementById("cat-select");
-  const links = document.querySelectorAll(".quarto-listing-category a.category");
+  var select = document.getElementById("cat-select");
+  var links = document.querySelectorAll(".quarto-listing-category a.category");
+  var seen = {};
   links.forEach(function (link) {
-    const val = link.getAttribute("data-listing-category") || link.textContent.trim();
-    const opt = document.createElement("option");
-    opt.value = val;
-    opt.textContent = val;
-    select.appendChild(opt);
+    var val = link.getAttribute("data-listing-category") || link.textContent.trim();
+    if (val && !seen[val]) {
+      seen[val] = true;
+      var opt = document.createElement("option");
+      opt.value = val;
+      opt.textContent = val;
+      select.appendChild(opt);
+    }
   });
 });
 
 function filterCategory(val) {
+  var links = document.querySelectorAll(".quarto-listing-category a.category");
   if (val === "all") {
-    const allLink = document.querySelector(".quarto-listing-category a.category[data-listing-category='']") ||
-                    document.querySelector(".quarto-listing-category a.category");
-    if (allLink) { allLink.click(); }
+    links.forEach(function(link) {
+      var cat = link.getAttribute("data-listing-category") || link.textContent.trim();
+      if (!cat) { link.click(); }
+    });
+    if (links.length > 0) { links[0].click(); }
     return;
   }
-  const links = document.querySelectorAll(".quarto-listing-category a.category");
   links.forEach(function (link) {
-    const cat = link.getAttribute("data-listing-category") || link.textContent.trim();
+    var cat = link.getAttribute("data-listing-category") || link.textContent.trim();
     if (cat === val) { link.click(); }
   });
 }
 </script>
 ```
+:::
+:::
+
+::: {.section-intro}
+7 projets issus de la formation **Data Analyst d'OpenClassrooms × ENSAE** — analyse de données, modélisation SQL, pipelines dbt et dashboards.
+:::

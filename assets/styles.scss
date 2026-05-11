@@ -216,23 +216,35 @@ body { line-height: 1.7; background: white; }
 /* ── Category sidebar — masquée, remplacée par le dropdown ───────────────── */
 .quarto-listing-category { display: none !important; }
 
-/* ── Category dropdown ───────────────────────────────────────────────────── */
-.category-dropdown-wrap {
+/* ── Filter bar ──────────────────────────────────────────────────────────── */
+.filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   max-width: 860px;
-  margin: 0 auto 1.5rem;
+  margin: 0 auto 1rem;
   padding: 0 1rem;
 
-  select {
-    font-size: 10px;
+  .filter-label {
+    font-size: 0.8rem;
+    color: #9B9BD4;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .filter-right select {
+    font-size: 0.82rem;
     font-family: $font-family-sans-serif;
     color: #4A4A6A;
     background: white;
     border: 1px solid #DDDDF0;
     border-radius: 8px;
-    padding: 0.3rem 0.8rem;
+    padding: 0.35rem 1rem;
     cursor: pointer;
     outline: none;
     transition: border-color 0.15s;
+    min-width: 200px;
 
     &:hover, &:focus { border-color: #9B9BD4; }
   }

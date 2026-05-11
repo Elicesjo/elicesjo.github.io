@@ -1,7 +1,7 @@
 ---
-title: "Tableau de bord dynamique Power BI"
-description: "Création d'un dashboard interactif pour le suivi des indicateurs santé d'une entreprise"
-categories: [Power BI, Visualisation, Dashboard, DAX]
+title: "Dashboard santé entreprise — Power BI"
+description: "Tableau de bord interactif (filtres dynamiques, drill-down, DAX) pour le suivi des KPIs santé de 1 200 collaborateurs"
+categories: [Power BI, Dashboard, DAX]
 image: thumbnail.png
 order: 5
 ---

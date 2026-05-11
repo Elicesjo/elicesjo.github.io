@@ -1,7 +1,7 @@
 ---
-title: "Étude de santé publique avec Python"
-description: "Cartographier la sous-nutrition mondiale et ses causes structurelles avec Python"
-categories: [Python, Pandas, Visualisation, Santé publique]
+title: "Étude de santé publique — Python"
+description: "Analyser les données FAO pour cartographier la sous-nutrition mondiale et identifier ses causes structurelles"
+categories: [Python, Visualisation, Analyse exploratoire]
 image: thumbnail.png
 order: 2
 ---

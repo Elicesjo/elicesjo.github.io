@@ -1,7 +1,7 @@
 ---
-title: "Requête d'une base de données SQL"
-description: "Identifier les vins et régions les plus rentables via des requêtes SQL multi-tables"
-categories: [SQL, Bases de données, Analyse exploratoire]
+title: "Requêtes SQL — Marchand de vin"
+description: "10+ requêtes SQL complexes (jointures, agrégats, sous-requêtes) pour identifier les vins et régions les plus rentables"
+categories: [SQL, Bases de données]
 image: thumbnail.png
 order: 1
 ---

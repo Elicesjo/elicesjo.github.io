@@ -1,7 +1,7 @@
 ---
-title: "Analyse socio-démographique avec dbt"
-description: "Mesurer l'écart entre profils OpenClassrooms et marché du travail via un pipeline dbt"
-categories: [Python, dbt, SQL, Data Engineering, Statistiques]
+title: "Pipeline dbt — Analyse socio-démographique"
+description: "Modéliser un pipeline dbt end-to-end pour comparer les profils des apprenants OpenClassrooms au marché du travail national"
+categories: [Python, SQL, dbt, Data Engineering]
 image: thumbnail.png
 order: 6
 ---
