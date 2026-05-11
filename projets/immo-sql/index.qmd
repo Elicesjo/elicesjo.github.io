@@ -1,6 +1,6 @@
 ---
 title: "Création d'une base de données immobilière"
-description: "Modélisation et alimentation d'une base SQL pour le marché immobilier français"
+description: "Concevoir une base SQL normalisée sur 3NF à partir des données DVF gouvernementales"
 categories: [SQL, Modélisation, PostgreSQL, Bases de données]
 image: thumbnail.png
 order: 3

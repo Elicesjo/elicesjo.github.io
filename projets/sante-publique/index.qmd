@@ -1,6 +1,6 @@
 ---
 title: "Étude de santé publique avec Python"
-description: "Analyse de la sous-nutrition mondiale et des capacités de production alimentaire"
+description: "Cartographier la sous-nutrition mondiale et ses causes structurelles avec Python"
 categories: [Python, Pandas, Visualisation, Santé publique]
 image: thumbnail.png
 order: 2

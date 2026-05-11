@@ -1,119 +1,131 @@
 /*-- scss:defaults --*/
-$primary: #1A1A2E;
-$link-color: #E67E22;
+$primary: #0F172A;
+$link-color: #4F46E5;
 $font-family-sans-serif: "Inter", "Segoe UI", system-ui, sans-serif;
 $headings-font-weight: 700;
-$body-bg: #FAFAFA;
+$body-bg: #F8FAFC;
+$body-color: #1E293B;
 
 /*-- scss:rules --*/
 
-/* ── Typography ─────────────────────────────────────────────────────────── */
-body { color: #2C2C2C; line-height: 1.65; }
-a { transition: color 0.2s; }
+body { line-height: 1.65; }
+
+/* ── Navbar ──────────────────────────────────────────────────────────────── */
+.navbar {
+  background: white !important;
+  border-bottom: 1px solid #E2E8F0;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+  .navbar-brand {
+    font-weight: 800;
+    font-size: 1rem;
+    color: #0F172A !important;
+    letter-spacing: -0.01em;
+  }
+  .nav-link {
+    font-weight: 500;
+    font-size: 0.88rem;
+    color: #475569 !important;
+    &:hover { color: #4F46E5 !important; }
+  }
+}
 
 /* ── Hero ────────────────────────────────────────────────────────────────── */
 .hero {
-  padding: 5rem 2rem 4.5rem;
-  background: linear-gradient(135deg, #0D0D1A 0%, #1A1A2E 45%, #2C1654 75%, #E67E22 130%);
+  padding: 5.5rem 2rem 5rem;
+  background: #0F172A;
   color: white;
   text-align: center;
   position: relative;
   overflow: hidden;
 
-  &::before {
+  &::after {
     content: "";
     position: absolute;
-    inset: 0;
-    background: radial-gradient(ellipse at 70% 40%, rgba(230,126,34,0.18) 0%, transparent 60%);
-    pointer-events: none;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background: #F8FAFC;
+    clip-path: ellipse(55% 100% at 50% 100%);
   }
 
   h1 {
-    font-size: 3.2rem;
+    font-size: 3rem;
     font-weight: 800;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.2rem;
     letter-spacing: -0.03em;
-    line-height: 1.1;
+    color: white;
   }
 
   .tagline {
-    font-size: 1.15rem;
-    opacity: 0.75;
-    font-weight: 400;
-    margin-bottom: 0.5rem;
-    letter-spacing: 0.03em;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
+    color: #4F46E5;
+    margin-bottom: 0.8rem;
   }
 
   .subtitle {
-    font-size: 1.05rem;
-    opacity: 0.85;
+    font-size: 1rem;
+    color: #94A3B8;
     margin-bottom: 2.5rem;
-    max-width: 560px;
+    max-width: 520px;
     margin-left: auto;
     margin-right: auto;
+    line-height: 1.7;
   }
 
   .badges {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.45rem;
+    gap: 0.4rem;
     justify-content: center;
     margin-bottom: 2.5rem;
   }
 
   .badge-skill {
-    background: rgba(255,255,255,0.1);
-    border: 1px solid rgba(255,255,255,0.25);
-    color: rgba(255,255,255,0.9);
-    padding: 0.3rem 1rem;
+    background: rgba(79,70,229,0.15);
+    border: 1px solid rgba(79,70,229,0.3);
+    color: #A5B4FC;
+    padding: 0.28rem 0.9rem;
     border-radius: 20px;
-    font-size: 0.82rem;
+    font-size: 0.78rem;
     font-weight: 500;
-    letter-spacing: 0.02em;
-    backdrop-filter: blur(4px);
   }
 
   .hero-cta {
     display: flex;
-    gap: 1rem;
+    gap: 0.9rem;
     justify-content: center;
     flex-wrap: wrap;
   }
 
   .cta-btn {
     display: inline-block;
-    background: #E67E22;
-    color: white;
-    padding: 0.8rem 2.2rem;
+    background: #4F46E5;
+    color: white !important;
+    padding: 0.75rem 2rem;
     border-radius: 8px;
     font-weight: 600;
-    font-size: 0.95rem;
-    text-decoration: none;
-    transition: background 0.2s, transform 0.15s;
-    box-shadow: 0 4px 15px rgba(230,126,34,0.35);
-    &:hover {
-      background: #D35400;
-      color: white;
-      transform: translateY(-2px);
-    }
+    font-size: 0.9rem;
+    text-decoration: none !important;
+    transition: background 0.18s, transform 0.15s;
+    &:hover { background: #4338CA; transform: translateY(-2px); }
   }
 
   .cta-ghost {
     display: inline-block;
     background: transparent;
-    color: rgba(255,255,255,0.85);
-    padding: 0.8rem 2.2rem;
+    color: #94A3B8 !important;
+    padding: 0.75rem 2rem;
     border-radius: 8px;
     font-weight: 500;
-    font-size: 0.95rem;
-    text-decoration: none;
-    border: 1px solid rgba(255,255,255,0.3);
-    transition: all 0.2s;
-    &:hover {
-      background: rgba(255,255,255,0.1);
-      color: white;
-    }
+    font-size: 0.9rem;
+    text-decoration: none !important;
+    border: 1px solid #334155;
+    transition: all 0.18s;
+    &:hover { border-color: #4F46E5; color: white !important; }
   }
 }
 
@@ -125,157 +137,187 @@ a { transition: color 0.2s; }
   justify-content: center;
   gap: 5rem;
   flex-wrap: wrap;
-  border-bottom: 1px solid #ECECEC;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  border-bottom: 1px solid #E2E8F0;
 
   .stat {
     text-align: center;
     .stat-number {
-      font-size: 2.2rem;
+      font-size: 2rem;
       font-weight: 800;
-      color: #E67E22;
+      color: #4F46E5;
       line-height: 1;
     }
     .stat-label {
-      font-size: 0.78rem;
-      color: #888;
+      font-size: 0.75rem;
+      color: #94A3B8;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-top: 0.25rem;
+      letter-spacing: 0.07em;
+      margin-top: 0.3rem;
     }
   }
 }
 
 /* ── About section ───────────────────────────────────────────────────────── */
 .about-section {
-  max-width: 780px;
+  max-width: 760px;
   margin: 3.5rem auto;
   padding: 0 1.5rem;
   text-align: center;
 
   h2 {
-    color: $primary;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+    color: #0F172A;
     margin-bottom: 1rem;
-    position: relative;
-    display: inline-block;
     &::after {
       content: "";
       display: block;
-      width: 40px;
+      width: 36px;
       height: 3px;
-      background: #E67E22;
+      background: #4F46E5;
       margin: 0.4rem auto 0;
       border-radius: 2px;
     }
   }
 
-  p { font-size: 1.05rem; line-height: 1.75; color: #444; }
+  p { font-size: 1rem; line-height: 1.8; color: #475569; }
 }
 
-/* ── Project listing cards ───────────────────────────────────────────────── */
+/* ── Projects listing title ──────────────────────────────────────────────── */
+#quarto-content h1.title,
+.quarto-title h1 {
+  font-size: 1.7rem !important;
+  color: #0F172A !important;
+  font-weight: 800 !important;
+  border: none !important;
+  margin-bottom: 0.25rem !important;
+}
+
+/* ── Category filter → style as tab bar ─────────────────────────────────── */
+.quarto-listing-category {
+  position: sticky;
+  top: 56px;
+  z-index: 100;
+  background: #F8FAFC;
+  padding: 0.75rem 0 0.75rem;
+  border-bottom: 1px solid #E2E8F0;
+  margin-bottom: 1.5rem !important;
+
+  .quarto-listing-category-title {
+    display: none !important;
+  }
+
+  .category-title-item {
+    display: none !important;
+  }
+
+  a.category {
+    display: inline-block !important;
+    background: white !important;
+    color: #475569 !important;
+    border: 1px solid #E2E8F0 !important;
+    border-radius: 20px !important;
+    padding: 0.3rem 1rem !important;
+    font-size: 0.8rem !important;
+    font-weight: 600 !important;
+    margin: 0.2rem 0.2rem !important;
+    transition: all 0.15s !important;
+    text-decoration: none !important;
+
+    &:hover {
+      border-color: #4F46E5 !important;
+      color: #4F46E5 !important;
+      background: #EEF2FF !important;
+    }
+
+    &.active {
+      background: #4F46E5 !important;
+      color: white !important;
+      border-color: #4F46E5 !important;
+    }
+  }
+}
+
+/* ── Project cards ───────────────────────────────────────────────────────── */
 #quarto-content .quarto-listing .card,
 .quarto-listing-default .card {
-  border: none !important;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.07) !important;
+  border: 1px solid #E2E8F0 !important;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05) !important;
   border-radius: 12px !important;
-  transition: transform 0.22s ease, box-shadow 0.22s ease !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease !important;
   overflow: hidden;
-  background: white;
+  background: white !important;
 
   &:hover {
-    transform: translateY(-6px) !important;
-    box-shadow: 0 12px 32px rgba(0,0,0,0.13) !important;
+    transform: translateY(-4px) !important;
+    box-shadow: 0 8px 24px rgba(79,70,229,0.12) !important;
+    border-color: #C7D2FE !important;
   }
 
   .card-img-top {
-    height: 195px !important;
+    height: 185px !important;
     object-fit: cover !important;
+    border-bottom: 1px solid #F1F5F9;
   }
 
-  .card-body { padding: 1.2rem 1.3rem 0.8rem; }
+  .card-body { padding: 1.1rem 1.2rem 1rem; }
 
   .card-title {
-    font-size: 0.97rem !important;
+    font-size: 0.95rem !important;
     font-weight: 700 !important;
-    color: #1A1A2E !important;
-    margin-bottom: 0.45rem !important;
+    color: #0F172A !important;
+    margin-bottom: 0.4rem !important;
     line-height: 1.35 !important;
   }
 
   .card-text {
-    font-size: 0.84rem !important;
-    color: #666 !important;
+    font-size: 0.82rem !important;
+    color: #64748B !important;
     line-height: 1.5 !important;
   }
-}
-
-/* ── Category filter pills ───────────────────────────────────────────────── */
-.quarto-listing-category .category,
-.quarto-listing-category-title {
-  font-size: 0.8rem !important;
-  font-weight: 600 !important;
 }
 
 /* ── Tool badges ─────────────────────────────────────────────────────────── */
 .tool-badge {
   display: inline-block;
-  background: #1A1A2E;
-  color: #E67E22;
-  padding: 0.22rem 0.85rem;
+  background: #EEF2FF;
+  color: #4F46E5;
+  padding: 0.2rem 0.8rem;
   border-radius: 5px;
   font-size: 0.78rem;
   font-weight: 600;
   margin: 0.2rem;
-  letter-spacing: 0.02em;
 }
 
 /* ── Key results ─────────────────────────────────────────────────────────── */
 .key-result {
-  background: #FFF8F3;
-  border-left: 4px solid #E67E22;
-  padding: 0.75rem 1.1rem;
-  margin: 0.5rem 0;
+  background: #F8FAFC;
+  border-left: 3px solid #4F46E5;
+  padding: 0.7rem 1rem;
+  margin: 0.45rem 0;
   border-radius: 0 8px 8px 0;
-  font-size: 0.95rem;
-  color: #333;
+  font-size: 0.93rem;
+  color: #1E293B;
 }
 
-/* ── CTA button (project pages) ──────────────────────────────────────────── */
+/* ── CTA button ──────────────────────────────────────────────────────────── */
 a.cta-btn {
   display: inline-block !important;
-  background: #E67E22 !important;
+  background: #4F46E5 !important;
   color: white !important;
-  padding: 0.7rem 1.8rem !important;
+  padding: 0.65rem 1.7rem !important;
   border-radius: 7px !important;
   font-weight: 600 !important;
-  font-size: 0.9rem !important;
+  font-size: 0.88rem !important;
   text-decoration: none !important;
-  margin-top: 1.2rem !important;
-  transition: background 0.2s, transform 0.15s !important;
-  box-shadow: 0 3px 10px rgba(230,126,34,0.3) !important;
-  &:hover {
-    background: #D35400 !important;
-    color: white !important;
-    transform: translateY(-2px) !important;
-  }
-}
-
-/* ── Navbar ──────────────────────────────────────────────────────────────── */
-.navbar {
-  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
-  .navbar-brand { font-weight: 800; font-size: 1.05rem; letter-spacing: -0.01em; }
-  .nav-link { font-weight: 500; font-size: 0.9rem; }
+  margin-top: 1rem !important;
+  transition: background 0.18s, transform 0.15s !important;
+  &:hover { background: #4338CA !important; transform: translateY(-2px) !important; }
 }
 
 /* ── Footer ──────────────────────────────────────────────────────────────── */
-.nav-footer { font-size: 0.82rem; opacity: 0.85; }
-
-/* ── Page title (projets page) ───────────────────────────────────────────── */
-#quarto-content h1.title {
-  font-size: 1.9rem;
-  color: $primary;
-  border-bottom: 3px solid #E67E22;
-  padding-bottom: 0.5rem;
-  display: inline-block;
+.nav-footer {
+  background: white !important;
+  border-top: 1px solid #E2E8F0 !important;
+  font-size: 0.82rem !important;
+  color: #94A3B8 !important;
 }

@@ -1,6 +1,6 @@
 ---
 title: "Optimisation de la gestion des données e-commerce"
-description: "Nettoyage, jointures et analyse des ventes d'une boutique en ligne avec Python"
+description: "Auditer et consolider les données d'une boutique e-commerce pour fiabiliser le reporting"
 categories: [Python, Pandas, Jupyter, E-commerce]
 image: thumbnail.png
 order: 4

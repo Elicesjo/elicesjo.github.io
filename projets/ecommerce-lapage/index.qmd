@@ -1,6 +1,6 @@
 ---
 title: "Analyse e-commerce — La Page"
-description: "Analyse du chiffre d'affaires, comportement client et segmentation RFM d'une librairie en ligne"
+description: "Segmenter 2 500 clients en 5 profils RFM et identifier les leviers de croissance"
 categories: [Python, Statistiques, RFM, E-commerce, Visualisation]
 image: thumbnail.png
 order: 7

@@ -1,6 +1,6 @@
 ---
 title: "Requête d'une base de données SQL"
-description: "Jointures et analyse des ventes d'un marchand de vin via SQL"
+description: "Identifier les vins et régions les plus rentables via des requêtes SQL multi-tables"
 categories: [SQL, Bases de données, Analyse exploratoire]
 image: thumbnail.png
 order: 1
