@@ -11,21 +11,21 @@ JE
 # Josy Elices-Diez
 
 ::: {.role-tags}
-[Data Analyst]{.role-tag} [SQL]{.role-tag} [Python]{.role-tag} [Power BI]{.role-tag} [dbt]{.role-tag}
+[Data Analyst]{.role-tag} [Retail Specialist]{.role-tag} [Python · SQL]{.role-tag} [Power BI · dbt]{.role-tag}
 :::
 
 ::: {.panel-tabset}
 ## Français
 
-**Data Analyst** diplômée de la formation d'OpenClassrooms en partenariat avec l'ENSAE Paris, je maîtrise l'ensemble de la chaîne de traitement de la donnée — de la collecte et la modélisation SQL jusqu'à la visualisation et la communication des résultats.
+**Data Analyst** avec 5 ans d'expérience en retail, je combine une expertise terrain — gestion d'équipes, analyse des KPIs de vente, pilotage du chiffre d'affaires — avec des compétences techniques solides en Python, SQL et Power BI.
 
-Mes projets couvrent des domaines variés : santé publique, immobilier, e-commerce et socio-démographie. Je travaille avec **Python**, **SQL**, **dbt** et **Power BI**. Je suis disponible pour des missions en **Data Analyst** ou **Data Engineer** junior.
+Après une formation intensive **Data Analytics chez OpenClassrooms**, je cherche un poste où je peux transformer des données complexes en décisions claires pour les équipes métier. Disponible pour des missions **Data Analyst** ou **Data Engineer** junior.
 
 ## English
 
-**Data Analyst** with a diploma from OpenClassrooms in partnership with ENSAE Paris. I cover the full data pipeline — from SQL modelling to visualization and communicating insights to stakeholders.
+**Data Analyst** with 5 years of retail experience, I combine hands-on business expertise — team management, sales KPI analysis, revenue growth — with a strong technical toolkit in Python, SQL and Power BI.
 
-My projects span public health, real estate, e-commerce, and sociodemographics. I work with **Python**, **SQL**, **dbt** and **Power BI**. Open to **Data Analyst** or junior **Data Engineer** roles.
+After an intensive **Data Analytics training at OpenClassrooms**, I'm looking for a position where I can make complex data easy to understand for business teams. Open to **Data Analyst** or junior **Data Engineer** roles.
 :::
 
 ::: {.hero-actions}
@@ -33,7 +33,8 @@ My projects span public health, real estate, e-commerce, and sociodemographics. 
 :::
 
 ::: {.contact-links}
-[elicesjoachats@gmail.com](mailto:elicesjoachats@gmail.com){.contact-link}
+[josy.elices@gmail.com](mailto:josy.elices@gmail.com){.contact-link}
+[+33 6 87 15 14 41](tel:+33687151441){.contact-link}
 [LinkedIn](https://www.linkedin.com/in/josy-elices-diez){.contact-link}
 [GitHub](https://github.com/Elicesjo){.contact-link}
 :::
@@ -46,7 +47,7 @@ My projects span public health, real estate, e-commerce, and sociodemographics. 
 ::: {.skill-group}
 #### Langages & outils
 
-[Python]{.skill-badge} [SQL]{.skill-badge} [dbt]{.skill-badge} [Power BI]{.skill-badge} [Quarto]{.skill-badge}
+[Python]{.skill-badge} [SQL]{.skill-badge} [dbt]{.skill-badge} [Power BI]{.skill-badge} [Excel]{.skill-badge}
 :::
 
 ::: {.skill-group}
@@ -56,9 +57,15 @@ My projects span public health, real estate, e-commerce, and sociodemographics. 
 :::
 
 ::: {.skill-group}
-#### Bases de données
+#### Bases de données & modélisation
 
-[PostgreSQL]{.skill-badge} [SQLite]{.skill-badge} [DBeaver]{.skill-badge}
+[PostgreSQL]{.skill-badge} [SQLite]{.skill-badge} [DBeaver]{.skill-badge} [Data Modeling]{.skill-badge}
+:::
+
+::: {.skill-group}
+#### Langues
+
+[Français — natif]{.skill-badge} [Anglais — C1]{.skill-badge} [Espagnol — A2]{.skill-badge}
 :::
 
 :::
