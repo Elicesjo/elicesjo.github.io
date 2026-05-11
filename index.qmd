@@ -10,12 +10,9 @@ JE
 
 # Josy Elices-Diez
 
-::: {.job-title}
-Data Analyst · OpenClassrooms × ENSAE Paris
+::: {.role-tags}
+[Data Analyst]{.role-tag} [SQL]{.role-tag} [Python]{.role-tag} [Power BI]{.role-tag} [dbt]{.role-tag}
 :::
-:::
-
-::: {.about-content}
 
 ::: {.panel-tabset}
 ## Français
@@ -31,10 +28,23 @@ Mes projets couvrent des domaines variés : santé publique, immobilier, e-comme
 My projects span public health, real estate, e-commerce, and sociodemographics. I work with **Python**, **SQL**, **dbt** and **Power BI**. Open to **Data Analyst** or junior **Data Engineer** roles.
 :::
 
+::: {.hero-actions}
+[Télécharger mon CV](assets/cv.pdf){.cv-btn}
+:::
+
+::: {.contact-links}
+[elicesjoachats@gmail.com](mailto:elicesjoachats@gmail.com){.contact-link}
+[LinkedIn](https://www.linkedin.com/in/josy-elices-diez){.contact-link}
+[GitHub](https://github.com/Elicesjo){.contact-link}
+:::
+:::
+
+::: {.about-content}
+
 ---
 
 ::: {.skill-group}
-#### Languages & outils
+#### Langages & outils
 
 [Python]{.skill-badge} [SQL]{.skill-badge} [dbt]{.skill-badge} [Power BI]{.skill-badge} [Quarto]{.skill-badge}
 :::

@@ -18,7 +18,7 @@ listing:
 :::
 :::
 
-::: {.stat-cards}
+::: {.stat-cards .stat-cards-2}
 ::: {.stat-card .pink}
 ::: {.stat-icon}
 {{< bi folder2 >}}
@@ -28,21 +28,6 @@ listing:
 :::
 ::: {.stat-label}
 Projets réalisés
-:::
-:::
-
-::: {.stat-card .purple}
-::: {.stat-icon}
-{{< bi calendar3 >}}
-:::
-::: {.stat-number}
-6 mois
-:::
-::: {.stat-label}
-Terminée en
-:::
-::: {.stat-sub}
-au lieu de 12
 :::
 :::
 

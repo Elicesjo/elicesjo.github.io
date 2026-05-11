@@ -81,6 +81,13 @@ body { line-height: 1.7; background: white; }
   box-shadow: 0 4px 20px rgba(100,100,160,0.12);
 
   @media (max-width: 640px) { grid-template-columns: 1fr; }
+
+  &.stat-cards-2 {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 580px;
+
+    @media (max-width: 480px) { grid-template-columns: 1fr; }
+  }
 }
 
 .stat-card {
@@ -225,9 +232,62 @@ body { line-height: 1.7; background: white; }
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 2.4rem;
     color: #3A3A5C;
-    margin-bottom: 0.3rem;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+  }
+
+  .role-tags {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.4rem;
+  }
+
+  .role-tag {
+    display: inline-block;
+    background: linear-gradient(135deg, #F0F0FF, #F8F0FF);
+    color: #5A5A8A;
+    border: 1px solid #D8D8F0;
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+
+  .hero-actions {
+    margin: 1.5rem 0 1rem;
+  }
+
+  .contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: #7A7A9A !important;
+    font-size: 0.82rem;
+    font-weight: 500;
+    text-decoration: none !important;
+    padding: 0.28rem 0.9rem;
+    border: 1px solid #DDDDF0;
+    border-radius: 20px;
+    transition: all 0.15s;
+
+    &:hover {
+      color: #4A4A6A !important;
+      border-color: #9B9BD4;
+      background: #F5F5FF;
+    }
   }
 
   .job-title {
@@ -237,6 +297,27 @@ body { line-height: 1.7; background: white; }
     letter-spacing: 0.1em;
     text-transform: uppercase;
     margin-bottom: 1.5rem;
+  }
+}
+
+/* ── CV button ───────────────────────────────────────────────────────────── */
+a.cv-btn {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 0.4rem;
+  background: linear-gradient(135deg, #E89090, #D47070) !important;
+  color: white !important;
+  padding: 0.6rem 1.6rem !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  font-size: 0.88rem !important;
+  text-decoration: none !important;
+  box-shadow: 0 4px 12px rgba(232,144,144,0.35) !important;
+  transition: transform 0.15s, box-shadow 0.15s !important;
+  &:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 18px rgba(232,144,144,0.45) !important;
+    color: white !important;
   }
 }
 
