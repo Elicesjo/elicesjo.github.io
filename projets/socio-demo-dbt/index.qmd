@@ -36,7 +36,7 @@ Pipeline dbt structuré en 2 couches (staging + marts) avec schémas documentés
 Pyramide des âges et répartition géographique des apprenants vs population nationale
 :::
 
-[Voir le repo GitHub](https://github.com/Elicesjo/PROJET-8-){.cta-btn style="display:inline-block;margin-top:1rem;"}
+[Voir le repo GitHub](https://github.com/Elicesjo/PROJET-7-){.cta-btn style="display:inline-block;margin-top:1rem;"}
 
 ## English
 
@@ -67,5 +67,5 @@ Gender gaps and OC penetration rates visualized by region and age group
 Age pyramid and geographic distribution of learners vs. national population
 :::
 
-[View GitHub repo](https://github.com/Elicesjo/PROJET-8-){.cta-btn style="display:inline-block;margin-top:1rem;"}
+[View GitHub repo](https://github.com/Elicesjo/PROJET-7-){.cta-btn style="display:inline-block;margin-top:1rem;"}
 :::

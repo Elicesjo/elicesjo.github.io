@@ -38,7 +38,7 @@ Segmentation RFM identifiant 5 profils clients distincts avec CA par segment
 Différences significatives H/F sur le panier moyen (Mann-Whitney, p < 0.05)
 :::
 
-[Voir le repo GitHub](https://github.com/Elicesjo/PROJET-9-){.cta-btn style="display:inline-block;margin-top:1rem;"}
+[Voir le repo GitHub](https://github.com/Elicesjo/PROJET-8-){.cta-btn style="display:inline-block;margin-top:1rem;"}
 
 ## English
 
@@ -71,5 +71,5 @@ RFM segmentation identifying 5 distinct customer profiles with revenue per segme
 Significant M/F differences in average basket (Mann-Whitney, p < 0.05)
 :::
 
-[View GitHub repo](https://github.com/Elicesjo/PROJET-9-){.cta-btn style="display:inline-block;margin-top:1rem;"}
+[View GitHub repo](https://github.com/Elicesjo/PROJET-8-){.cta-btn style="display:inline-block;margin-top:1rem;"}
 :::
