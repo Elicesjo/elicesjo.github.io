@@ -8,7 +8,7 @@ listing:
   fields: [image, title, description, categories]
   categories: true
   sort: "order"
-  image-height: "220px"
+  image-height: "260px"
 ---
 
 ::: {.page-hero}
