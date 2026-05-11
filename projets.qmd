@@ -4,11 +4,11 @@ page-layout: full
 listing:
   contents: projets
   type: grid
-  grid-columns: 3
+  grid-columns: 1
   fields: [image, title, description, categories]
   categories: true
   sort: "order"
-  image-height: "190px"
+  image-height: "320px"
 ---
 
 ::: {.page-hero}
