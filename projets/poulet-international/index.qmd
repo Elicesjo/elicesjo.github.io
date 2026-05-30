@@ -1,0 +1,77 @@
+---
+title: "Expansion internationale — La poule qui chante"
+description: "Identifier des groupements de pays cibles pour l'export de poulets bio via ACP et clustering (CAH + K-means)"
+categories: [Python, ACP, Clustering, Analyse de données]
+image: thumbnail.png
+order: 8
+---
+
+::: {.panel-tabset}
+## Français
+
+### Contexte
+
+Mission d'analyse pour une entreprise agroalimentaire française souhaitant évaluer son potentiel d'expansion internationale. À partir des données FAO (New Food Balances), de la Banque mondiale et de données mondiales, l'objectif est de regrouper les pays en clusters homogènes pour identifier des marchés cibles pour l'export de poulets bio.
+
+### Outils
+
+[Python]{.tool-badge} [Pandas]{.tool-badge} [Scikit-learn]{.tool-badge} [Matplotlib]{.tool-badge} [Seaborn]{.tool-badge} [Jupyter]{.tool-badge}
+
+### Méthodologie
+
+- Collecte de données open data : FAO, Banque mondiale, données mondiales (≥ 8 variables, cadre PESTEL)
+- Nettoyage et consolidation des sources dans un fichier unique (≥ 100 pays, ≥ 60 % de la population mondiale)
+- Analyse exploratoire : distributions, corrélations, valeurs manquantes
+- ACP (Analyse en Composantes Principales) avec réduction dimensionnelle
+- Analyse du cercle des corrélations et projection des individus
+- Classification Ascendante Hiérarchique (CAH) pour déterminer le nombre optimal de clusters
+- K-means pour la segmentation finale des pays
+
+### Résultats clés
+
+::: {.key-result}
+Segmentation en 4 groupes de pays aux profils de consommation et de marché distincts
+:::
+::: {.key-result}
+Préconisation d'un groupe prioritaire à fort potentiel d'export basé sur la consommation de volaille et le PIB/habitant
+:::
+::: {.key-result}
+Plus de 100 pays analysés couvrant plus de 60 % de la population mondiale
+:::
+
+[Voir le repo GitHub](https://github.com/Elicesjo/PROJET-11-){.cta-btn style="display:inline-block;margin-top:1rem;"}
+
+## English
+
+### Context
+
+Analysis mission for a French agri-food company looking to evaluate its international expansion potential. Using FAO (New Food Balances), World Bank and global datasets, the goal is to group countries into homogeneous clusters to identify target export markets for organic chicken.
+
+### Tools
+
+[Python]{.tool-badge} [Pandas]{.tool-badge} [Scikit-learn]{.tool-badge} [Matplotlib]{.tool-badge} [Seaborn]{.tool-badge} [Jupyter]{.tool-badge}
+
+### Methodology
+
+- Open data collection: FAO, World Bank, global datasets (≥ 8 variables, PESTEL framework)
+- Cleaning and consolidation into a single file (≥ 100 countries, ≥ 60% of world population)
+- Exploratory data analysis: distributions, correlations, missing values
+- PCA (Principal Component Analysis) with dimensionality reduction
+- Correlation circle and individual projection analysis
+- Hierarchical Agglomerative Clustering (HAC) to determine optimal number of clusters
+- K-means for final country segmentation
+
+### Key results
+
+::: {.key-result}
+Segmentation into 4 country groups with distinct consumption and market profiles
+:::
+::: {.key-result}
+Priority export group identified based on poultry consumption and GDP per capita
+:::
+::: {.key-result}
+Over 100 countries analysed covering more than 60% of the world population
+:::
+
+[View GitHub repo](https://github.com/Elicesjo/PROJET-11-){.cta-btn style="display:inline-block;margin-top:1rem;"}
+:::

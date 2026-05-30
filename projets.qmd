@@ -26,37 +26,34 @@ Filtrer par catégorie
 ```{=html}
 <select id="cat-select" onchange="filterCategory(this.value)">
   <option value="all">Toutes les catégories</option>
+  <option value="SQL">SQL</option>
+  <option value="Bases de données">Bases de données</option>
+  <option value="Modélisation">Modélisation</option>
+  <option value="Python">Python</option>
+  <option value="Nettoyage de données">Nettoyage de données</option>
+  <option value="Visualisation">Visualisation</option>
+  <option value="Analyse exploratoire">Analyse exploratoire</option>
+  <option value="Statistiques">Statistiques</option>
+  <option value="Power BI">Power BI</option>
+  <option value="Dashboard">Dashboard</option>
+  <option value="DAX">DAX</option>
+  <option value="dbt">dbt</option>
+  <option value="Data Engineering">Data Engineering</option>
+  <option value="ACP">ACP</option>
+  <option value="Clustering">Clustering</option>
 </select>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  var select = document.getElementById("cat-select");
-  var links = document.querySelectorAll(".quarto-listing-category a.category");
-  var seen = {};
-  links.forEach(function (link) {
-    var val = link.getAttribute("data-listing-category") || link.textContent.trim();
-    if (val && !seen[val]) {
-      seen[val] = true;
-      var opt = document.createElement("option");
-      opt.value = val;
-      opt.textContent = val;
-      select.appendChild(opt);
-    }
-  });
-});
 
+<script>
 function filterCategory(val) {
-  var links = document.querySelectorAll(".quarto-listing-category a.category");
-  if (val === "all") {
-    links.forEach(function(link) {
-      var cat = link.getAttribute("data-listing-category") || link.textContent.trim();
-      if (!cat) { link.click(); }
-    });
-    if (links.length > 0) { links[0].click(); }
-    return;
-  }
-  links.forEach(function (link) {
-    var cat = link.getAttribute("data-listing-category") || link.textContent.trim();
-    if (cat === val) { link.click(); }
+  var items = document.querySelectorAll(".quarto-grid-item");
+  items.forEach(function(item) {
+    if (val === "all") {
+      item.style.display = "";
+      return;
+    }
+    var cats = Array.from(item.querySelectorAll(".listing-category"))
+                    .map(function(el) { return el.textContent.trim(); });
+    item.style.display = cats.includes(val) ? "" : "none";
   });
 }
 </script>
@@ -65,5 +62,5 @@ function filterCategory(val) {
 :::
 
 ::: {.section-intro}
-7 projets issus de la formation **Data Analyst d'OpenClassrooms × ENSAE** — analyse de données, modélisation SQL, pipelines dbt et dashboards.
+8 projets issus de la formation **Data Analyst d'OpenClassrooms × ENSAE** — analyse de données, modélisation SQL, pipelines dbt et dashboards.
 :::
