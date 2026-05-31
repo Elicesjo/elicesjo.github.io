@@ -6,7 +6,7 @@ listing:
   type: grid
   grid-columns: 1
   fields: [image, title, description, categories]
-  categories: true
+  categories: false
   sort: "order"
   image-height: "260px"
 ---
