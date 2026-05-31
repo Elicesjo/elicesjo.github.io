@@ -7,8 +7,8 @@ website:
   favicon: assets/favicon.png
   navbar:
     pinned: true
-    background: white
-    foreground: "#4A4A6A"
+    background: "#0D0D0D"
+    foreground: "#C0C0D8"
     left:
       - text: "Présentation"
         href: index.qmd
@@ -19,13 +19,13 @@ website:
         href: https://github.com/Elicesjo
         aria-label: GitHub
       - icon: linkedin
-        href: "https://www.linkedin.com/in/josy-elices-diez"
+        href: "https://www.linkedin.com/in/josy-elices-diez-03523225a/"
         aria-label: LinkedIn
 
   page-footer:
-    center: "Josy Elices-Diez · Data Analyst · [GitHub](https://github.com/Elicesjo)"
-    background: white
-    foreground: "#94A3B8"
+    center: "Josy Elices-Diez · Data Analyst · [GitHub](https://github.com/Elicesjo) · [LinkedIn](https://www.linkedin.com/in/josy-elices-diez-03523225a/)"
+    background: "#0D0D0D"
+    foreground: "#6B6B8A"
 
 format:
   html:

@@ -17,15 +17,15 @@ JE
 ::: {.panel-tabset}
 ## Français
 
-**Data Analyst** avec 5 ans d'expérience en retail, je combine une expertise terrain — gestion d'équipes, analyse des KPIs de vente, pilotage du chiffre d'affaires — avec des compétences techniques solides en Python, SQL et Power BI.
+**Data Analyst** avec 10 ans d'expérience en retail, je combine une expertise terrain solide — management d'équipes, gestion de projet, pilotage des KPIs de vente et du chiffre d'affaires — avec des compétences techniques en Python, SQL, Power BI et dbt.
 
-Après une formation intensive **Data Analytics chez OpenClassrooms**, je cherche un poste où je peux transformer des données complexes en décisions claires pour les équipes métier. Disponible pour des missions **Data Analyst** ou **Data Engineer** junior.
+Après une formation intensive **Data Analytics chez OpenClassrooms × ENSAE**, je cherche un poste où je peux transformer des données complexes en décisions actionnables pour les équipes métier.
 
 ## English
 
-**Data Analyst** with 5 years of retail experience, I combine hands-on business expertise — team management, sales KPI analysis, revenue growth — with a strong technical toolkit in Python, SQL and Power BI.
+**Data Analyst** with 10 years of retail experience, I bring strong field expertise — team management, project management, KPI tracking and revenue growth — combined with a solid technical toolkit in Python, SQL, Power BI and dbt.
 
-After an intensive **Data Analytics training at OpenClassrooms**, I'm looking for a position where I can make complex data easy to understand for business teams. Open to **Data Analyst** or junior **Data Engineer** roles.
+After an intensive **Data Analytics training at OpenClassrooms × ENSAE**, I'm looking for a role where I can turn complex data into clear, actionable insights for business teams.
 :::
 
 ::: {.hero-actions}
@@ -35,7 +35,7 @@ After an intensive **Data Analytics training at OpenClassrooms**, I'm looking fo
 ::: {.contact-links}
 [josy.elices@gmail.com](mailto:josy.elices@gmail.com){.contact-link}
 [+33 6 87 15 14 41](tel:+33687151441){.contact-link}
-[LinkedIn](https://www.linkedin.com/in/josy-elices-diez){.contact-link}
+[LinkedIn](https://www.linkedin.com/in/josy-elices-diez-03523225a/){.contact-link}
 [GitHub](https://github.com/Elicesjo){.contact-link}
 :::
 :::
@@ -47,19 +47,31 @@ After an intensive **Data Analytics training at OpenClassrooms**, I'm looking fo
 ::: {.skill-group}
 #### Langages & outils
 
-[Python]{.skill-badge} [SQL]{.skill-badge} [dbt]{.skill-badge} [Power BI]{.skill-badge} [Excel]{.skill-badge}
+[Python]{.skill-badge} [SQL]{.skill-badge} [dbt]{.skill-badge} [Power BI]{.skill-badge} [Excel]{.skill-badge} [Git]{.skill-badge}
 :::
 
 ::: {.skill-group}
 #### Librairies Python
 
-[Pandas]{.skill-badge} [Matplotlib]{.skill-badge} [Seaborn]{.skill-badge} [SciPy]{.skill-badge} [Jupyter]{.skill-badge}
+[Pandas]{.skill-badge} [Matplotlib]{.skill-badge} [Seaborn]{.skill-badge} [SciPy]{.skill-badge} [Scikit-learn]{.skill-badge} [Jupyter]{.skill-badge} [Quarto]{.skill-badge}
 :::
 
 ::: {.skill-group}
 #### Bases de données & modélisation
 
-[PostgreSQL]{.skill-badge} [SQLite]{.skill-badge} [DBeaver]{.skill-badge} [Data Modeling]{.skill-badge}
+[PostgreSQL]{.skill-badge} [SQLite]{.skill-badge} [DBeaver]{.skill-badge} [Modélisation relationnelle]{.skill-badge} [Normalisation 3NF]{.skill-badge}
+:::
+
+::: {.skill-group}
+#### Méthodes analytiques
+
+[Segmentation RFM]{.skill-badge} [ACP]{.skill-badge} [Clustering K-means]{.skill-badge} [CAH]{.skill-badge} [Tests statistiques]{.skill-badge} [Analyse exploratoire]{.skill-badge} [Visualisation de données]{.skill-badge}
+:::
+
+::: {.skill-group}
+#### Expertise métier — Retail
+
+[Pilotage KPIs]{.skill-badge} [Analyse des ventes]{.skill-badge} [Reporting opérationnel]{.skill-badge} [Management d'équipes]{.skill-badge} [Gestion de projet]{.skill-badge}
 :::
 
 ::: {.skill-group}
