@@ -4,7 +4,7 @@ page-layout: full
 listing:
   contents: projets
   type: grid
-  grid-columns: 2
+  grid-columns: 1
   fields: [image, title, description, categories]
   categories: true
   sort: "order"
