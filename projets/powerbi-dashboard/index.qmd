@@ -1,5 +1,5 @@
 ---
-title: "Dashboard santé entreprise — Power BI"
+title: "Dashboard KPIs RH — Power BI title: "Dashboard santé entreprise — Power BI" DAX"
 description: "Tableau de bord interactif (filtres dynamiques, drill-down, DAX) pour le suivi des KPIs santé de 1 200 collaborateurs"
 categories: [Power BI, Dashboard, DAX]
 image: thumbnail.png

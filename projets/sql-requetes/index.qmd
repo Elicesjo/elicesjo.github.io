@@ -1,5 +1,5 @@
 ---
-title: "Requêtes SQL — Marchand de vin"
+title: "Analyse des ventes SQL — Requêtes avancées"
 description: "10+ requêtes SQL complexes (jointures, agrégats, sous-requêtes) pour identifier les vins et régions les plus rentables"
 categories: [SQL, Bases de données]
 image: thumbnail.png

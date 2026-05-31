@@ -1,5 +1,5 @@
 ---
-title: "Création d'une base de données immobilière"
+title: "Modélisation SQL — Base de données immobilière"
 description: "Concevoir et peupler une base SQL normalisée (3NF) à partir de 500 000 transactions DVF — schéma relationnel complet"
 categories: [SQL, Bases de données, Modélisation]
 image: thumbnail.png

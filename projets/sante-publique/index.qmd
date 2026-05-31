@@ -1,5 +1,5 @@
 ---
-title: "Étude de santé publique — Python"
+title: "Analyse de la sous-nutrition mondiale — Python"
 description: "Analyser les données FAO pour cartographier la sous-nutrition mondiale et identifier ses causes structurelles"
 categories: [Python, Visualisation, Analyse exploratoire]
 image: thumbnail.png

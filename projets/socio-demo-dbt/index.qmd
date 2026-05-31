@@ -1,5 +1,5 @@
 ---
-title: "Pipeline dbt — Analyse socio-démographique"
+title: "Pipeline dbt — Profils socio-démographiques"
 description: "Modéliser un pipeline dbt end-to-end pour comparer les profils des apprenants OpenClassrooms au marché du travail national"
 categories: [Python, SQL, dbt, Data Engineering]
 image: thumbnail.png
