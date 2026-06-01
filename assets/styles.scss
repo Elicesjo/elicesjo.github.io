@@ -535,9 +535,12 @@ a.cta-btn {
 
 /* ── Bio tabset (page présentation) ─────────────────────────────────────── */
 .about-hero .panel-tabset {
+  margin-top: 3rem;
+  margin-bottom: 2.5rem;
+
   .nav-tabs {
     border-bottom: none !important;
-    margin-bottom: 0.8rem;
+    margin-bottom: 1.2rem;
   }
 
   .tab-content {
@@ -546,11 +549,14 @@ a.cta-btn {
     padding: 0 !important;
 
     p {
-      font-size: 1.08rem;
-      line-height: 1.85;
+      font-size: 1.12rem;
+      line-height: 1.9;
       text-align: justify;
       color: #C0C0DC;
-      margin-bottom: 1rem;
+      margin-bottom: 1.2rem;
+      max-width: 620px;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 }

@@ -24,15 +24,15 @@ Data Analyst · Retail Specialist
 ::: {.panel-tabset}
 ## Français
 
-Après 10 ans à piloter des équipes et la performance commerciale en retail, j'ai fait le choix de la data.
+10 ans en retail — manager, analyste terrain, pilote de KPIs. Aujourd'hui, data analyst.
 
-Formée à la data analytics chez **OpenClassrooms × ENSAE**, je mobilise Python, SQL et Power BI pour transformer des données complexes en décisions concrètes. Ce qui me distingue : je comprends le terrain autant que les chiffres — et je sais faire le lien entre les deux.
+Formée chez **OpenClassrooms × ENSAE**, je transforme des données brutes en décisions actionnables : segmentation client, analyse des ventes, tableaux de bord. Je parle la langue du business autant que celle des données — c'est là mon vrai atout.
 
 ## English
 
-After 10 years leading teams and driving commercial performance in retail, I made the move into data.
+10 years in retail — team manager, field analyst, KPI driver. Now, data analyst.
 
-Trained in data analytics at **OpenClassrooms × ENSAE**, I use Python, SQL and Power BI to turn complex datasets into clear business decisions. What sets me apart: I understand both the field and the numbers — and I know how to connect them.
+Trained at **OpenClassrooms × ENSAE**, I turn raw data into actionable decisions: customer segmentation, sales analysis, dashboards. I speak both business and data fluently — and that's my edge.
 :::
 :::
 
