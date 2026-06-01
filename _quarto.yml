@@ -14,13 +14,10 @@ website:
         href: index.qmd
       - text: "Projets Data"
         href: projets.qmd
-    right:
-      - icon: github
-        href: https://github.com/Elicesjo
-        aria-label: GitHub
-      - icon: linkedin
+      - text: "LinkedIn"
         href: "https://www.linkedin.com/in/josy-elices-diez-03523225a/"
-        aria-label: LinkedIn
+      - text: "GitHub"
+        href: "https://github.com/Elicesjo"
 
   page-footer:
     center: "Josy Elices-Diez · Data Analyst · [GitHub](https://github.com/Elicesjo) · [LinkedIn](https://www.linkedin.com/in/josy-elices-diez-03523225a/)"

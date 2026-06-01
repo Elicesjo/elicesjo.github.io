@@ -20,10 +20,6 @@ Data Analyst · Retail Specialist
 [Télécharger mon CV](assets/cv.pdf){.cv-btn}
 :::
 
-::: {.contact-links}
-[LinkedIn](https://www.linkedin.com/in/josy-elices-diez-03523225a/){.contact-link}
-[GitHub](https://github.com/Elicesjo){.contact-link}
-:::
 
 ::: {.panel-tabset}
 ## Français
