@@ -4,14 +4,11 @@ page-layout: full
 ---
 
 ::: {.about-hero}
-::: {.avatar-placeholder}
-JE
-:::
 
 # Josy Elices-Diez
 
-::: {.role-tags}
-[Data Analyst]{.role-tag} [Retail Specialist]{.role-tag}
+::: {.job-title}
+Data Analyst · Retail Specialist
 :::
 
 ::: {.panel-tabset}
@@ -47,37 +44,54 @@ After an intensive **Data Analytics training at OpenClassrooms × ENSAE**, I'm l
 ::: {.skill-group}
 #### Langages & outils
 
-[Python]{.skill-badge} [SQL]{.skill-badge} [dbt]{.skill-badge} [Power BI]{.skill-badge} [Excel]{.skill-badge} [Git]{.skill-badge}
-:::
-
-::: {.skill-group}
-#### Librairies Python
-
-[Pandas]{.skill-badge} [Matplotlib]{.skill-badge} [Seaborn]{.skill-badge} [SciPy]{.skill-badge} [Scikit-learn]{.skill-badge} [Jupyter]{.skill-badge} [Quarto]{.skill-badge}
+- Python
+- SQL
+- dbt
+- Power BI · Tableau
+- Excel
+- Git
 :::
 
 ::: {.skill-group}
 #### Bases de données & modélisation
 
-[PostgreSQL]{.skill-badge} [SQLite]{.skill-badge} [DBeaver]{.skill-badge} [Modélisation relationnelle]{.skill-badge} [Normalisation 3NF]{.skill-badge}
+- PostgreSQL
+- MySQL
+- SQLite
+- DBeaver · pgAdmin
+- Modélisation relationnelle
+- Normalisation 3NF
+- Schéma en étoile
+- Diagramme ERD
 :::
 
 ::: {.skill-group}
 #### Méthodes analytiques
 
-[Segmentation RFM]{.skill-badge} [ACP]{.skill-badge} [Clustering K-means]{.skill-badge} [CAH]{.skill-badge} [Tests statistiques]{.skill-badge} [Analyse exploratoire]{.skill-badge} [Visualisation de données]{.skill-badge}
+- Segmentation RFM
+- ACP
+- Clustering
+- Tests statistiques
+- Analyse exploratoire
+- Visualisation de données
 :::
 
 ::: {.skill-group}
 #### Expertise métier — Retail
 
-[Pilotage KPIs]{.skill-badge} [Analyse des ventes]{.skill-badge} [Reporting opérationnel]{.skill-badge} [Management d'équipes]{.skill-badge} [Gestion de projet]{.skill-badge}
+- Pilotage KPIs
+- Analyse des ventes
+- Reporting opérationnel
+- Management d'équipes
+- Gestion de projet
 :::
 
 ::: {.skill-group}
 #### Langues
 
-[Français — natif]{.skill-badge} [Anglais — C1]{.skill-badge} [Espagnol — A2]{.skill-badge}
+- Français — natif
+- Anglais — C1
+- Espagnol — A2
 :::
 
 :::

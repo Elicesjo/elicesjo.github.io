@@ -12,27 +12,60 @@ $body-color: #C8C8E0;
 
 body { line-height: 1.7; background: #0D0D0D; color: #C8C8E0; }
 
-/* ── Navbar ── centré, style onglets ────────────────────────────────────── */
+/* ── Navbar ── centré, deux lignes : titre + liens ──────────────────────── */
 .navbar {
   background: #0D0D0D !important;
   border-bottom: 1px solid #1E1E2E !important;
   box-shadow: 0 1px 8px rgba(0,0,0,0.4) !important;
-  padding: 0.5rem 1.5rem !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  padding: 1.2rem 1.5rem 0.8rem !important;
+  gap: 0.6rem !important;
+
+  .navbar-toggler { display: none !important; }
 
   .navbar-brand {
-    font-weight: 700;
-    font-size: 1rem;
-    color: #E0E0F0 !important;
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: #E8E8F8 !important;
+    letter-spacing: 0.06em;
+    line-height: 1.15;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &::after {
+      content: "8 projets";
+      font-size: 0.7rem;
+      font-weight: 400;
+      color: #505070;
+      letter-spacing: 0.1em;
+      margin-top: 0.1rem;
+    }
+  }
+
+  .navbar-collapse {
+    display: flex !important;
+    flex: none !important;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .navbar-nav {
+    flex-direction: row !important;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+    flex-wrap: wrap;
   }
 
   .navbar-nav .nav-link {
     color: #8080A8 !important;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     font-weight: 500;
-    padding: 0.6rem 1.2rem !important;
+    padding: 0.5rem 1.4rem !important;
     border-radius: 6px;
     transition: all 0.15s;
-    margin: 0 0.1rem;
 
     &:hover {
       color: #C8C8E0 !important;
@@ -342,11 +375,10 @@ body { line-height: 1.7; background: #0D0D0D; color: #C8C8E0; }
 
   .job-title {
     color: #9B9BD4;
-    font-weight: 600;
-    font-size: 0.9rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    margin-bottom: 1.5rem;
+    font-weight: 500;
+    font-size: 1.05rem;
+    letter-spacing: 0.04em;
+    margin-bottom: 1.8rem;
   }
 }
 
@@ -378,7 +410,7 @@ a.cv-btn {
 }
 
 .skill-group {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.8rem;
 
   h4 {
     font-size: 0.78rem;
@@ -386,7 +418,29 @@ a.cv-btn {
     letter-spacing: 0.1em;
     color: #7070A8;
     font-weight: 700;
-    margin-bottom: 0.6rem;
+    margin-bottom: 0.8rem;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      color: #B0B0D8;
+      font-size: 0.9rem;
+      padding: 0.38rem 0;
+      border-bottom: 1px solid #161626;
+
+      &:last-child { border-bottom: none; }
+
+      &::before {
+        content: "·";
+        color: #9B9BD4;
+        font-weight: 700;
+        margin-right: 0.7rem;
+      }
+    }
   }
 }
 

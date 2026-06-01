@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "Josy Elices-Diez"
+  title: "PORTFOLIO 2026"
   favicon: assets/favicon.png
   navbar:
     pinned: true
@@ -12,7 +12,7 @@ website:
     left:
       - text: "Présentation"
         href: index.qmd
-      - text: "Data Analyst"
+      - text: "Projets Data"
         href: projets.qmd
     right:
       - icon: github
