@@ -1,5 +1,5 @@
 ---
-title: "Segmentation RFM title: "Segmentation clients e-commerce — Lapage" tests statistiques — La Page"
+title: "Segmentation clients e-commerce — Lapage"
 description: "Segmenter 2 500 clients en profils RFM et tester statistiquement les différences de comportement d'achat"
 categories: [Python, Statistiques, Visualisation]
 image: thumbnail.png

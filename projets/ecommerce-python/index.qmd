@@ -1,5 +1,5 @@
 ---
-title: "Audit title: "Audit de données e-commerce — Python" nettoyage de données — E-commerce"
+title: "Audit de données e-commerce — Python"
 description: "Détecter et corriger les doublons, valeurs manquantes et incohérences dans les données d'une boutique de vins en ligne"
 categories: [Python, Nettoyage de données]
 image: thumbnail.png

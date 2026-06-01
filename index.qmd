@@ -11,7 +11,7 @@ JE
 # Josy Elices-Diez
 
 ::: {.role-tags}
-[Data Analyst]{.role-tag} [Retail Specialist]{.role-tag} [Python · SQL]{.role-tag} [Power BI · dbt]{.role-tag}
+[Data Analyst]{.role-tag} [Retail Specialist]{.role-tag}
 :::
 
 ::: {.panel-tabset}
