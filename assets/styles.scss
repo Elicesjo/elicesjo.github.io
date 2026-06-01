@@ -532,3 +532,25 @@ a.cta-btn {
 
   .tab-content { color: #C8C8E0; }
 }
+
+/* ── Bio tabset (page présentation) ─────────────────────────────────────── */
+.about-hero .panel-tabset {
+  .nav-tabs {
+    border-bottom: none !important;
+    margin-bottom: 0.8rem;
+  }
+
+  .tab-content {
+    border: none !important;
+    background: transparent !important;
+    padding: 0 !important;
+
+    p {
+      font-size: 1.08rem;
+      line-height: 1.85;
+      text-align: justify;
+      color: #C0C0DC;
+      margin-bottom: 1rem;
+    }
+  }
+}

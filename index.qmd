@@ -24,15 +24,15 @@ Data Analyst · Retail Specialist
 ::: {.panel-tabset}
 ## Français
 
-**Data Analyst** avec 10 ans d'expérience en retail, je combine une expertise terrain solide — management d'équipes, gestion de projet, pilotage des KPIs de vente et du chiffre d'affaires — avec des compétences techniques en Python, SQL, Power BI et dbt.
+Après 10 ans à piloter des équipes et la performance commerciale en retail, j'ai fait le choix de la data.
 
-Après une formation intensive **Data Analytics chez OpenClassrooms × ENSAE**, je cherche un poste où je peux transformer des données complexes en décisions actionnables pour les équipes métier.
+Formée à la data analytics chez **OpenClassrooms × ENSAE**, je mobilise Python, SQL et Power BI pour transformer des données complexes en décisions concrètes. Ce qui me distingue : je comprends le terrain autant que les chiffres — et je sais faire le lien entre les deux.
 
 ## English
 
-**Data Analyst** with 10 years of retail experience, I bring strong field expertise — team management, project management, KPI tracking and revenue growth — combined with a solid technical toolkit in Python, SQL, Power BI and dbt.
+After 10 years leading teams and driving commercial performance in retail, I made the move into data.
 
-After an intensive **Data Analytics training at OpenClassrooms × ENSAE**, I'm looking for a role where I can turn complex data into clear, actionable insights for business teams.
+Trained in data analytics at **OpenClassrooms × ENSAE**, I use Python, SQL and Power BI to turn complex datasets into clear business decisions. What sets me apart: I understand both the field and the numbers — and I know how to connect them.
 :::
 :::
 
