@@ -11,6 +11,20 @@ page-layout: full
 Data Analyst · Retail Specialist
 :::
 
+::: {.contact-links}
+[josy.elices@gmail.com](mailto:josy.elices@gmail.com){.contact-link}
+[+33 6 87 15 14 41](tel:+33687151441){.contact-link}
+:::
+
+::: {.hero-actions}
+[Télécharger mon CV](assets/cv.pdf){.cv-btn}
+:::
+
+::: {.contact-links}
+[LinkedIn](https://www.linkedin.com/in/josy-elices-diez-03523225a/){.contact-link}
+[GitHub](https://github.com/Elicesjo){.contact-link}
+:::
+
 ::: {.panel-tabset}
 ## Français
 
@@ -23,17 +37,6 @@ Après une formation intensive **Data Analytics chez OpenClassrooms × ENSAE**, 
 **Data Analyst** with 10 years of retail experience, I bring strong field expertise — team management, project management, KPI tracking and revenue growth — combined with a solid technical toolkit in Python, SQL, Power BI and dbt.
 
 After an intensive **Data Analytics training at OpenClassrooms × ENSAE**, I'm looking for a role where I can turn complex data into clear, actionable insights for business teams.
-:::
-
-::: {.hero-actions}
-[Télécharger mon CV](assets/cv.pdf){.cv-btn}
-:::
-
-::: {.contact-links}
-[josy.elices@gmail.com](mailto:josy.elices@gmail.com){.contact-link}
-[+33 6 87 15 14 41](tel:+33687151441){.contact-link}
-[LinkedIn](https://www.linkedin.com/in/josy-elices-diez-03523225a/){.contact-link}
-[GitHub](https://github.com/Elicesjo){.contact-link}
 :::
 :::
 
