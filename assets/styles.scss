@@ -200,12 +200,19 @@ body { line-height: 1.7; background: #0D0D0D; color: #C8C8E0; }
   }
 
   .card-img-top {
-    height: 320px !important;
+    height: 260px !important;
     object-fit: contain !important;
     object-position: center !important;
-    background: #0D0D0D !important;
-    border-bottom: 1px solid #1E1E2E !important;
+    background: #10101E !important;
+    border-bottom: 1px solid #252540 !important;
     width: 100% !important;
+    padding: 1.4rem !important;
+    box-sizing: border-box !important;
+    transition: filter 0.2s ease !important;
+  }
+
+  &:hover .card-img-top {
+    filter: brightness(1.1) !important;
   }
 
   .card-body {
