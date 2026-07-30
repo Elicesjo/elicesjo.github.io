@@ -14,6 +14,8 @@ website:
         href: index.qmd
       - text: "Projets Data"
         href: projets.qmd
+      - text: "Veille"
+        href: veille.qmd
       - text: "LinkedIn"
         href: "https://www.linkedin.com/in/josy-elices-diez-03523225a/"
       - text: "GitHub"

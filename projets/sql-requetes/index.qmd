@@ -1,5 +1,5 @@
 ---
-title: "Analyse des ventes SQL — Requêtes avancées"
+title: "Analyse des ventes SQL : requêtes avancées"
 description: "10+ requêtes SQL complexes (jointures, agrégats, sous-requêtes) pour identifier les vins et régions les plus rentables"
 categories: [SQL, Bases de données]
 image: thumbnail.png
@@ -11,7 +11,12 @@ order: 1
 
 ### Contexte
 
-Base de données relationnelle d'un marchand de vin. L'objectif était d'explorer la structure des données, d'écrire des requêtes SQL progressivement complexes et de produire une analyse des ventes.
+Base de données relationnelle d'un marchand de vin ("Rester dans les Vignes"). L'objectif était d'explorer la structure des données, d'écrire des requêtes SQL progressivement complexes et de produire une analyse des ventes.
+
+### Données
+
+- **Source** : base de données relationnelle fictive fournie par la formation, schéma entité-relation livré en amont (pas de collecte terrain).
+- **Limites** : jeu de données pédagogique, pas un extrait de production réelle ; l'analyse RFM appliquée est volontairement simplifiée (pas de scoring quantifié par client).
 
 ### Outils
 
@@ -24,14 +29,22 @@ Base de données relationnelle d'un marchand de vin. L'objectif était d'explore
 - Analyse des ventes par produit, région, période
 - Documentation des résultats en PDF
 
-### Résultats clés
+### Résultats et impact
 
 ::: {.key-result}
-Identification des produits les plus rentables et des clients à fort potentiel
+Identification des 5 produits les plus rentables par région viticole
 :::
 ::: {.key-result}
-Maîtrise des jointures multi-tables et des agrégations SQL
+Détection des clients à fort potentiel (RFM simplifié) et analyse de la saisonnalité des ventes sur 2 ans
 :::
+
+Impact : un jeu de requêtes réutilisable pour un reporting périodique (top produits, clients à relancer, saisonnalité), plutôt qu'une extraction ponctuelle.
+
+### Limites et prochaines pistes
+
+- Jeu de données pédagogique fictif : les requêtes n'ont pas été rejouées sur un extrait de données de production réelles.
+- Le RFM appliqué est simplifié (pas de score Récence/Fréquence/Montant formalisé par client).
+- Prochaine piste : formaliser un scoring RFM complet et valider la généralisation des requêtes sur un jeu de données réel.
 
 [Voir le repo GitHub](https://github.com/Elicesjo/PROJET-2-){.cta-btn style="display:inline-block;margin-top:1rem;"}
 
@@ -39,7 +52,12 @@ Maîtrise des jointures multi-tables et des agrégations SQL
 
 ### Context
 
-Relational database for a wine merchant. The goal was to explore the data structure, write progressively complex SQL queries, and produce a sales analysis.
+Relational database for a wine merchant ("Rester dans les Vignes"). The goal was to explore the data structure, write progressively complex SQL queries, and produce a sales analysis.
+
+### Data
+
+- **Source**: fictional relational database provided by the training program, entity-relation schema supplied upfront (no field data collection).
+- **Limits**: educational dataset, not a real production extract; the applied RFM analysis is deliberately simplified (no quantified per-customer score).
 
 ### Tools
 
@@ -52,14 +70,22 @@ Relational database for a wine merchant. The goal was to explore the data struct
 - Sales analysis by product, region, and time period
 - Results documented in PDF
 
-### Key results
+### Results and impact
 
 ::: {.key-result}
-Identification of most profitable products and high-value customers
+Identification of the 5 most profitable products by wine region
 :::
 ::: {.key-result}
-Mastery of multi-table joins and SQL aggregations
+Detection of high-potential customers (simplified RFM) and analysis of sales seasonality over 2 years
 :::
+
+Impact: a reusable set of queries for periodic reporting (top products, customers to re-engage, seasonality), rather than a one-off extraction.
+
+### Limits and next steps
+
+- Fictional educational dataset: the queries were not re-run against a real production data extract.
+- The applied RFM is simplified (no formalized Recency/Frequency/Monetary score per customer).
+- Next step: formalize a full RFM scoring model and validate the queries' generalization on a real dataset.
 
 [View GitHub repo](https://github.com/Elicesjo/PROJET-2-){.cta-btn style="display:inline-block;margin-top:1rem;"}
 :::

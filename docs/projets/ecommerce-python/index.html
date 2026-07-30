@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="description" content="Détecter et corriger les doublons, valeurs manquantes et incohérences dans les données d’une boutique de vins en ligne">
 
-<title>Audit de données e-commerce — Python – PORTFOLIO 2026</title>
+<title>Audit de données e-commerce : Python – PORTFOLIO 2026</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -40,7 +40,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-ee089b5cd8c331d37006e611d21b4011.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
@@ -102,6 +102,10 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Projets Data</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="../../veille.html"> 
+<span class="menu-text">Veille</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="https://www.linkedin.com/in/josy-elices-diez-03523225a/"> 
 <span class="menu-text">LinkedIn</span></a>
   </li>  
@@ -126,7 +130,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Audit de données e-commerce — Python</h1>
+<h1 class="title">Audit de données e-commerce : Python</h1>
   <div class="quarto-categories">
     <div class="quarto-category">Python</div>
     <div class="quarto-category">Nettoyage de données</div>
@@ -158,7 +162,15 @@ ul.task-list li input[type="checkbox"] {
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <section id="contexte" class="level3">
 <h3 class="anchored" data-anchor-id="contexte">Contexte</h3>
-<p>Optimisation de la gestion des données d’une boutique en ligne de vins. Travail sur la qualité des données, les jointures entre tables (ERP, web, liaison) et la production d’analyses métier.</p>
+<p>Optimisation de la gestion des données d’une boutique en ligne de vins (Bottleneck). Travail sur la qualité des données, les jointures entre tables (ERP, web, liaison) et la production d’analyses métier.</p>
+</section>
+<section id="données" class="level3">
+<h3 class="anchored" data-anchor-id="données">Données</h3>
+<ul>
+<li><strong>Source</strong> : 3 fichiers (ERP, web, liaison) d’une boutique de vins en ligne. Fichiers sources non inclus dans le repo pour confidentialité.</li>
+<li><strong>Qualité</strong> : nettoyage documenté à chaque étape (822 lignes ERP après filtre prix, 714 après suppression des attachments ; 734 lignes web après dédoublonnage sur 825 lignes brutes).</li>
+<li><strong>Limites</strong> : la fusion finale ERP + web perd 4 lignes sur 716 (jointure trop restrictive, signalée explicitement dans le notebook), pour un dataset final de 712 références.</li>
+</ul>
 </section>
 <section id="outils" class="level3">
 <h3 class="anchored" data-anchor-id="outils">Outils</h3>
@@ -173,21 +185,38 @@ ul.task-list li input[type="checkbox"] {
 <li>Analyse des ventes par produit et par période</li>
 </ul>
 </section>
-<section id="résultats-clés" class="level3">
-<h3 class="anchored" data-anchor-id="résultats-clés">Résultats clés</h3>
+<section id="résultats-et-impact" class="level3">
+<h3 class="anchored" data-anchor-id="résultats-et-impact">Résultats et impact</h3>
 <div class="key-result">
-<p>Dataset nettoyé et consolidé, prêt pour l’analyse et le reporting</p>
+<p>Chiffre d’affaires total du site web : 143 424 €, dont 16 610 € (12 %) portés par des produits identifiés comme outliers de prix</p>
 </div>
 <div class="key-result">
-<p>Identification des principales anomalies de données et de leur impact sur les ventes</p>
+<p>Dataset consolidé de 712 références, prêt pour l’analyse et le reporting</p>
 </div>
+<p>Impact : ce dataset consolidé sert de base de travail à un projet ultérieur de ce portfolio (détection d’anomalies de prix par machine learning), qui étend directement ce traitement d’outliers.</p>
+</section>
+<section id="limites-et-prochaines-pistes" class="level3">
+<h3 class="anchored" data-anchor-id="limites-et-prochaines-pistes">Limites et prochaines pistes</h3>
+<ul>
+<li>La fusion finale perd 4 lignes ERP sur 716 (jointure trop restrictive) : documenté dans le notebook mais non corrigé dans cette itération.</li>
+<li>Les fichiers sources ne sont pas inclus dans le repo (confidentialité), ce qui limite la reproductibilité stricte par un tiers.</li>
+<li>Prochaine piste : assouplir la jointure finale pour récupérer les 4 lignes perdues et vérifier leur impact sur le CA total.</li>
+</ul>
 <p><a href="https://github.com/Elicesjo/PROJET-5-" class="cta-btn" style="display:inline-block;margin-top:1rem;">Voir le repo GitHub</a></p>
 </section>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <section id="context" class="level3">
 <h3 class="anchored" data-anchor-id="context">Context</h3>
-<p>Data management optimization for an online wine shop. Work on data quality, table joins (ERP, web, liaison) and business analysis.</p>
+<p>Data management optimization for an online wine shop (Bottleneck). Work on data quality, table joins (ERP, web, liaison) and business analysis.</p>
+</section>
+<section id="data" class="level3">
+<h3 class="anchored" data-anchor-id="data">Data</h3>
+<ul>
+<li><strong>Source</strong>: 3 files (ERP, web, liaison) from an online wine shop. Source files not included in the repo for confidentiality.</li>
+<li><strong>Quality</strong>: cleaning documented at each step (822 ERP rows after price filtering, 714 after removing attachments; 734 web rows after deduplication out of 825 raw rows).</li>
+<li><strong>Limits</strong>: the final ERP + web merge loses 4 rows out of 716 (an overly restrictive join, explicitly flagged in the notebook), for a final dataset of 712 references.</li>
+</ul>
 </section>
 <section id="tools" class="level3">
 <h3 class="anchored" data-anchor-id="tools">Tools</h3>
@@ -202,14 +231,23 @@ ul.task-list li input[type="checkbox"] {
 <li>Sales analysis by product and time period</li>
 </ul>
 </section>
-<section id="key-results" class="level3">
-<h3 class="anchored" data-anchor-id="key-results">Key results</h3>
+<section id="results-and-impact" class="level3">
+<h3 class="anchored" data-anchor-id="results-and-impact">Results and impact</h3>
 <div class="key-result">
-<p>Clean, consolidated dataset ready for analysis and reporting</p>
+<p>Total website revenue: €143,424, of which €16,610 (12%) driven by products flagged as price outliers</p>
 </div>
 <div class="key-result">
-<p>Identification of key data anomalies and their impact on sales figures</p>
+<p>Consolidated dataset of 712 references, ready for analysis and reporting</p>
 </div>
+<p>Impact: this consolidated dataset serves as the working base for a later project in this portfolio (machine learning price anomaly detection), which directly extends this outlier treatment.</p>
+</section>
+<section id="limits-and-next-steps" class="level3">
+<h3 class="anchored" data-anchor-id="limits-and-next-steps">Limits and next steps</h3>
+<ul>
+<li>The final merge loses 4 ERP rows out of 716 (overly restrictive join): documented in the notebook but not fixed in this iteration.</li>
+<li>Source files are not included in the repo (confidentiality), which limits strict reproducibility by a third party.</li>
+<li>Next step: relax the final join to recover the 4 lost rows and check their impact on total revenue.</li>
+</ul>
 <p><a href="https://github.com/Elicesjo/PROJET-5-" class="cta-btn" style="display:inline-block;margin-top:1rem;">View GitHub repo</a></p>
 </section>
 </div>

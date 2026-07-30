@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Segmenter 2 500 clients en profils RFM et tester statistiquement les différences de comportement d’achat">
+<meta name="description" content="Analyser le comportement de 8 600 clients via des indicateurs Récence/Fréquence/Montant et des corrélations statistiques">
 
-<title>Segmentation clients e-commerce — Lapage – PORTFOLIO 2026</title>
+<title>Segmentation clients e-commerce : Lapage – PORTFOLIO 2026</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -40,7 +40,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-ee089b5cd8c331d37006e611d21b4011.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
@@ -102,6 +102,10 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Projets Data</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="../../veille.html"> 
+<span class="menu-text">Veille</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="https://www.linkedin.com/in/josy-elices-diez-03523225a/"> 
 <span class="menu-text">LinkedIn</span></a>
   </li>  
@@ -126,7 +130,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Segmentation clients e-commerce — Lapage</h1>
+<h1 class="title">Segmentation clients e-commerce : Lapage</h1>
   <div class="quarto-categories">
     <div class="quarto-category">Python</div>
     <div class="quarto-category">Statistiques</div>
@@ -136,7 +140,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    Segmenter 2 500 clients en profils RFM et tester statistiquement les différences de comportement d’achat
+    Analyser le comportement de 8 600 clients via des indicateurs Récence/Fréquence/Montant et des corrélations statistiques
   </div>
 </div>
 
@@ -159,7 +163,15 @@ ul.task-list li input[type="checkbox"] {
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <section id="contexte" class="level3">
 <h3 class="anchored" data-anchor-id="contexte">Contexte</h3>
-<p>Analyse complète des données de vente d’une librairie en ligne (La Page) : CA, comportement des clients, segmentation RFM, analyses statistiques (tests non-paramétriques, courbe de Lorenz, cohortes de rétention).</p>
+<p>Analyse complète des données de vente d’une librairie en ligne (La Page) : CA, comportement des clients, indicateurs Récence/Fréquence/Montant, analyses statistiques (tests non-paramétriques, courbe de Lorenz, cohortes de rétention).</p>
+</section>
+<section id="données" class="level3">
+<h3 class="anchored" data-anchor-id="données">Données</h3>
+<ul>
+<li><strong>Source</strong> : 3 tables (clients, produits, transactions), période mars 2021 à février 2023.</li>
+<li><strong>Qualité</strong> : 8 623 clients bruts → 8 621 après suppression de 2 comptes de test ; 3 287 produits bruts → 3 286 (1 produit de test à prix négatif supprimé) ; 679 532 transactions brutes → 679 111 valides après retrait des comptes de test.</li>
+<li><strong>Limites</strong> : 4 clients identifiés comme BtoB (seuil = moyenne + 2 écarts-types de CA) exclus des analyses comportementales, ramenant le jeu exploité à 632 477 transactions sur 8 596 clients.</li>
+</ul>
 </section>
 <section id="outils" class="level3">
 <h3 class="anchored" data-anchor-id="outils">Outils</h3>
@@ -170,30 +182,46 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>Nettoyage des 3 tables (clients, produits, transactions)</li>
 <li>Analyse temporelle du CA et des volumes de vente</li>
-<li>Segmentation RFM (Récence, Fréquence, Montant)</li>
-<li>Tests statistiques : Mann-Whitney, Kruskal-Wallis, Chi²</li>
-<li>Courbe de Lorenz pour l’analyse de la concentration des ventes</li>
+<li>Indicateurs Récence, Fréquence, Montant par client</li>
+<li>Tests statistiques : corrélations de Spearman</li>
+<li>Courbe de Lorenz pour l’analyse de la concentration du CA par client</li>
 <li>Cohortes de rétention clients</li>
 </ul>
 </section>
-<section id="résultats-clés" class="level3">
-<h3 class="anchored" data-anchor-id="résultats-clés">Résultats clés</h3>
+<section id="résultats-et-impact" class="level3">
+<h3 class="anchored" data-anchor-id="résultats-et-impact">Résultats et impact</h3>
 <div class="key-result">
-<p>Segmentation RFM identifiant 5 profils clients distincts avec CA par segment</p>
+<p>CA total de 11 853 729 € sur 632 477 transactions (hors clients BtoB)</p>
 </div>
 <div class="key-result">
-<p>20% des produits génèrent 80% du CA (loi de Pareto confirmée)</p>
+<p>Âge corrélé négativement à la fréquence d’achat (ρ de Spearman = -0,674) et au panier moyen (ρ = -0,745), tous deux significatifs (p &lt; 0,05) ; pas de corrélation significative avec le CA total par client (ρ = -0,085)</p>
 </div>
 <div class="key-result">
-<p>Différences significatives H/F sur le panier moyen (Mann-Whitney, p &lt; 0.05)</p>
+<p>Indice de Gini de 0,446 sur la concentration du CA : les 20 % de clients les plus dépensiers représentent 48,4 % du CA</p>
 </div>
+<p>Impact : les clients plus âgés achètent moins souvent et avec un panier plus petit, mais restent aussi rentables sur la durée en cumulé (pas de lien avec le CA total). Signal pour adapter la fréquence des sollicitations marketing par âge plutôt que le budget par client.</p>
+</section>
+<section id="limites-et-prochaines-pistes" class="level3">
+<h3 class="anchored" data-anchor-id="limites-et-prochaines-pistes">Limites et prochaines pistes</h3>
+<ul>
+<li>Le seuil BtoB (moyenne + 2 écarts-types de CA) est une règle statistique simple, pas un critère métier validé (type de compte, volume de commande) ; à confirmer avec l’équipe commerciale.</li>
+<li>Prochaine piste : construire un score RFM formel (quintiles ou clustering) pour aller au-delà de l’indice de Gini, qui décrit la concentration du CA mais ne segmente pas les clients en profils actionnables.</li>
+</ul>
 <p><a href="https://github.com/Elicesjo/PROJET-8-" class="cta-btn" style="display:inline-block;margin-top:1rem;">Voir le repo GitHub</a></p>
 </section>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <section id="context" class="level3">
 <h3 class="anchored" data-anchor-id="context">Context</h3>
-<p>Full analysis of sales data for an online bookstore (La Page): revenue, customer behaviour, RFM segmentation, and statistical analyses (non-parametric tests, Lorenz curve, retention cohorts).</p>
+<p>Full analysis of sales data for an online bookstore (La Page): revenue, customer behaviour, Recency/Frequency/Monetary indicators, and statistical analyses (non-parametric tests, Lorenz curve, retention cohorts).</p>
+</section>
+<section id="data" class="level3">
+<h3 class="anchored" data-anchor-id="data">Data</h3>
+<ul>
+<li><strong>Source</strong>: 3 tables (customers, products, transactions), period March 2021 to February 2023.</li>
+<li><strong>Quality</strong>: 8,623 raw customers → 8,621 after removing 2 test accounts; 3,287 raw products → 3,286 (1 test product with a negative price removed); 679,532 raw transactions → 679,111 valid after removing test accounts.</li>
+<li><strong>Limits</strong>: 4 customers identified as B2B (threshold = mean + 2 standard deviations of revenue) excluded from behavioral analyses, narrowing the working dataset to 632,477 transactions across 8,596 customers.</li>
+</ul>
 </section>
 <section id="tools" class="level3">
 <h3 class="anchored" data-anchor-id="tools">Tools</h3>
@@ -204,23 +232,31 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>Cleaning of 3 tables (customers, products, transactions)</li>
 <li>Time series analysis of revenue and sales volume</li>
-<li>RFM segmentation (Recency, Frequency, Monetary)</li>
-<li>Statistical tests: Mann-Whitney, Kruskal-Wallis, Chi²</li>
-<li>Lorenz curve for sales concentration analysis</li>
+<li>Recency, Frequency, Monetary indicators per customer</li>
+<li>Statistical tests: Spearman correlations</li>
+<li>Lorenz curve for per-customer revenue concentration analysis</li>
 <li>Customer retention cohorts</li>
 </ul>
 </section>
-<section id="key-results" class="level3">
-<h3 class="anchored" data-anchor-id="key-results">Key results</h3>
+<section id="results-and-impact" class="level3">
+<h3 class="anchored" data-anchor-id="results-and-impact">Results and impact</h3>
 <div class="key-result">
-<p>RFM segmentation identifying 5 distinct customer profiles with revenue per segment</p>
+<p>Total revenue of €11,853,729 across 632,477 transactions (excluding B2B customers)</p>
 </div>
 <div class="key-result">
-<p>20% of products generate 80% of revenue (Pareto confirmed)</p>
+<p>Age negatively correlated with purchase frequency (Spearman ρ = -0.674) and average basket (ρ = -0.745), both significant (p &lt; 0.05); no significant correlation with total revenue per customer (ρ = -0.085)</p>
 </div>
 <div class="key-result">
-<p>Significant M/F differences in average basket (Mann-Whitney, p &lt; 0.05)</p>
+<p>Gini index of 0.446 on revenue concentration: the top 20% of spenders account for 48.4% of revenue</p>
 </div>
+<p>Impact: older customers buy less often and with a smaller basket, but remain just as profitable cumulatively over time (no link with total revenue). A signal to adjust marketing outreach frequency by age rather than budget per customer.</p>
+</section>
+<section id="limits-and-next-steps" class="level3">
+<h3 class="anchored" data-anchor-id="limits-and-next-steps">Limits and next steps</h3>
+<ul>
+<li>The B2B threshold (mean + 2 standard deviations of revenue) is a simple statistical rule, not a validated business criterion (account type, order volume); to be confirmed with the sales team.</li>
+<li>Next step: build a formal RFM score (quintiles or clustering) to go beyond the Gini index, which describes revenue concentration but does not segment customers into actionable profiles.</li>
+</ul>
 <p><a href="https://github.com/Elicesjo/PROJET-8-" class="cta-btn" style="display:inline-block;margin-top:1rem;">View GitHub repo</a></p>
 </section>
 </div>

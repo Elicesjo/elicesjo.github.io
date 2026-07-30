@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="description" content="Analyser les données FAO pour cartographier la sous-nutrition mondiale et identifier ses causes structurelles">
 
-<title>Analyse de la sous-nutrition mondiale — Python – PORTFOLIO 2026</title>
+<title>Analyse de la sous-nutrition mondiale : Python – PORTFOLIO 2026</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -40,7 +40,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-ee089b5cd8c331d37006e611d21b4011.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
@@ -102,6 +102,10 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Projets Data</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="../../veille.html"> 
+<span class="menu-text">Veille</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="https://www.linkedin.com/in/josy-elices-diez-03523225a/"> 
 <span class="menu-text">LinkedIn</span></a>
   </li>  
@@ -126,7 +130,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Analyse de la sous-nutrition mondiale — Python</h1>
+<h1 class="title">Analyse de la sous-nutrition mondiale : Python</h1>
   <div class="quarto-categories">
     <div class="quarto-category">Python</div>
     <div class="quarto-category">Visualisation</div>
@@ -161,6 +165,14 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="contexte">Contexte</h3>
 <p>Étude mondiale sur la sous-alimentation menée pour la FAO. Analyse de la répartition de la sous-nutrition, des capacités de production alimentaire par pays et des causes possibles de déficits nutritionnels.</p>
 </section>
+<section id="données" class="level3">
+<h3 class="anchored" data-anchor-id="données">Données</h3>
+<ul>
+<li><strong>Source</strong> : 4 fichiers CSV publics FAO croisés (population : 1 416 lignes sur 2013-2017 ; disponibilité alimentaire : 15 605 lignes, 18 colonnes ; aide alimentaire : 1 475 lignes ; sous-nutrition : 1 218 lignes), analyse centrée sur l’année 2017.</li>
+<li><strong>Qualité</strong> : valeurs manquantes identifiées sur le fichier disponibilité alimentaire, remplacées par 0 (<code>fillna(0)</code>) plutôt que supprimées, pour ne pas perdre de lignes sur un jeu agrégé par pays et par produit.</li>
+<li><strong>Limites</strong> : photo figée sur 2017, pas d’exploitation de tendance temporelle au-delà de cette année pour les indicateurs de couverture calorique.</li>
+</ul>
+</section>
 <section id="outils" class="level3">
 <h3 class="anchored" data-anchor-id="outils">Outils</h3>
 <p><span class="tool-badge">Python</span> <span class="tool-badge">Pandas</span> <span class="tool-badge">Matplotlib</span> <span class="tool-badge">Jupyter</span></p>
@@ -174,14 +186,23 @@ ul.task-list li input[type="checkbox"] {
 <li>Analyse des corrélations entre production et malnutrition</li>
 </ul>
 </section>
-<section id="résultats-clés" class="level3">
-<h3 class="anchored" data-anchor-id="résultats-clés">Résultats clés</h3>
+<section id="résultats-et-impact" class="level3">
+<h3 class="anchored" data-anchor-id="résultats-et-impact">Résultats et impact</h3>
 <div class="key-result">
-<p>Identification des zones géographiques les plus vulnérables à la sous-alimentation</p>
+<p>535,7 millions de personnes en sous-nutrition en 2017, soit 7,10 % de la population mondiale</p>
 </div>
 <div class="key-result">
-<p>Mise en évidence de l’écart entre production alimentaire disponible et besoins réels</p>
+<p>Disponibilité calorique mondiale théorique largement excédentaire (82,5 % d’origine végétale) : le déficit nutritionnel est un problème de répartition, pas de production globale</p>
 </div>
+<p>Impact : corrélation observée entre PIB par habitant et taux de sous-alimentation, avec l’Afrique subsaharienne et l’Asie du Sud comme zones les plus vulnérables, orientant les recommandations vers des leviers de répartition plutôt que de production.</p>
+</section>
+<section id="limites-et-prochaines-pistes" class="level3">
+<h3 class="anchored" data-anchor-id="limites-et-prochaines-pistes">Limites et prochaines pistes</h3>
+<ul>
+<li>Le remplacement des valeurs manquantes par 0 (plutôt qu’une imputation) peut sous-estimer certains flux alimentaires dans les pays aux données incomplètes.</li>
+<li>Analyse centrée sur une seule année (2017) pour les indicateurs de couverture calorique : pas de suivi de tendance sur la période 2013-2017 pourtant disponible dans le dataset population.</li>
+<li>Prochaine piste : étendre les indicateurs de couverture calorique sur toute la période disponible pour distinguer une dégradation structurelle d’un phénomène ponctuel.</li>
+</ul>
 <p><a href="https://github.com/Elicesjo/PROJET-3-" class="cta-btn" style="display:inline-block;margin-top:1rem;">Voir le repo GitHub</a></p>
 </section>
 </div>
@@ -189,6 +210,14 @@ ul.task-list li input[type="checkbox"] {
 <section id="context" class="level3">
 <h3 class="anchored" data-anchor-id="context">Context</h3>
 <p>Global study on undernourishment conducted for the FAO. Analysis of the distribution of malnutrition, food production capacities by country, and potential causes of nutritional deficits.</p>
+</section>
+<section id="data" class="level3">
+<h3 class="anchored" data-anchor-id="data">Data</h3>
+<ul>
+<li><strong>Source</strong>: 4 public FAO CSV files merged (population: 1,416 rows over 2013-2017; food availability: 15,605 rows, 18 columns; food aid: 1,475 rows; undernourishment: 1,218 rows), analysis centered on 2017.</li>
+<li><strong>Quality</strong>: missing values identified in the food availability file, replaced with 0 (<code>fillna(0)</code>) rather than dropped, to avoid losing rows in a dataset aggregated by country and product.</li>
+<li><strong>Limits</strong>: a snapshot of 2017, no exploitation of time trends beyond that year for the caloric coverage indicators.</li>
+</ul>
 </section>
 <section id="tools" class="level3">
 <h3 class="anchored" data-anchor-id="tools">Tools</h3>
@@ -203,14 +232,23 @@ ul.task-list li input[type="checkbox"] {
 <li>Correlation analysis between production and malnutrition</li>
 </ul>
 </section>
-<section id="key-results" class="level3">
-<h3 class="anchored" data-anchor-id="key-results">Key results</h3>
+<section id="results-and-impact" class="level3">
+<h3 class="anchored" data-anchor-id="results-and-impact">Results and impact</h3>
 <div class="key-result">
-<p>Identification of the most vulnerable geographic areas to food insecurity</p>
+<p>535.7 million people undernourished in 2017, 7.10% of the world’s population</p>
 </div>
 <div class="key-result">
-<p>Highlighted gap between available food production and actual nutritional needs</p>
+<p>Theoretical global caloric availability is largely in surplus (82.5% plant-based): the nutritional deficit is a distribution problem, not a global production one</p>
 </div>
+<p>Impact: a correlation was observed between GDP per capita and the undernourishment rate, with Sub-Saharan Africa and South Asia as the most vulnerable regions, pointing recommendations toward distribution levers rather than production ones.</p>
+</section>
+<section id="limits-and-next-steps" class="level3">
+<h3 class="anchored" data-anchor-id="limits-and-next-steps">Limits and next steps</h3>
+<ul>
+<li>Replacing missing values with 0 (rather than imputing) may underestimate certain food flows in countries with incomplete data.</li>
+<li>Analysis centered on a single year (2017) for caloric coverage indicators: no trend tracking over the 2013-2017 period, despite it being available in the population dataset.</li>
+<li>Next step: extend caloric coverage indicators across the full available period to distinguish a structural decline from a one-off phenomenon.</li>
+</ul>
 <p><a href="https://github.com/Elicesjo/PROJET-3-" class="cta-btn" style="display:inline-block;margin-top:1rem;">View GitHub repo</a></p>
 </section>
 </div>

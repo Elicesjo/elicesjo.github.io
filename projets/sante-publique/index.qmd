@@ -1,5 +1,5 @@
 ---
-title: "Analyse de la sous-nutrition mondiale — Python"
+title: "Analyse de la sous-nutrition mondiale : Python"
 description: "Analyser les données FAO pour cartographier la sous-nutrition mondiale et identifier ses causes structurelles"
 categories: [Python, Visualisation, Analyse exploratoire]
 image: thumbnail.png
@@ -13,6 +13,12 @@ order: 2
 
 Étude mondiale sur la sous-alimentation menée pour la FAO. Analyse de la répartition de la sous-nutrition, des capacités de production alimentaire par pays et des causes possibles de déficits nutritionnels.
 
+### Données
+
+- **Source** : 4 fichiers CSV publics FAO croisés (population : 1 416 lignes sur 2013-2017 ; disponibilité alimentaire : 15 605 lignes, 18 colonnes ; aide alimentaire : 1 475 lignes ; sous-nutrition : 1 218 lignes), analyse centrée sur l'année 2017.
+- **Qualité** : valeurs manquantes identifiées sur le fichier disponibilité alimentaire, remplacées par 0 (`fillna(0)`) plutôt que supprimées, pour ne pas perdre de lignes sur un jeu agrégé par pays et par produit.
+- **Limites** : photo figée sur 2017, pas d'exploitation de tendance temporelle au-delà de cette année pour les indicateurs de couverture calorique.
+
 ### Outils
 
 [Python]{.tool-badge} [Pandas]{.tool-badge} [Matplotlib]{.tool-badge} [Jupyter]{.tool-badge}
@@ -24,14 +30,22 @@ order: 2
 - Cartographie mondiale de la sous-nutrition
 - Analyse des corrélations entre production et malnutrition
 
-### Résultats clés
+### Résultats et impact
 
 ::: {.key-result}
-Identification des zones géographiques les plus vulnérables à la sous-alimentation
+535,7 millions de personnes en sous-nutrition en 2017, soit 7,10 % de la population mondiale
 :::
 ::: {.key-result}
-Mise en évidence de l'écart entre production alimentaire disponible et besoins réels
+Disponibilité calorique mondiale théorique largement excédentaire (82,5 % d'origine végétale) : le déficit nutritionnel est un problème de répartition, pas de production globale
 :::
+
+Impact : corrélation observée entre PIB par habitant et taux de sous-alimentation, avec l'Afrique subsaharienne et l'Asie du Sud comme zones les plus vulnérables, orientant les recommandations vers des leviers de répartition plutôt que de production.
+
+### Limites et prochaines pistes
+
+- Le remplacement des valeurs manquantes par 0 (plutôt qu'une imputation) peut sous-estimer certains flux alimentaires dans les pays aux données incomplètes.
+- Analyse centrée sur une seule année (2017) pour les indicateurs de couverture calorique : pas de suivi de tendance sur la période 2013-2017 pourtant disponible dans le dataset population.
+- Prochaine piste : étendre les indicateurs de couverture calorique sur toute la période disponible pour distinguer une dégradation structurelle d'un phénomène ponctuel.
 
 [Voir le repo GitHub](https://github.com/Elicesjo/PROJET-3-){.cta-btn style="display:inline-block;margin-top:1rem;"}
 
@@ -40,6 +54,12 @@ Mise en évidence de l'écart entre production alimentaire disponible et besoins
 ### Context
 
 Global study on undernourishment conducted for the FAO. Analysis of the distribution of malnutrition, food production capacities by country, and potential causes of nutritional deficits.
+
+### Data
+
+- **Source**: 4 public FAO CSV files merged (population: 1,416 rows over 2013-2017; food availability: 15,605 rows, 18 columns; food aid: 1,475 rows; undernourishment: 1,218 rows), analysis centered on 2017.
+- **Quality**: missing values identified in the food availability file, replaced with 0 (`fillna(0)`) rather than dropped, to avoid losing rows in a dataset aggregated by country and product.
+- **Limits**: a snapshot of 2017, no exploitation of time trends beyond that year for the caloric coverage indicators.
 
 ### Tools
 
@@ -52,14 +72,22 @@ Global study on undernourishment conducted for the FAO. Analysis of the distribu
 - World map of undernourishment
 - Correlation analysis between production and malnutrition
 
-### Key results
+### Results and impact
 
 ::: {.key-result}
-Identification of the most vulnerable geographic areas to food insecurity
+535.7 million people undernourished in 2017, 7.10% of the world's population
 :::
 ::: {.key-result}
-Highlighted gap between available food production and actual nutritional needs
+Theoretical global caloric availability is largely in surplus (82.5% plant-based): the nutritional deficit is a distribution problem, not a global production one
 :::
+
+Impact: a correlation was observed between GDP per capita and the undernourishment rate, with Sub-Saharan Africa and South Asia as the most vulnerable regions, pointing recommendations toward distribution levers rather than production ones.
+
+### Limits and next steps
+
+- Replacing missing values with 0 (rather than imputing) may underestimate certain food flows in countries with incomplete data.
+- Analysis centered on a single year (2017) for caloric coverage indicators: no trend tracking over the 2013-2017 period, despite it being available in the population dataset.
+- Next step: extend caloric coverage indicators across the full available period to distinguish a structural decline from a one-off phenomenon.
 
 [View GitHub repo](https://github.com/Elicesjo/PROJET-3-){.cta-btn style="display:inline-block;margin-top:1rem;"}
 :::

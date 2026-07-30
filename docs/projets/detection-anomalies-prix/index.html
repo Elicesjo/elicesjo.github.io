@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Comparer une détection statistique existante à des méthodes de machine learning (Isolation Forest, LOF) pour repérer des anomalies de prix invisibles à un contrôle univarié">
 
-<title>PORTFOLIO 2026</title>
+<title>Détection d’anomalies de prix : comparaison de méthodes IA – PORTFOLIO 2026</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,23 +27,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./assets/favicon.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-ee089b5cd8c331d37006e611d21b4011.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../assets/favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-ee089b5cd8c331d37006e611d21b4011.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -75,14 +76,14 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">PORTFOLIO 2026</span>
     </a>
   </div>
@@ -93,15 +94,15 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Présentation</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projets.html"> 
+    <a class="nav-link" href="../../projets.html"> 
 <span class="menu-text">Projets Data</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./veille.html"> 
+    <a class="nav-link" href="../../veille.html"> 
 <span class="menu-text">Veille</span></a>
   </li>  
   <li class="nav-item">
@@ -120,96 +121,138 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Détection d’anomalies de prix : comparaison de méthodes IA</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Python</div>
+    <div class="quarto-category">Machine Learning</div>
+    <div class="quarto-category">Détection d'anomalies</div>
+  </div>
+  </div>
 
-
-
-<section id="josy-elices-diez" class="level1 about-hero">
-<h1>Josy Elices-Diez</h1>
-<div class="job-title">
-<p>Data Analyst · Retail Specialist</p>
+<div>
+  <div class="description">
+    Comparer une détection statistique existante à des méthodes de machine learning (Isolation Forest, LOF) pour repérer des anomalies de prix invisibles à un contrôle univarié
+  </div>
 </div>
-<div class="contact-links">
-<p><a href="mailto:josy.elices@gmail.com" class="contact-link">josy.elices@gmail.com</a> <a href="tel:+33687151441" class="contact-link">+33 6 87 15 14 41</a></p>
-</div>
-<div class="hero-actions">
-<p><a href="assets/cv.pdf" class="cv-btn">Télécharger mon CV</a></p>
-</div>
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Français</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">English</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p>10 ans en retail, dont 5 de management — pilotage des KPIs, gestion de la performance. Cette expérience terrain m’a appris à lire les données bien avant de savoir coder.</p>
-<p>Reconvertie en data analytics chez <strong>OpenClassrooms × ENSAE</strong>, je construis aujourd’hui des analyses et dashboards qui parlent aux équipes métier.</p>
+<section id="contexte" class="level3">
+<h3 class="anchored" data-anchor-id="contexte">Contexte</h3>
+<p>Reprise critique et documentée d’un livrable antérieur (audit de données Bottleneck) : la détection d’outliers de prix existante contrôlait une seule variable à la fois (Z-score, IQR). Le projet évalue si des méthodes multivariées de machine learning détectent des anomalies que ce contrôle univarié ne peut pas voir, à travers une démarche de veille technologique sourcée et comparée plutôt qu’un choix d’outil intuitif.</p>
+</section>
+<section id="données" class="level3">
+<h3 class="anchored" data-anchor-id="données">Données</h3>
+<ul>
+<li><strong>Source</strong> : catalogue produit consolidé issu de l’audit e-commerce précédent (711 références, fusion ERP/web/liaison déjà nettoyée en amont).</li>
+<li><strong>Qualité</strong> : 0 valeur manquante sur les 3 variables retenues (<code>price</code>, <code>total_sales</code>, <code>taux_marge</code>) après vérification programmatique.</li>
+<li><strong>Limites</strong> : aucune donnée personnelle en jeu (catalogue produit uniquement), mais le prix d’achat reste une donnée commercialement sensible ; aucune vérité terrain (label “anomalie confirmée”) n’existe pour mesurer une précision au sens strict.</li>
+</ul>
+</section>
+<section id="outils" class="level3">
+<h3 class="anchored" data-anchor-id="outils">Outils</h3>
+<p><span class="tool-badge">Python</span> <span class="tool-badge">scikit-learn</span> <span class="tool-badge">Pandas</span> <span class="tool-badge">Jupyter</span></p>
+</section>
+<section id="démarche" class="level3">
+<h3 class="anchored" data-anchor-id="démarche">Démarche</h3>
+<ul>
+<li>Veille technologique sourcée (documentation officielle scikit-learn) comparant Z-score/IQR, Isolation Forest et Local Outlier Factor sur 6 critères explicites (qualité, biais, coût temps, reproductibilité, sécurité, maintenabilité).</li>
+<li>Décision argumentée : Z-score/IQR conservé comme référence transparente, Isolation Forest ajouté en complément multivarié, LOF implémenté à titre comparatif plutôt qu’écarté sans preuve.</li>
+<li>Détection appliquée sur <code>price</code>, <code>total_sales</code>, <code>taux_marge</code> avec standardisation préalable, <code>contamination</code> calibrée sur le seuil Tukey existant pour une comparaison à nombre d’anomalies égal.</li>
+<li>Vérification empirique : notebook exécuté de bout en bout, comparaison quantifiée entre les trois méthodes plutôt qu’une affirmation théorique.</li>
+</ul>
+</section>
+<section id="résultats-et-impact" class="level3">
+<h3 class="anchored" data-anchor-id="résultats-et-impact">Résultats et impact</h3>
+<div class="key-result">
+<p>31 anomalies détectées par chaque méthode, dont seulement 7 communes aux trois à la fois</p>
+</div>
+<div class="key-result">
+<p>28 anomalies contextuelles (prix/ventes/marge incohérents) détectées uniquement par une méthode multivariée, invisibles au contrôle univarié existant</p>
+</div>
+<p>Impact : un fichier enrichi (<code>audit_vins_final_anomalies.xlsx</code>) fournit à l’équipe pricing un outil de tri priorisé (accord des trois méthodes = priorité haute) plutôt qu’une liste plate de seuils dépassés.</p>
+</section>
+<section id="limites-et-prochaines-pistes" class="level3">
+<h3 class="anchored" data-anchor-id="limites-et-prochaines-pistes">Limites et prochaines pistes</h3>
+<ul>
+<li>Le paramètre <code>contamination</code> est calibré, pas appris : changer sa valeur change directement le nombre d’anomalies retournées.</li>
+<li>LOF ne dispose pas de <code>predict()</code> réutilisable sur de nouveaux produits en mode détection d’outliers (limite de maintenabilité documentée).</li>
+<li>Prochaine piste : tester la sensibilité du résultat à l’ajout d’autres variables (stock), et construire un échantillon d’anomalies confirmées manuellement pour mesurer une vraie précision/rappel.</li>
+</ul>
+<p><a href="../../veille.html" class="cta-btn" style="display:inline-block;margin-top:1rem;">Voir la veille technologique associée</a></p>
+</section>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<p>10 years in retail, 5 in management — KPI tracking, performance management. That hands-on experience taught me to read data long before I learned to code.</p>
-<p>Retrained in data analytics at <strong>OpenClassrooms × ENSAE</strong>, I now build analyses and dashboards that speak to business teams.</p>
+<section id="context" class="level3">
+<h3 class="anchored" data-anchor-id="context">Context</h3>
+<p>A critical, documented follow-up on a prior deliverable (Bottleneck data audit): the existing price-outlier detection checked one variable at a time (Z-score, IQR). This project evaluates whether multivariate machine learning methods catch anomalies that univariate control cannot see, through a sourced and compared technology review rather than an intuitive tool choice.</p>
+</section>
+<section id="data" class="level3">
+<h3 class="anchored" data-anchor-id="data">Data</h3>
+<ul>
+<li><strong>Source</strong>: consolidated product catalog from the prior e-commerce audit (711 references, ERP/web/liaison merge already cleaned upstream).</li>
+<li><strong>Quality</strong>: 0 missing values on the 3 retained variables (<code>price</code>, <code>total_sales</code>, <code>taux_marge</code>) after programmatic verification.</li>
+<li><strong>Limits</strong>: no personal data involved (product catalog only), but purchase price remains commercially sensitive; no ground truth (confirmed “anomaly” label) exists to measure strict precision.</li>
+</ul>
+</section>
+<section id="tools" class="level3">
+<h3 class="anchored" data-anchor-id="tools">Tools</h3>
+<p><span class="tool-badge">Python</span> <span class="tool-badge">scikit-learn</span> <span class="tool-badge">Pandas</span> <span class="tool-badge">Jupyter</span></p>
+</section>
+<section id="approach" class="level3">
+<h3 class="anchored" data-anchor-id="approach">Approach</h3>
+<ul>
+<li>Sourced technology review (official scikit-learn documentation) comparing Z-score/IQR, Isolation Forest, and Local Outlier Factor on 6 explicit criteria (quality, bias, time cost, reproducibility, security, maintainability).</li>
+<li>Argued decision: Z-score/IQR kept as the transparent baseline, Isolation Forest added as a multivariate complement, LOF implemented for comparison rather than dismissed without evidence.</li>
+<li>Detection applied on <code>price</code>, <code>total_sales</code>, <code>taux_marge</code> with prior standardization, <code>contamination</code> calibrated on the existing Tukey threshold for an apples-to-apples comparison.</li>
+<li>Empirical verification: notebook executed end to end, quantified comparison across the three methods rather than a theoretical claim.</li>
+</ul>
+</section>
+<section id="results-and-impact" class="level3">
+<h3 class="anchored" data-anchor-id="results-and-impact">Results and impact</h3>
+<div class="key-result">
+<p>31 anomalies flagged by each method, only 7 common to all three</p>
+</div>
+<div class="key-result">
+<p>28 contextual anomalies (inconsistent price/sales/margin) caught only by a multivariate method, invisible to the existing univariate check</p>
+</div>
+<p>Impact: an enriched file (<code>audit_vins_final_anomalies.xlsx</code>) gives the pricing team a prioritized triage tool (agreement across all three methods = high priority) instead of a flat list of threshold breaches.</p>
+</section>
+<section id="limits-and-next-steps" class="level3">
+<h3 class="anchored" data-anchor-id="limits-and-next-steps">Limits and next steps</h3>
+<ul>
+<li>The <code>contamination</code> parameter is calibrated, not learned: changing its value directly changes how many anomalies are returned.</li>
+<li>LOF has no reusable <code>predict()</code> for new products in outlier-detection mode (documented maintainability limit).</li>
+<li>Next step: test the result’s sensitivity to adding other variables (stock), and build a manually confirmed anomaly sample to measure real precision/recall.</li>
+</ul>
+<p><a href="../../veille.html" class="cta-btn" style="display:inline-block;margin-top:1rem;">See the related technology review</a></p>
+</section>
 </div>
 </div>
-</div>
-</section>
-<div class="about-content">
-<hr>
-<section id="langages-outils" class="level4 skill-group">
-<h4 class="anchored" data-anchor-id="langages-outils">Langages &amp; outils</h4>
-<ul>
-<li>Python</li>
-<li>SQL</li>
-<li>dbt</li>
-<li>Power BI · Tableau</li>
-<li>Excel</li>
-<li>Git</li>
-</ul>
-</section>
-<section id="bases-de-données-modélisation" class="level4 skill-group">
-<h4 class="anchored" data-anchor-id="bases-de-données-modélisation">Bases de données &amp; modélisation</h4>
-<ul>
-<li>PostgreSQL</li>
-<li>MySQL</li>
-<li>SQLite</li>
-<li>DBeaver · pgAdmin</li>
-<li>Modélisation relationnelle</li>
-<li>Normalisation 3NF</li>
-<li>Schéma en étoile</li>
-<li>Diagramme ERD</li>
-</ul>
-</section>
-<section id="méthodes-analytiques" class="level4 skill-group">
-<h4 class="anchored" data-anchor-id="méthodes-analytiques">Méthodes analytiques</h4>
-<ul>
-<li>Segmentation RFM</li>
-<li>ACP</li>
-<li>Clustering</li>
-<li>Tests statistiques</li>
-<li>Analyse exploratoire</li>
-<li>Visualisation de données</li>
-</ul>
-</section>
-<section id="expertise-métier-retail" class="level4 skill-group">
-<h4 class="anchored" data-anchor-id="expertise-métier-retail">Expertise métier — Retail</h4>
-<ul>
-<li>Pilotage KPIs</li>
-<li>Analyse des ventes</li>
-<li>Reporting opérationnel</li>
-<li>Management d’équipes</li>
-<li>Gestion de projet</li>
-</ul>
-</section>
-<section id="langues" class="level4 skill-group">
-<h4 class="anchored" data-anchor-id="langues">Langues</h4>
-<ul>
-<li>Français — natif</li>
-<li>Anglais — C1</li>
-<li>Espagnol — A2</li>
-</ul>
-</section>
 </div>
 
 
@@ -633,5 +676,5 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

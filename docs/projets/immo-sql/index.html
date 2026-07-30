@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Concevoir et peupler une base SQL normalisée (3NF) à partir de 500 000 transactions DVF — schéma relationnel complet">
+<meta name="description" content="Concevoir et peupler une base SQL normalisée (3NF) à partir de 500 000 transactions DVF : schéma relationnel complet">
 
-<title>Modélisation SQL — Base de données immobilière – PORTFOLIO 2026</title>
+<title>Modélisation SQL : base de données immobilière – PORTFOLIO 2026</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -40,7 +40,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-ee089b5cd8c331d37006e611d21b4011.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
@@ -102,6 +102,10 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Projets Data</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="../../veille.html"> 
+<span class="menu-text">Veille</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="https://www.linkedin.com/in/josy-elices-diez-03523225a/"> 
 <span class="menu-text">LinkedIn</span></a>
   </li>  
@@ -126,7 +130,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Modélisation SQL — Base de données immobilière</h1>
+<h1 class="title">Modélisation SQL : base de données immobilière</h1>
   <div class="quarto-categories">
     <div class="quarto-category">SQL</div>
     <div class="quarto-category">Bases de données</div>
@@ -136,7 +140,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    Concevoir et peupler une base SQL normalisée (3NF) à partir de 500 000 transactions DVF — schéma relationnel complet
+    Concevoir et peupler une base SQL normalisée (3NF) à partir de 500 000 transactions DVF : schéma relationnel complet
   </div>
 </div>
 
@@ -161,6 +165,14 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="contexte">Contexte</h3>
 <p>Création d’une base de données relationnelle pour un réseau d’agences immobilières, à partir des données de valeurs foncières (DVF) publiées par le gouvernement français.</p>
 </section>
+<section id="données" class="level3">
+<h3 class="anchored" data-anchor-id="données">Données</h3>
+<ul>
+<li><strong>Source</strong> : 500 000 transactions foncières DVF, croisées à un référentiel géographique d’environ 976 communes.</li>
+<li><strong>Modèle</strong> : schéma normalisé 3NF en 5 tables hiérarchiques (RÉGION → DÉPARTEMENT → COMMUNE → POPULATION / BIEN), clés primaires et étrangères documentées champ par champ dans un dictionnaire de données.</li>
+<li><strong>Limites</strong> : le type de bien (<code>Type_Local</code>) est restreint à Maison ou Appartement dans le dictionnaire ; locaux commerciaux et terrains non couverts par ce modèle.</li>
+</ul>
+</section>
 <section id="outils" class="level3">
 <h3 class="anchored" data-anchor-id="outils">Outils</h3>
 <p><span class="tool-badge">SQL</span> <span class="tool-badge">PostgreSQL</span> <span class="tool-badge">DBeaver</span> <span class="tool-badge">Excel</span></p>
@@ -175,14 +187,23 @@ ul.task-list li input[type="checkbox"] {
 <li>Requêtes d’analyse du marché immobilier</li>
 </ul>
 </section>
-<section id="résultats-clés" class="level3">
-<h3 class="anchored" data-anchor-id="résultats-clés">Résultats clés</h3>
+<section id="résultats-et-impact" class="level3">
+<h3 class="anchored" data-anchor-id="résultats-et-impact">Résultats et impact</h3>
 <div class="key-result">
-<p>Base de données normalisée intégrant communes, biens et transactions foncières</p>
+<p>500 000 transactions DVF importées et requêtables sur un schéma normalisé à 5 tables</p>
 </div>
 <div class="key-result">
-<p>Schéma documenté et requêtes d’analyse prêtes à l’emploi</p>
+<p>Requêtes d’analyse couvrant les KPI marché immobilier (prix au m², évolution par commune, transactions par type de bien)</p>
 </div>
+<p>Impact : une base réutilisable pour un reporting de marché récurrent (par commune, par type de bien), plutôt qu’une extraction ponctuelle.</p>
+</section>
+<section id="limites-et-prochaines-pistes" class="level3">
+<h3 class="anchored" data-anchor-id="limites-et-prochaines-pistes">Limites et prochaines pistes</h3>
+<ul>
+<li>Modèle restreint à 2 types de biens (Maison, Appartement) : les locaux commerciaux et terrains ne sont pas couverts.</li>
+<li>Aucune contrainte d’intégrité au-delà des clés primaires/étrangères n’est documentée (pas de borne de validité sur <code>Valeur_Fonciere</code> par exemple).</li>
+<li>Prochaine piste : étendre le modèle à d’autres types de biens si le réseau d’agences en a besoin, et ajouter des contraintes métier sur les valeurs numériques.</li>
+</ul>
 <p><a href="https://github.com/Elicesjo/PROJET-4-" class="cta-btn" style="display:inline-block;margin-top:1rem;">Voir le repo GitHub</a></p>
 </section>
 </div>
@@ -190,6 +211,14 @@ ul.task-list li input[type="checkbox"] {
 <section id="context" class="level3">
 <h3 class="anchored" data-anchor-id="context">Context</h3>
 <p>Creation of a relational database for a real estate agency network, using French government land value data (DVF).</p>
+</section>
+<section id="data" class="level3">
+<h3 class="anchored" data-anchor-id="data">Data</h3>
+<ul>
+<li><strong>Source</strong>: 500,000 DVF land transactions, cross-referenced with a geographic reference set of about 976 municipalities.</li>
+<li><strong>Model</strong>: normalized 3NF schema across 5 hierarchical tables (REGION → DEPARTMENT → MUNICIPALITY → POPULATION / PROPERTY), primary and foreign keys documented field by field in a data dictionary.</li>
+<li><strong>Limits</strong>: property type (<code>Type_Local</code>) is restricted to House or Apartment in the dictionary; commercial premises and land plots are not covered by this model.</li>
+</ul>
 </section>
 <section id="tools" class="level3">
 <h3 class="anchored" data-anchor-id="tools">Tools</h3>
@@ -205,14 +234,23 @@ ul.task-list li input[type="checkbox"] {
 <li>Real estate market analysis queries</li>
 </ul>
 </section>
-<section id="key-results" class="level3">
-<h3 class="anchored" data-anchor-id="key-results">Key results</h3>
+<section id="results-and-impact" class="level3">
+<h3 class="anchored" data-anchor-id="results-and-impact">Results and impact</h3>
 <div class="key-result">
-<p>Normalized database integrating municipalities, properties, and land transactions</p>
+<p>500,000 DVF transactions imported and queryable on a normalized 5-table schema</p>
 </div>
 <div class="key-result">
-<p>Documented schema with ready-to-use analysis queries</p>
+<p>Analysis queries covering real estate market KPIs (price per m², trends by municipality, transactions by property type)</p>
 </div>
+<p>Impact: a reusable database for recurring market reporting (by municipality, by property type), rather than a one-off extraction.</p>
+</section>
+<section id="limits-and-next-steps" class="level3">
+<h3 class="anchored" data-anchor-id="limits-and-next-steps">Limits and next steps</h3>
+<ul>
+<li>Model restricted to 2 property types (House, Apartment): commercial premises and land plots are not covered.</li>
+<li>No integrity constraint beyond primary/foreign keys is documented (no validity range on <code>Valeur_Fonciere</code>, for instance).</li>
+<li>Next step: extend the model to other property types if the agency network needs it, and add business constraints on numeric values.</li>
+</ul>
 <p><a href="https://github.com/Elicesjo/PROJET-4-" class="cta-btn" style="display:inline-block;margin-top:1rem;">View GitHub repo</a></p>
 </section>
 </div>

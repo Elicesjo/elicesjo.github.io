@@ -343,4 +343,43 @@ ax2.set_title("Évolution du CA", fontsize=10, color="#4A4A6A", pad=8)
 save(fig, "ecommerce-lapage")
 
 
+# ── 8. Détection de faux billets ─────────────────────────────────────────────
+C = "#C39BE0"
+fig, axes = plt.subplots(1, 2, figsize=(9, 5), facecolor="white")
+fig.subplots_adjust(wspace=0.42, left=0.1, right=0.96, top=0.84, bottom=0.14)
+fig.suptitle("Détection de faux billets — ONCFM", fontsize=12,
+             fontweight="bold", color="#3A3A5C", y=0.97)
+
+modeles = ["K-means", "Rég. log.", "KNN", "Rand. Forest"]
+accuracy = [98.7, 99.2, 99.2, 99.2]
+colors_m = [LIGHT, PALETTE[3], C, PALETTE[5]]
+ax = axes[0]
+bars = ax.bar(modeles, accuracy, color=colors_m, edgecolor="none", width=0.6)
+ax.set_ylim(95, 101)
+ax.set_ylabel("Accuracy (%)", color=GRAY, fontsize=9)
+ax.tick_params(labelcolor="#4A4A6A", labelsize=8)
+ax.spines["left"].set_color(LIGHT)
+ax.spines["bottom"].set_color(LIGHT)
+for bar, val in zip(bars, accuracy):
+    ax.text(bar.get_x() + bar.get_width() / 2, val + 0.15, f"{val}%",
+            ha="center", color="#3A3A5C", fontsize=8, fontweight="bold")
+ax.set_title("Comparaison des 4 algorithmes", fontsize=10, color="#4A4A6A", pad=8)
+
+ax2 = axes[1]
+classes = ["Vrais", "Faux"]
+counts_c = [1000, 500]
+colors_c = [PALETTE[1], C]
+wedges, texts, autotexts = ax2.pie(
+    counts_c, labels=classes, colors=colors_c, autopct="%1.0f%%", startangle=90,
+    textprops={"fontsize": 8, "color": "#4A4A6A"},
+    wedgeprops={"edgecolor": "white", "linewidth": 2},
+)
+for at in autotexts:
+    at.set_fontweight("bold")
+    at.set_color("#3A3A5C")
+ax2.set_title("1 500 billets scannés", fontsize=10, color="#4A4A6A", pad=8)
+ax2.set_facecolor("white")
+save(fig, "faux-billets")
+
+
 print("\nTous les thumbnails générés.")

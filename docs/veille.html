@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>PORTFOLIO 2026</title>
+<title>veille – PORTFOLIO 2026</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -93,7 +93,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Présentation</span></a>
   </li>  
   <li class="nav-item">
@@ -101,7 +101,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Projets Data</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./veille.html"> 
+    <a class="nav-link active" href="./veille.html" aria-current="page"> 
 <span class="menu-text">Veille</span></a>
   </li>  
   <li class="nav-item">
@@ -130,86 +130,169 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="josy-elices-diez" class="level1 about-hero">
-<h1>Josy Elices-Diez</h1>
-<div class="job-title">
-<p>Data Analyst · Retail Specialist</p>
+<section id="veille-technologique" class="level1 page-hero">
+<h1>Veille technologique</h1>
+<div class="underline-bar">
+
 </div>
-<div class="contact-links">
-<p><a href="mailto:josy.elices@gmail.com" class="contact-link">josy.elices@gmail.com</a> <a href="tel:+33687151441" class="contact-link">+33 6 87 15 14 41</a></p>
+</section>
+<div class="section-intro">
+<p>Détection d’anomalies de prix dans un catalogue produit : méthodes statistiques vs machine learning, comparées sur des critères explicites plutôt que sur une préférence intuitive.</p>
 </div>
-<div class="hero-actions">
-<p><a href="assets/cv.pdf" class="cv-btn">Télécharger mon CV</a></p>
-</div>
+<div class="about-content">
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Français</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">English</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p>10 ans en retail, dont 5 de management — pilotage des KPIs, gestion de la performance. Cette expérience terrain m’a appris à lire les données bien avant de savoir coder.</p>
-<p>Reconvertie en data analytics chez <strong>OpenClassrooms × ENSAE</strong>, je construis aujourd’hui des analyses et dashboards qui parlent aux équipes métier.</p>
+<section id="besoin" class="level3">
+<h3 class="anchored" data-anchor-id="besoin">Besoin</h3>
+<p>Un contrôle qualité classique (Z-score, intervalle interquartile) détecte les prix aberrants <strong>variable par variable</strong>. Il ne peut pas repérer une anomalie <em>contextuelle</em> : un prix normal en apparence mais incohérent avec le volume de ventes ou la marge du produit. Le besoin : vérifier si une approche multivariée apporte une détection plus fine, sans sacrifier la transparence ni la reproductibilité attendues dans un contexte métier.</p>
+</section>
+<section id="panel-comparé" class="level3">
+<h3 class="anchored" data-anchor-id="panel-comparé">Panel comparé</h3>
+<p><span class="tool-badge">Z-score / IQR</span> <span class="tool-badge">Isolation Forest</span> <span class="tool-badge">Local Outlier Factor</span></p>
+</section>
+<section id="sources" class="level3">
+<h3 class="anchored" data-anchor-id="sources">Sources</h3>
+<ul>
+<li><a href="https://scikit-learn.org/stable/modules/outlier_detection.html">scikit-learn, Novelty and Outlier Detection</a></li>
+<li><a href="https://scikit-learn.org/stable/auto_examples/miscellaneous/plot_anomaly_comparison.html">scikit-learn, Comparing anomaly detection algorithms</a></li>
+</ul>
+</section>
+<section id="critères-de-comparaison" class="level3">
+<h3 class="anchored" data-anchor-id="critères-de-comparaison">Critères de comparaison</h3>
+<p>Qualité de détection, biais/robustesse, coût temps, reproductibilité, sécurité/conformité, maintenabilité.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Critère</th>
+<th>Z-score / IQR</th>
+<th>Isolation Forest</th>
+<th>Local Outlier Factor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Détection</td>
+<td>Univariée, ignore les incohérences croisées</td>
+<td>Multivariée, robuste sur densité uniforme</td>
+<td>Multivariée, meilleure sur densités hétérogènes</td>
+</tr>
+<tr class="even">
+<td>Biais</td>
+<td>Suppose une distribution proche de la normale</td>
+<td>Aucune hypothèse de distribution</td>
+<td>Sensible au choix de <code>n_neighbors</code></td>
+</tr>
+<tr class="odd">
+<td>Coût temps</td>
+<td>Très faible</td>
+<td>Faible, quasi linéaire</td>
+<td>Plus coûteux (k plus proches voisins)</td>
+</tr>
+<tr class="even">
+<td>Reproductibilité</td>
+<td>Déterministe</td>
+<td>Reproductible via <code>random_state</code></td>
+<td>Déterministe à <code>n_neighbors</code> fixé</td>
+</tr>
+<tr class="odd">
+<td>Maintenabilité</td>
+<td>Formule simple, sans dépendance</td>
+<td><code>predict()</code> réutilisable sur nouvelles données</td>
+<td>Pas de <code>predict()</code> en mode détection d’outliers</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="décision" class="level3">
+<h3 class="anchored" data-anchor-id="décision">Décision</h3>
+<p>Le Z-score/IQR est conservé comme référence simple et transparente. Isolation Forest est ajouté en complément multivarié : sur un cas réel testé (catalogue de 711 produits), <strong>7 anomalies sur 31 sont détectées par les trois méthodes à la fois</strong> et <strong>28 le sont uniquement par une méthode multivariée</strong>, preuve empirique que le contrôle univarié seul laisse passer des incohérences. Local Outlier Factor est implémenté à titre comparatif plutôt qu’écarté sans vérification.</p>
+<p><a href="projets/detection-anomalies-prix/" class="cta-btn" style="display:inline-block;margin-top:1rem;">Voir le projet appliqué</a></p>
+</section>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<p>10 years in retail, 5 in management — KPI tracking, performance management. That hands-on experience taught me to read data long before I learned to code.</p>
-<p>Retrained in data analytics at <strong>OpenClassrooms × ENSAE</strong>, I now build analyses and dashboards that speak to business teams.</p>
+<section id="need" class="level3">
+<h3 class="anchored" data-anchor-id="need">Need</h3>
+<p>A classic quality check (Z-score, interquartile range) flags price outliers <strong>one variable at a time</strong>. It cannot catch a <em>contextual</em> anomaly: a price that looks normal in isolation but is inconsistent with the product’s sales volume or margin. The need: check whether a multivariate approach catches more without sacrificing transparency or reproducibility.</p>
+</section>
+<section id="panel-compared" class="level3">
+<h3 class="anchored" data-anchor-id="panel-compared">Panel compared</h3>
+<p><span class="tool-badge">Z-score / IQR</span> <span class="tool-badge">Isolation Forest</span> <span class="tool-badge">Local Outlier Factor</span></p>
+</section>
+<section id="sources-1" class="level3">
+<h3 class="anchored" data-anchor-id="sources-1">Sources</h3>
+<ul>
+<li><a href="https://scikit-learn.org/stable/modules/outlier_detection.html">scikit-learn, Novelty and Outlier Detection</a></li>
+<li><a href="https://scikit-learn.org/stable/auto_examples/miscellaneous/plot_anomaly_comparison.html">scikit-learn, Comparing anomaly detection algorithms</a></li>
+</ul>
+</section>
+<section id="comparison-criteria" class="level3">
+<h3 class="anchored" data-anchor-id="comparison-criteria">Comparison criteria</h3>
+<p>Detection quality, bias/robustness, time cost, reproducibility, security/compliance, maintainability.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Criterion</th>
+<th>Z-score / IQR</th>
+<th>Isolation Forest</th>
+<th>Local Outlier Factor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Detection</td>
+<td>Univariate, misses cross-variable inconsistencies</td>
+<td>Multivariate, robust on uniform density</td>
+<td>Multivariate, better on heterogeneous densities</td>
+</tr>
+<tr class="even">
+<td>Bias</td>
+<td>Assumes near-normal distribution</td>
+<td>No distribution assumption</td>
+<td>Sensitive to <code>n_neighbors</code> choice</td>
+</tr>
+<tr class="odd">
+<td>Time cost</td>
+<td>Very low</td>
+<td>Low, near-linear</td>
+<td>Higher (k-nearest-neighbor lookups)</td>
+</tr>
+<tr class="even">
+<td>Reproducibility</td>
+<td>Deterministic</td>
+<td>Reproducible via <code>random_state</code></td>
+<td>Deterministic at fixed <code>n_neighbors</code></td>
+</tr>
+<tr class="odd">
+<td>Maintainability</td>
+<td>Simple formula, no dependency</td>
+<td>Reusable <code>predict()</code> on new data</td>
+<td>No <code>predict()</code> in outlier-detection mode</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="decision" class="level3">
+<h3 class="anchored" data-anchor-id="decision">Decision</h3>
+<p>Z-score/IQR stays as the simple, transparent baseline. Isolation Forest is added as a multivariate complement: on a real case (a 711-product catalog), <strong>7 out of 31 anomalies are flagged by all three methods</strong>, and <strong>28 are caught only by a multivariate method</strong>, empirical proof that the univariate check alone misses real inconsistencies. Local Outlier Factor is implemented for comparison rather than dismissed without evidence.</p>
+<p><a href="projets/detection-anomalies-prix/" class="cta-btn" style="display:inline-block;margin-top:1rem;">See the applied project</a></p>
+</section>
 </div>
 </div>
 </div>
-</section>
-<div class="about-content">
-<hr>
-<section id="langages-outils" class="level4 skill-group">
-<h4 class="anchored" data-anchor-id="langages-outils">Langages &amp; outils</h4>
-<ul>
-<li>Python</li>
-<li>SQL</li>
-<li>dbt</li>
-<li>Power BI · Tableau</li>
-<li>Excel</li>
-<li>Git</li>
-</ul>
-</section>
-<section id="bases-de-données-modélisation" class="level4 skill-group">
-<h4 class="anchored" data-anchor-id="bases-de-données-modélisation">Bases de données &amp; modélisation</h4>
-<ul>
-<li>PostgreSQL</li>
-<li>MySQL</li>
-<li>SQLite</li>
-<li>DBeaver · pgAdmin</li>
-<li>Modélisation relationnelle</li>
-<li>Normalisation 3NF</li>
-<li>Schéma en étoile</li>
-<li>Diagramme ERD</li>
-</ul>
-</section>
-<section id="méthodes-analytiques" class="level4 skill-group">
-<h4 class="anchored" data-anchor-id="méthodes-analytiques">Méthodes analytiques</h4>
-<ul>
-<li>Segmentation RFM</li>
-<li>ACP</li>
-<li>Clustering</li>
-<li>Tests statistiques</li>
-<li>Analyse exploratoire</li>
-<li>Visualisation de données</li>
-</ul>
-</section>
-<section id="expertise-métier-retail" class="level4 skill-group">
-<h4 class="anchored" data-anchor-id="expertise-métier-retail">Expertise métier — Retail</h4>
-<ul>
-<li>Pilotage KPIs</li>
-<li>Analyse des ventes</li>
-<li>Reporting opérationnel</li>
-<li>Management d’équipes</li>
-<li>Gestion de projet</li>
-</ul>
-</section>
-<section id="langues" class="level4 skill-group">
-<h4 class="anchored" data-anchor-id="langues">Langues</h4>
-<ul>
-<li>Français — natif</li>
-<li>Anglais — C1</li>
-<li>Espagnol — A2</li>
-</ul>
-</section>
 </div>
 
 

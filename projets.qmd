@@ -41,6 +41,8 @@ Filtrer par catégorie
   <option value="Data Engineering">Data Engineering</option>
   <option value="ACP">ACP</option>
   <option value="Clustering">Clustering</option>
+  <option value="Machine Learning">Machine Learning</option>
+  <option value="Classification">Classification</option>
 </select>
 
 <script>
@@ -62,5 +64,5 @@ function filterCategory(val) {
 :::
 
 ::: {.section-intro}
-8 projets issus de la formation **Data Analyst d'OpenClassrooms × ENSAE** — analyse de données, modélisation SQL, pipelines dbt et dashboards.
+9 projets issus de la formation **Data Analyst d'OpenClassrooms × ENSAE** — analyse de données, modélisation SQL, pipelines dbt et dashboards.
 :::

@@ -1,0 +1,95 @@
+---
+title: "Détection de faux billets : ONCFM"
+description: "Classifier automatiquement les billets vrais et faux à partir de mesures physiques, en comparant 4 algorithmes de machine learning"
+categories: [Python, Machine Learning, Classification]
+image: thumbnail.png
+order: 9
+---
+
+::: {.panel-tabset}
+## Français
+
+### Contexte
+
+Mission pour l'Organisation nationale de lutte contre le faux-monnayage (ONCFM) : développer un système capable de détecter automatiquement les faux billets à partir de 6 mesures physiques scannées (dimensions, marges). L'objectif est de livrer un script autonome, testé en direct sur des données inconnues.
+
+### Données
+
+- **Source** : 1 500 billets (1 000 vrais, 500 faux), 6 mesures physiques par billet.
+- **Qualité** : 37 valeurs manquantes sur la variable `margin_low` (1 463 lignes complètes), imputées après comparaison de deux méthodes (régression linéaire vs KNN) validées par validation croisée à 5 plis.
+- **Limites** : split train/test stratifié à 33 % (495 billets de test : 165 faux, 330 vrais).
+
+### Outils
+
+[Python]{.tool-badge} [Pandas]{.tool-badge} [Scikit-learn]{.tool-badge} [Matplotlib]{.tool-badge} [Seaborn]{.tool-badge} [Jupyter]{.tool-badge}
+
+### Méthodologie
+
+- Analyse exploratoire de 1 500 billets (1 000 vrais, 500 faux)
+- Imputation des valeurs manquantes par régression linéaire
+- Standardisation et split train/test stratifié
+- Comparaison de 4 algorithmes : K-means (prédiction par distance aux centroïdes), régression logistique, KNN, Random Forest
+- Sélection du modèle final sur le critère prioritaire recall(classe faux)
+- Script CLI de prédiction acceptant valeurs directes ou fichier CSV multi-billets
+
+### Résultats et impact
+
+::: {.key-result}
+Modèle final retenu : régression logistique, 99,39 % d'accuracy, 98,79 % de recall sur la classe faux, AUC-ROC 99,94 %
+:::
+::: {.key-result}
+4 algorithmes comparés (régression logistique, KNN 98,99 % accuracy, Random Forest 98,79 %, K-means 98,59 %), stabilité confirmée en validation croisée à 5 plis (recall(faux) moyen 0,980 ± 0,014)
+:::
+
+Impact : un script applicatif déployable (`model_final.pkl`) qui priorise explicitement le recall sur la classe faux, pour minimiser les faux billets classés à tort comme authentiques.
+
+### Limites et prochaines pistes
+
+- Le jeu de test (495 billets) reste modeste ; la validation croisée à 5 plis limite mais ne supprime pas le risque de variance sur des données réelles plus hétérogènes.
+- Prochaine piste : tester le modèle sur un flux de billets scannés en conditions réelles pour vérifier la stabilité du recall hors du jeu de données ONCFM.
+
+[Voir le repo GitHub](https://github.com/Elicesjo/PROJET-11-){.cta-btn style="display:inline-block;margin-top:1rem;"}
+
+## English
+
+### Context
+
+Mission for the National Counterfeiting Prevention Organization (ONCFM): develop a system to automatically detect counterfeit banknotes from 6 scanned physical measurements (dimensions, margins). The goal is to deliver a standalone script, tested live on unknown data.
+
+### Data
+
+- **Source**: 1,500 banknotes (1,000 genuine, 500 counterfeit), 6 physical measurements per note.
+- **Quality**: 37 missing values on the `margin_low` variable (1,463 complete rows), imputed after comparing two methods (linear regression vs. KNN) validated via 5-fold cross-validation.
+- **Limits**: stratified 33% train/test split (495 test banknotes: 165 counterfeit, 330 genuine).
+
+### Tools
+
+[Python]{.tool-badge} [Pandas]{.tool-badge} [Scikit-learn]{.tool-badge} [Matplotlib]{.tool-badge} [Seaborn]{.tool-badge} [Jupyter]{.tool-badge}
+
+### Methodology
+
+- Exploratory analysis of 1,500 banknotes (1,000 genuine, 500 counterfeit)
+- Missing value imputation via linear regression
+- Standardization and stratified train/test split
+- Comparison of 4 algorithms: K-means (centroid-distance prediction), logistic regression, KNN, Random Forest
+- Final model selected on the priority criterion: recall on the counterfeit class
+- CLI prediction script accepting direct values or a multi-banknote CSV file
+
+### Results and impact
+
+::: {.key-result}
+Final model selected: logistic regression, 99.39% accuracy, 98.79% recall on the counterfeit class, 99.94% AUC-ROC
+:::
+::: {.key-result}
+4 algorithms compared (logistic regression, KNN 98.99% accuracy, Random Forest 98.79%, K-means 98.59%), stability confirmed via 5-fold cross-validation (mean recall on counterfeit 0.980 ± 0.014)
+:::
+
+Impact: a deployable prediction script (`model_final.pkl`) that explicitly prioritizes recall on the counterfeit class, to minimize counterfeit notes wrongly classified as genuine.
+
+### Limits and next steps
+
+- The test set (495 banknotes) remains modest; 5-fold cross-validation limits but does not eliminate variance risk on more heterogeneous real-world data.
+- Next step: test the model on a live stream of scanned banknotes to verify recall stability beyond the ONCFM dataset.
+
+[View GitHub repo](https://github.com/Elicesjo/PROJET-11-){.cta-btn style="display:inline-block;margin-top:1rem;"}
+:::

@@ -1,5 +1,5 @@
 ---
-title: "Audit de données e-commerce — Python"
+title: "Audit de données e-commerce : Python"
 description: "Détecter et corriger les doublons, valeurs manquantes et incohérences dans les données d'une boutique de vins en ligne"
 categories: [Python, Nettoyage de données]
 image: thumbnail.png
@@ -11,7 +11,13 @@ order: 4
 
 ### Contexte
 
-Optimisation de la gestion des données d'une boutique en ligne de vins. Travail sur la qualité des données, les jointures entre tables (ERP, web, liaison) et la production d'analyses métier.
+Optimisation de la gestion des données d'une boutique en ligne de vins (Bottleneck). Travail sur la qualité des données, les jointures entre tables (ERP, web, liaison) et la production d'analyses métier.
+
+### Données
+
+- **Source** : 3 fichiers (ERP, web, liaison) d'une boutique de vins en ligne. Fichiers sources non inclus dans le repo pour confidentialité.
+- **Qualité** : nettoyage documenté à chaque étape (822 lignes ERP après filtre prix, 714 après suppression des attachments ; 734 lignes web après dédoublonnage sur 825 lignes brutes).
+- **Limites** : la fusion finale ERP + web perd 4 lignes sur 716 (jointure trop restrictive, signalée explicitement dans le notebook), pour un dataset final de 712 références.
 
 ### Outils
 
@@ -24,14 +30,22 @@ Optimisation de la gestion des données d'une boutique en ligne de vins. Travail
 - Jointures et constitution d'un dataset consolidé
 - Analyse des ventes par produit et par période
 
-### Résultats clés
+### Résultats et impact
 
 ::: {.key-result}
-Dataset nettoyé et consolidé, prêt pour l'analyse et le reporting
+Chiffre d'affaires total du site web : 143 424 €, dont 16 610 € (12 %) portés par des produits identifiés comme outliers de prix
 :::
 ::: {.key-result}
-Identification des principales anomalies de données et de leur impact sur les ventes
+Dataset consolidé de 712 références, prêt pour l'analyse et le reporting
 :::
+
+Impact : ce dataset consolidé sert de base de travail à un projet ultérieur de ce portfolio (détection d'anomalies de prix par machine learning), qui étend directement ce traitement d'outliers.
+
+### Limites et prochaines pistes
+
+- La fusion finale perd 4 lignes ERP sur 716 (jointure trop restrictive) : documenté dans le notebook mais non corrigé dans cette itération.
+- Les fichiers sources ne sont pas inclus dans le repo (confidentialité), ce qui limite la reproductibilité stricte par un tiers.
+- Prochaine piste : assouplir la jointure finale pour récupérer les 4 lignes perdues et vérifier leur impact sur le CA total.
 
 [Voir le repo GitHub](https://github.com/Elicesjo/PROJET-5-){.cta-btn style="display:inline-block;margin-top:1rem;"}
 
@@ -39,7 +53,13 @@ Identification des principales anomalies de données et de leur impact sur les v
 
 ### Context
 
-Data management optimization for an online wine shop. Work on data quality, table joins (ERP, web, liaison) and business analysis.
+Data management optimization for an online wine shop (Bottleneck). Work on data quality, table joins (ERP, web, liaison) and business analysis.
+
+### Data
+
+- **Source**: 3 files (ERP, web, liaison) from an online wine shop. Source files not included in the repo for confidentiality.
+- **Quality**: cleaning documented at each step (822 ERP rows after price filtering, 714 after removing attachments; 734 web rows after deduplication out of 825 raw rows).
+- **Limits**: the final ERP + web merge loses 4 rows out of 716 (an overly restrictive join, explicitly flagged in the notebook), for a final dataset of 712 references.
 
 ### Tools
 
@@ -52,14 +72,22 @@ Data management optimization for an online wine shop. Work on data quality, tabl
 - Joins and consolidated dataset creation
 - Sales analysis by product and time period
 
-### Key results
+### Results and impact
 
 ::: {.key-result}
-Clean, consolidated dataset ready for analysis and reporting
+Total website revenue: €143,424, of which €16,610 (12%) driven by products flagged as price outliers
 :::
 ::: {.key-result}
-Identification of key data anomalies and their impact on sales figures
+Consolidated dataset of 712 references, ready for analysis and reporting
 :::
+
+Impact: this consolidated dataset serves as the working base for a later project in this portfolio (machine learning price anomaly detection), which directly extends this outlier treatment.
+
+### Limits and next steps
+
+- The final merge loses 4 ERP rows out of 716 (overly restrictive join): documented in the notebook but not fixed in this iteration.
+- Source files are not included in the repo (confidentiality), which limits strict reproducibility by a third party.
+- Next step: relax the final join to recover the 4 lost rows and check their impact on total revenue.
 
 [View GitHub repo](https://github.com/Elicesjo/PROJET-5-){.cta-btn style="display:inline-block;margin-top:1rem;"}
 :::

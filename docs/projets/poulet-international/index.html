@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="description" content="Identifier des groupements de pays cibles pour l’export de poulets bio via ACP et clustering (CAH + K-means)">
 
-<title>Expansion internationale — La poule qui chante – PORTFOLIO 2026</title>
+<title>Expansion internationale : la poule qui chante – PORTFOLIO 2026</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -40,7 +40,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-ee089b5cd8c331d37006e611d21b4011.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
@@ -102,6 +102,10 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Projets Data</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="../../veille.html"> 
+<span class="menu-text">Veille</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="https://www.linkedin.com/in/josy-elices-diez-03523225a/"> 
 <span class="menu-text">LinkedIn</span></a>
   </li>  
@@ -126,7 +130,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Expansion internationale — La poule qui chante</h1>
+<h1 class="title">Expansion internationale : la poule qui chante</h1>
   <div class="quarto-categories">
     <div class="quarto-category">Python</div>
     <div class="quarto-category">ACP</div>
@@ -162,6 +166,14 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="contexte">Contexte</h3>
 <p>Mission d’analyse pour une entreprise agroalimentaire française souhaitant évaluer son potentiel d’expansion internationale. À partir des données FAO (New Food Balances), de la Banque mondiale et de données mondiales, l’objectif est de regrouper les pays en clusters homogènes pour identifier des marchés cibles pour l’export de poulets bio.</p>
 </section>
+<section id="données" class="level3">
+<h3 class="anchored" data-anchor-id="données">Données</h3>
+<ul>
+<li><strong>Source</strong> : croisement FAO (disponibilité alimentaire, 176 600 lignes), population (4 411 lignes), PIB/habitant et urbanisation (Banque mondiale), consolidés sur 141 pays et 17 variables.</li>
+<li><strong>Qualité</strong> : 141 pays retenus représentent 7 039 millions de personnes, soit 92,6 % de la population mondiale.</li>
+<li><strong>Limites</strong> : l’ACP retient 2 axes pour 70 % de variance cumulée (PC1 56 %, PC2 14 %) ; les axes suivants (jusqu’à 98,9 % cumulé sur 9 composantes) ne sont pas exploités dans la segmentation finale.</li>
+</ul>
+</section>
 <section id="outils" class="level3">
 <h3 class="anchored" data-anchor-id="outils">Outils</h3>
 <p><span class="tool-badge">Python</span> <span class="tool-badge">Pandas</span> <span class="tool-badge">Scikit-learn</span> <span class="tool-badge">Matplotlib</span> <span class="tool-badge">Seaborn</span> <span class="tool-badge">Jupyter</span></p>
@@ -178,24 +190,38 @@ ul.task-list li input[type="checkbox"] {
 <li>K-means pour la segmentation finale des pays</li>
 </ul>
 </section>
-<section id="résultats-clés" class="level3">
-<h3 class="anchored" data-anchor-id="résultats-clés">Résultats clés</h3>
+<section id="résultats-et-impact" class="level3">
+<h3 class="anchored" data-anchor-id="résultats-et-impact">Résultats et impact</h3>
 <div class="key-result">
-<p>Segmentation en 4 groupes de pays aux profils de consommation et de marché distincts</p>
+<p>Segmentation en 3 groupes de pays (48, 35 et 58 pays), retenue malgré un score de silhouette légèrement inférieur à celui d’un découpage en 2 groupes (0,404 contre 0,494), pour une interprétabilité métier jugée supérieure</p>
 </div>
 <div class="key-result">
-<p>Préconisation d’un groupe prioritaire à fort potentiel d’export basé sur la consommation de volaille et le PIB/habitant</p>
+<p>Cluster cible “Marchés matures et riches” (34 pays, PIB/habitant moyen 43 833 $, indice de performance logistique 3,66) affiné à 14 pays cibles après filtrage</p>
 </div>
-<div class="key-result">
-<p>Plus de 100 pays analysés couvrant plus de 60 % de la population mondiale</p>
-</div>
-<p><a href="https://github.com/Elicesjo/PROJET-11-" class="cta-btn" style="display:inline-block;margin-top:1rem;">Voir le repo GitHub</a></p>
+<p>Impact : une liste de 14 marchés prioritaires justifiée par des critères explicites (richesse, logistique, gouvernance) plutôt qu’une intuition commerciale.</p>
+</section>
+<section id="limites-et-prochaines-pistes" class="level3">
+<h3 class="anchored" data-anchor-id="limites-et-prochaines-pistes">Limites et prochaines pistes</h3>
+<ul>
+<li>Le choix de 3 clusters plutôt que 2 privilégie l’interprétabilité métier au détriment du score de silhouette optimal ; à documenter explicitement auprès des parties prenantes métier.</li>
+<li>Seuls 2 axes de l’ACP (70 % de variance) sont utilisés pour interpréter les clusters, le reste de l’information (30 %) n’est pas exploité.</li>
+<li>Prochaine piste : tester la stabilité de la segmentation en ajoutant les axes PC3/PC4 (8,7 % et 7,1 % de variance supplémentaire).</li>
+</ul>
+<p><a href="https://github.com/Elicesjo/PROJET-10-" class="cta-btn" style="display:inline-block;margin-top:1rem;">Voir le repo GitHub</a></p>
 </section>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <section id="context" class="level3">
 <h3 class="anchored" data-anchor-id="context">Context</h3>
 <p>Analysis mission for a French agri-food company looking to evaluate its international expansion potential. Using FAO (New Food Balances), World Bank and global datasets, the goal is to group countries into homogeneous clusters to identify target export markets for organic chicken.</p>
+</section>
+<section id="data" class="level3">
+<h3 class="anchored" data-anchor-id="data">Data</h3>
+<ul>
+<li><strong>Source</strong>: FAO food availability (176,600 rows), population (4,411 rows), GDP per capita and urbanization (World Bank), consolidated across 141 countries and 17 variables.</li>
+<li><strong>Quality</strong>: the 141 retained countries represent 7,039 million people, i.e.&nbsp;92.6% of the world’s population.</li>
+<li><strong>Limits</strong>: PCA retains 2 axes for 70% cumulative variance (PC1 56%, PC2 14%); further axes (up to 98.9% cumulative across 9 components) are not used in the final segmentation.</li>
+</ul>
 </section>
 <section id="tools" class="level3">
 <h3 class="anchored" data-anchor-id="tools">Tools</h3>
@@ -213,18 +239,24 @@ ul.task-list li input[type="checkbox"] {
 <li>K-means for final country segmentation</li>
 </ul>
 </section>
-<section id="key-results" class="level3">
-<h3 class="anchored" data-anchor-id="key-results">Key results</h3>
+<section id="results-and-impact" class="level3">
+<h3 class="anchored" data-anchor-id="results-and-impact">Results and impact</h3>
 <div class="key-result">
-<p>Segmentation into 4 country groups with distinct consumption and market profiles</p>
+<p>Segmentation into 3 country groups (48, 35, and 58 countries), chosen despite a slightly lower silhouette score than a 2-group split (0.404 vs.&nbsp;0.494), for better business interpretability</p>
 </div>
 <div class="key-result">
-<p>Priority export group identified based on poultry consumption and GDP per capita</p>
+<p>Target cluster “Mature, wealthy markets” (34 countries, average GDP per capita $43,833, logistics performance index 3.66) narrowed down to 14 target countries after filtering</p>
 </div>
-<div class="key-result">
-<p>Over 100 countries analysed covering more than 60% of the world population</p>
-</div>
-<p><a href="https://github.com/Elicesjo/PROJET-11-" class="cta-btn" style="display:inline-block;margin-top:1rem;">View GitHub repo</a></p>
+<p>Impact: a list of 14 priority markets justified by explicit criteria (wealth, logistics, governance) rather than commercial intuition.</p>
+</section>
+<section id="limits-and-next-steps" class="level3">
+<h3 class="anchored" data-anchor-id="limits-and-next-steps">Limits and next steps</h3>
+<ul>
+<li>Choosing 3 clusters over 2 favors business interpretability over the optimal silhouette score; this trade-off should be made explicit to business stakeholders.</li>
+<li>Only 2 PCA axes (70% of variance) are used to interpret the clusters; the remaining 30% of information is not exploited.</li>
+<li>Next step: test segmentation stability by adding the PC3/PC4 axes (8.7% and 7.1% additional variance).</li>
+</ul>
+<p><a href="https://github.com/Elicesjo/PROJET-10-" class="cta-btn" style="display:inline-block;margin-top:1rem;">View GitHub repo</a></p>
 </section>
 </div>
 </div>

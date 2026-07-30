@@ -28,5 +28,14 @@
   },
   "projets/poulet-international/index.qmd": {
     "index.html": "e08f29c9"
+  },
+  "projets/faux-billets/index.qmd": {
+    "index.html": "195accf7"
+  },
+  "veille.qmd": {
+    "veille.html": "a552583d"
+  },
+  "projets/detection-anomalies-prix/index.qmd": {
+    "index.html": "409e6e65"
   }
 }

@@ -1,6 +1,6 @@
 ---
-title: "Modélisation SQL — Base de données immobilière"
-description: "Concevoir et peupler une base SQL normalisée (3NF) à partir de 500 000 transactions DVF — schéma relationnel complet"
+title: "Modélisation SQL : base de données immobilière"
+description: "Concevoir et peupler une base SQL normalisée (3NF) à partir de 500 000 transactions DVF : schéma relationnel complet"
 categories: [SQL, Bases de données, Modélisation]
 image: thumbnail.png
 order: 3
@@ -12,6 +12,12 @@ order: 3
 ### Contexte
 
 Création d'une base de données relationnelle pour un réseau d'agences immobilières, à partir des données de valeurs foncières (DVF) publiées par le gouvernement français.
+
+### Données
+
+- **Source** : 500 000 transactions foncières DVF, croisées à un référentiel géographique d'environ 976 communes.
+- **Modèle** : schéma normalisé 3NF en 5 tables hiérarchiques (RÉGION → DÉPARTEMENT → COMMUNE → POPULATION / BIEN), clés primaires et étrangères documentées champ par champ dans un dictionnaire de données.
+- **Limites** : le type de bien (`Type_Local`) est restreint à Maison ou Appartement dans le dictionnaire ; locaux commerciaux et terrains non couverts par ce modèle.
 
 ### Outils
 
@@ -25,14 +31,22 @@ Création d'une base de données relationnelle pour un réseau d'agences immobil
 - Alimentation de la BDD depuis les fichiers sources
 - Requêtes d'analyse du marché immobilier
 
-### Résultats clés
+### Résultats et impact
 
 ::: {.key-result}
-Base de données normalisée intégrant communes, biens et transactions foncières
+500 000 transactions DVF importées et requêtables sur un schéma normalisé à 5 tables
 :::
 ::: {.key-result}
-Schéma documenté et requêtes d'analyse prêtes à l'emploi
+Requêtes d'analyse couvrant les KPI marché immobilier (prix au m², évolution par commune, transactions par type de bien)
 :::
+
+Impact : une base réutilisable pour un reporting de marché récurrent (par commune, par type de bien), plutôt qu'une extraction ponctuelle.
+
+### Limites et prochaines pistes
+
+- Modèle restreint à 2 types de biens (Maison, Appartement) : les locaux commerciaux et terrains ne sont pas couverts.
+- Aucune contrainte d'intégrité au-delà des clés primaires/étrangères n'est documentée (pas de borne de validité sur `Valeur_Fonciere` par exemple).
+- Prochaine piste : étendre le modèle à d'autres types de biens si le réseau d'agences en a besoin, et ajouter des contraintes métier sur les valeurs numériques.
 
 [Voir le repo GitHub](https://github.com/Elicesjo/PROJET-4-){.cta-btn style="display:inline-block;margin-top:1rem;"}
 
@@ -41,6 +55,12 @@ Schéma documenté et requêtes d'analyse prêtes à l'emploi
 ### Context
 
 Creation of a relational database for a real estate agency network, using French government land value data (DVF).
+
+### Data
+
+- **Source**: 500,000 DVF land transactions, cross-referenced with a geographic reference set of about 976 municipalities.
+- **Model**: normalized 3NF schema across 5 hierarchical tables (REGION → DEPARTMENT → MUNICIPALITY → POPULATION / PROPERTY), primary and foreign keys documented field by field in a data dictionary.
+- **Limits**: property type (`Type_Local`) is restricted to House or Apartment in the dictionary; commercial premises and land plots are not covered by this model.
 
 ### Tools
 
@@ -54,14 +74,22 @@ Creation of a relational database for a real estate agency network, using French
 - Database population from source files
 - Real estate market analysis queries
 
-### Key results
+### Results and impact
 
 ::: {.key-result}
-Normalized database integrating municipalities, properties, and land transactions
+500,000 DVF transactions imported and queryable on a normalized 5-table schema
 :::
 ::: {.key-result}
-Documented schema with ready-to-use analysis queries
+Analysis queries covering real estate market KPIs (price per m², trends by municipality, transactions by property type)
 :::
+
+Impact: a reusable database for recurring market reporting (by municipality, by property type), rather than a one-off extraction.
+
+### Limits and next steps
+
+- Model restricted to 2 property types (House, Apartment): commercial premises and land plots are not covered.
+- No integrity constraint beyond primary/foreign keys is documented (no validity range on `Valeur_Fonciere`, for instance).
+- Next step: extend the model to other property types if the agency network needs it, and add business constraints on numeric values.
 
 [View GitHub repo](https://github.com/Elicesjo/PROJET-4-){.cta-btn style="display:inline-block;margin-top:1rem;"}
 :::

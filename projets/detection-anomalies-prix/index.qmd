@@ -1,0 +1,93 @@
+---
+title: "Détection d'anomalies de prix : comparaison de méthodes IA"
+description: "Comparer une détection statistique existante à des méthodes de machine learning (Isolation Forest, LOF) pour repérer des anomalies de prix invisibles à un contrôle univarié"
+categories: [Python, Machine Learning, Détection d'anomalies]
+image: thumbnail.png
+order: 10
+---
+
+::: {.panel-tabset}
+## Français
+
+### Contexte
+
+Reprise critique et documentée d'un livrable antérieur (audit de données Bottleneck) : la détection d'outliers de prix existante contrôlait une seule variable à la fois (Z-score, IQR). Le projet évalue si des méthodes multivariées de machine learning détectent des anomalies que ce contrôle univarié ne peut pas voir, à travers une démarche de veille technologique sourcée et comparée plutôt qu'un choix d'outil intuitif.
+
+### Données
+
+- **Source** : catalogue produit consolidé issu de l'audit e-commerce précédent (711 références, fusion ERP/web/liaison déjà nettoyée en amont).
+- **Qualité** : 0 valeur manquante sur les 3 variables retenues (`price`, `total_sales`, `taux_marge`) après vérification programmatique.
+- **Limites** : aucune donnée personnelle en jeu (catalogue produit uniquement), mais le prix d'achat reste une donnée commercialement sensible ; aucune vérité terrain (label "anomalie confirmée") n'existe pour mesurer une précision au sens strict.
+
+### Outils
+
+[Python]{.tool-badge} [scikit-learn]{.tool-badge} [Pandas]{.tool-badge} [Jupyter]{.tool-badge}
+
+### Démarche
+
+- Veille technologique sourcée (documentation officielle scikit-learn) comparant Z-score/IQR, Isolation Forest et Local Outlier Factor sur 6 critères explicites (qualité, biais, coût temps, reproductibilité, sécurité, maintenabilité).
+- Décision argumentée : Z-score/IQR conservé comme référence transparente, Isolation Forest ajouté en complément multivarié, LOF implémenté à titre comparatif plutôt qu'écarté sans preuve.
+- Détection appliquée sur `price`, `total_sales`, `taux_marge` avec standardisation préalable, `contamination` calibrée sur le seuil Tukey existant pour une comparaison à nombre d'anomalies égal.
+- Vérification empirique : notebook exécuté de bout en bout, comparaison quantifiée entre les trois méthodes plutôt qu'une affirmation théorique.
+
+### Résultats et impact
+
+::: {.key-result}
+31 anomalies détectées par chaque méthode, dont seulement 7 communes aux trois à la fois
+:::
+::: {.key-result}
+28 anomalies contextuelles (prix/ventes/marge incohérents) détectées uniquement par une méthode multivariée, invisibles au contrôle univarié existant
+:::
+
+Impact : un fichier enrichi (`audit_vins_final_anomalies.xlsx`) fournit à l'équipe pricing un outil de tri priorisé (accord des trois méthodes = priorité haute) plutôt qu'une liste plate de seuils dépassés.
+
+### Limites et prochaines pistes
+
+- Le paramètre `contamination` est calibré, pas appris : changer sa valeur change directement le nombre d'anomalies retournées.
+- LOF ne dispose pas de `predict()` réutilisable sur de nouveaux produits en mode détection d'outliers (limite de maintenabilité documentée).
+- Prochaine piste : tester la sensibilité du résultat à l'ajout d'autres variables (stock), et construire un échantillon d'anomalies confirmées manuellement pour mesurer une vraie précision/rappel.
+
+[Voir la veille technologique associée](../../veille.qmd){.cta-btn style="display:inline-block;margin-top:1rem;"}
+
+## English
+
+### Context
+
+A critical, documented follow-up on a prior deliverable (Bottleneck data audit): the existing price-outlier detection checked one variable at a time (Z-score, IQR). This project evaluates whether multivariate machine learning methods catch anomalies that univariate control cannot see, through a sourced and compared technology review rather than an intuitive tool choice.
+
+### Data
+
+- **Source**: consolidated product catalog from the prior e-commerce audit (711 references, ERP/web/liaison merge already cleaned upstream).
+- **Quality**: 0 missing values on the 3 retained variables (`price`, `total_sales`, `taux_marge`) after programmatic verification.
+- **Limits**: no personal data involved (product catalog only), but purchase price remains commercially sensitive; no ground truth (confirmed "anomaly" label) exists to measure strict precision.
+
+### Tools
+
+[Python]{.tool-badge} [scikit-learn]{.tool-badge} [Pandas]{.tool-badge} [Jupyter]{.tool-badge}
+
+### Approach
+
+- Sourced technology review (official scikit-learn documentation) comparing Z-score/IQR, Isolation Forest, and Local Outlier Factor on 6 explicit criteria (quality, bias, time cost, reproducibility, security, maintainability).
+- Argued decision: Z-score/IQR kept as the transparent baseline, Isolation Forest added as a multivariate complement, LOF implemented for comparison rather than dismissed without evidence.
+- Detection applied on `price`, `total_sales`, `taux_marge` with prior standardization, `contamination` calibrated on the existing Tukey threshold for an apples-to-apples comparison.
+- Empirical verification: notebook executed end to end, quantified comparison across the three methods rather than a theoretical claim.
+
+### Results and impact
+
+::: {.key-result}
+31 anomalies flagged by each method, only 7 common to all three
+:::
+::: {.key-result}
+28 contextual anomalies (inconsistent price/sales/margin) caught only by a multivariate method, invisible to the existing univariate check
+:::
+
+Impact: an enriched file (`audit_vins_final_anomalies.xlsx`) gives the pricing team a prioritized triage tool (agreement across all three methods = high priority) instead of a flat list of threshold breaches.
+
+### Limits and next steps
+
+- The `contamination` parameter is calibrated, not learned: changing its value directly changes how many anomalies are returned.
+- LOF has no reusable `predict()` for new products in outlier-detection mode (documented maintainability limit).
+- Next step: test the result's sensitivity to adding other variables (stock), and build a manually confirmed anomaly sample to measure real precision/recall.
+
+[See the related technology review](../../veille.qmd){.cta-btn style="display:inline-block;margin-top:1rem;"}
+:::

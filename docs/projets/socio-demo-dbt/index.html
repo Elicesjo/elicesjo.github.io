@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="description" content="Modéliser un pipeline dbt end-to-end pour comparer les profils des apprenants OpenClassrooms au marché du travail national">
 
-<title>Pipeline dbt — Profils socio-démographiques – PORTFOLIO 2026</title>
+<title>Pipeline dbt : profils socio-démographiques – PORTFOLIO 2026</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -40,7 +40,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-ee089b5cd8c331d37006e611d21b4011.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
@@ -102,6 +102,10 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Projets Data</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="../../veille.html"> 
+<span class="menu-text">Veille</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="https://www.linkedin.com/in/josy-elices-diez-03523225a/"> 
 <span class="menu-text">LinkedIn</span></a>
   </li>  
@@ -126,7 +130,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Pipeline dbt — Profils socio-démographiques</h1>
+<h1 class="title">Pipeline dbt : profils socio-démographiques</h1>
   <div class="quarto-categories">
     <div class="quarto-category">Python</div>
     <div class="quarto-category">SQL</div>
@@ -162,6 +166,14 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="contexte">Contexte</h3>
 <p>Analyse de l’évolution des profils socio-démographiques des apprenants OpenClassrooms en les confrontant aux données nationales du marché du travail (chômage, emploi, population active).</p>
 </section>
+<section id="données" class="level3">
+<h3 class="anchored" data-anchor-id="données">Données</h3>
+<ul>
+<li><strong>Source</strong> : seeds dbt (population, chômage, taux d’emploi, apprenants OpenClassrooms), granularité harmonisée entre sources (tranches d’âge de 5 ans regroupées en tranches de 10 ans pour aligner le seed population avec les autres sources).</li>
+<li><strong>Qualité</strong> : validation systématique à chaque transformation seed → staging (comparaison de volumétrie, contrôle des valeurs nulles sur les colonnes clés, détection de doublons sur la clé fonctionnelle genre/année/région/tranche d’âge).</li>
+<li><strong>Limites</strong> : mart final de 4 647 lignes croisant profils apprenants et indicateurs nationaux ; granularité limitée à la région et à la tranche d’âge, pas de niveau individuel au-delà.</li>
+</ul>
+</section>
 <section id="outils" class="level3">
 <h3 class="anchored" data-anchor-id="outils">Outils</h3>
 <p><span class="tool-badge">Python</span> <span class="tool-badge">dbt</span> <span class="tool-badge">SQL</span> <span class="tool-badge">Pandas</span> <span class="tool-badge">Matplotlib</span> <span class="tool-badge">Quarto</span></p>
@@ -175,17 +187,23 @@ ul.task-list li input[type="checkbox"] {
 <li>Rapport Quarto et présentation des résultats</li>
 </ul>
 </section>
-<section id="résultats-clés" class="level3">
-<h3 class="anchored" data-anchor-id="résultats-clés">Résultats clés</h3>
+<section id="résultats-et-impact" class="level3">
+<h3 class="anchored" data-anchor-id="résultats-et-impact">Résultats et impact</h3>
 <div class="key-result">
-<p>Pipeline dbt structuré en 2 couches (staging + marts) avec schémas documentés</p>
+<p>Pipeline dbt en 2 couches (staging + marts) avec validation systématique à chaque étape de transformation</p>
 </div>
 <div class="key-result">
-<p>Écarts H/F et taux de pénétration OC visualisés par région et tranche d’âge</p>
+<p>Mart final de 4 647 lignes croisant profils apprenants (domaine, genre, tranche d’âge, région) et indicateurs nationaux (taux de chômage, taux d’emploi)</p>
 </div>
-<div class="key-result">
-<p>Pyramide des âges et répartition géographique des apprenants vs population nationale</p>
-</div>
+<p>Impact : permet de comparer directement le profil des apprenants OpenClassrooms aux tendances du marché du travail national par région et tranche d’âge, plutôt que des analyses séparées non comparables.</p>
+</section>
+<section id="limites-et-prochaines-pistes" class="level3">
+<h3 class="anchored" data-anchor-id="limites-et-prochaines-pistes">Limites et prochaines pistes</h3>
+<ul>
+<li>Le regroupement des tranches d’âge de 5 à 10 ans (pour aligner les sources) fait perdre de la granularité présente dans les seeds d’origine.</li>
+<li>La validation de qualité actuelle couvre volumétrie, valeurs nulles et doublons, mais pas de règles métier plus fines (cohérence temporelle, plages de valeurs).</li>
+<li>Prochaine piste : étendre les tests dbt à ces règles métier et documenter les écarts H/F avec des chiffres consolidés dans le mart plutôt que dans des scripts de visualisation séparés.</li>
+</ul>
 <p><a href="https://github.com/Elicesjo/PROJET-7-" class="cta-btn" style="display:inline-block;margin-top:1rem;">Voir le repo GitHub</a></p>
 </section>
 </div>
@@ -193,6 +211,14 @@ ul.task-list li input[type="checkbox"] {
 <section id="context" class="level3">
 <h3 class="anchored" data-anchor-id="context">Context</h3>
 <p>Analysis of the sociodemographic profile evolution of OpenClassrooms learners, benchmarked against national labour market data (unemployment, employment rates, active population).</p>
+</section>
+<section id="data" class="level3">
+<h3 class="anchored" data-anchor-id="data">Data</h3>
+<ul>
+<li><strong>Source</strong>: dbt seeds (population, unemployment, employment rate, OpenClassrooms learners), granularity harmonized across sources (5-year age brackets grouped into 10-year brackets to align the population seed with the other sources).</li>
+<li><strong>Quality</strong>: systematic validation at each seed → staging transformation (row-count comparison, null checks on key columns, duplicate detection on the gender/year/region/age-bracket functional key).</li>
+<li><strong>Limits</strong>: final mart of 4,647 rows cross-referencing learner profiles and national indicators; granularity limited to region and age bracket, no individual-level detail beyond that.</li>
+</ul>
 </section>
 <section id="tools" class="level3">
 <h3 class="anchored" data-anchor-id="tools">Tools</h3>
@@ -207,17 +233,23 @@ ul.task-list li input[type="checkbox"] {
 <li>Quarto report and results presentation</li>
 </ul>
 </section>
-<section id="key-results" class="level3">
-<h3 class="anchored" data-anchor-id="key-results">Key results</h3>
+<section id="results-and-impact" class="level3">
+<h3 class="anchored" data-anchor-id="results-and-impact">Results and impact</h3>
 <div class="key-result">
-<p>Structured dbt pipeline with 2 layers (staging + marts) and documented schemas</p>
+<p>Two-layer dbt pipeline (staging + marts) with systematic validation at each transformation step</p>
 </div>
 <div class="key-result">
-<p>Gender gaps and OC penetration rates visualized by region and age group</p>
+<p>Final mart of 4,647 rows cross-referencing learner profiles (field, gender, age bracket, region) and national indicators (unemployment rate, employment rate)</p>
 </div>
-<div class="key-result">
-<p>Age pyramid and geographic distribution of learners vs.&nbsp;national population</p>
-</div>
+<p>Impact: enables a direct comparison between OpenClassrooms learner profiles and national labor market trends by region and age bracket, rather than separate, non-comparable analyses.</p>
+</section>
+<section id="limits-and-next-steps" class="level3">
+<h3 class="anchored" data-anchor-id="limits-and-next-steps">Limits and next steps</h3>
+<ul>
+<li>Grouping age brackets from 5 to 10 years (to align sources) loses granularity present in the original seeds.</li>
+<li>Current quality validation covers row counts, nulls, and duplicates, but not finer business rules (temporal consistency, value ranges).</li>
+<li>Next step: extend dbt tests to these business rules, and document gender gaps with consolidated figures in the mart rather than in separate visualization scripts.</li>
+</ul>
 <p><a href="https://github.com/Elicesjo/PROJET-7-" class="cta-btn" style="display:inline-block;margin-top:1rem;">View GitHub repo</a></p>
 </section>
 </div>

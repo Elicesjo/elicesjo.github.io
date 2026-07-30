@@ -1,6 +1,6 @@
 ---
-title: "Segmentation clients e-commerce — Lapage"
-description: "Segmenter 2 500 clients en profils RFM et tester statistiquement les différences de comportement d'achat"
+title: "Segmentation clients e-commerce : Lapage"
+description: "Analyser le comportement de 8 600 clients via des indicateurs Récence/Fréquence/Montant et des corrélations statistiques"
 categories: [Python, Statistiques, Visualisation]
 image: thumbnail.png
 order: 7
@@ -11,7 +11,13 @@ order: 7
 
 ### Contexte
 
-Analyse complète des données de vente d'une librairie en ligne (La Page) : CA, comportement des clients, segmentation RFM, analyses statistiques (tests non-paramétriques, courbe de Lorenz, cohortes de rétention).
+Analyse complète des données de vente d'une librairie en ligne (La Page) : CA, comportement des clients, indicateurs Récence/Fréquence/Montant, analyses statistiques (tests non-paramétriques, courbe de Lorenz, cohortes de rétention).
+
+### Données
+
+- **Source** : 3 tables (clients, produits, transactions), période mars 2021 à février 2023.
+- **Qualité** : 8 623 clients bruts → 8 621 après suppression de 2 comptes de test ; 3 287 produits bruts → 3 286 (1 produit de test à prix négatif supprimé) ; 679 532 transactions brutes → 679 111 valides après retrait des comptes de test.
+- **Limites** : 4 clients identifiés comme BtoB (seuil = moyenne + 2 écarts-types de CA) exclus des analyses comportementales, ramenant le jeu exploité à 632 477 transactions sur 8 596 clients.
 
 ### Outils
 
@@ -21,22 +27,29 @@ Analyse complète des données de vente d'une librairie en ligne (La Page) : CA,
 
 - Nettoyage des 3 tables (clients, produits, transactions)
 - Analyse temporelle du CA et des volumes de vente
-- Segmentation RFM (Récence, Fréquence, Montant)
-- Tests statistiques : Mann-Whitney, Kruskal-Wallis, Chi²
-- Courbe de Lorenz pour l'analyse de la concentration des ventes
+- Indicateurs Récence, Fréquence, Montant par client
+- Tests statistiques : corrélations de Spearman
+- Courbe de Lorenz pour l'analyse de la concentration du CA par client
 - Cohortes de rétention clients
 
-### Résultats clés
+### Résultats et impact
 
 ::: {.key-result}
-Segmentation RFM identifiant 5 profils clients distincts avec CA par segment
+CA total de 11 853 729 € sur 632 477 transactions (hors clients BtoB)
 :::
 ::: {.key-result}
-20% des produits génèrent 80% du CA (loi de Pareto confirmée)
+Âge corrélé négativement à la fréquence d'achat (ρ de Spearman = -0,674) et au panier moyen (ρ = -0,745), tous deux significatifs (p < 0,05) ; pas de corrélation significative avec le CA total par client (ρ = -0,085)
 :::
 ::: {.key-result}
-Différences significatives H/F sur le panier moyen (Mann-Whitney, p < 0.05)
+Indice de Gini de 0,446 sur la concentration du CA : les 20 % de clients les plus dépensiers représentent 48,4 % du CA
 :::
+
+Impact : les clients plus âgés achètent moins souvent et avec un panier plus petit, mais restent aussi rentables sur la durée en cumulé (pas de lien avec le CA total). Signal pour adapter la fréquence des sollicitations marketing par âge plutôt que le budget par client.
+
+### Limites et prochaines pistes
+
+- Le seuil BtoB (moyenne + 2 écarts-types de CA) est une règle statistique simple, pas un critère métier validé (type de compte, volume de commande) ; à confirmer avec l'équipe commerciale.
+- Prochaine piste : construire un score RFM formel (quintiles ou clustering) pour aller au-delà de l'indice de Gini, qui décrit la concentration du CA mais ne segmente pas les clients en profils actionnables.
 
 [Voir le repo GitHub](https://github.com/Elicesjo/PROJET-8-){.cta-btn style="display:inline-block;margin-top:1rem;"}
 
@@ -44,7 +57,13 @@ Différences significatives H/F sur le panier moyen (Mann-Whitney, p < 0.05)
 
 ### Context
 
-Full analysis of sales data for an online bookstore (La Page): revenue, customer behaviour, RFM segmentation, and statistical analyses (non-parametric tests, Lorenz curve, retention cohorts).
+Full analysis of sales data for an online bookstore (La Page): revenue, customer behaviour, Recency/Frequency/Monetary indicators, and statistical analyses (non-parametric tests, Lorenz curve, retention cohorts).
+
+### Data
+
+- **Source**: 3 tables (customers, products, transactions), period March 2021 to February 2023.
+- **Quality**: 8,623 raw customers → 8,621 after removing 2 test accounts; 3,287 raw products → 3,286 (1 test product with a negative price removed); 679,532 raw transactions → 679,111 valid after removing test accounts.
+- **Limits**: 4 customers identified as B2B (threshold = mean + 2 standard deviations of revenue) excluded from behavioral analyses, narrowing the working dataset to 632,477 transactions across 8,596 customers.
 
 ### Tools
 
@@ -54,22 +73,29 @@ Full analysis of sales data for an online bookstore (La Page): revenue, customer
 
 - Cleaning of 3 tables (customers, products, transactions)
 - Time series analysis of revenue and sales volume
-- RFM segmentation (Recency, Frequency, Monetary)
-- Statistical tests: Mann-Whitney, Kruskal-Wallis, Chi²
-- Lorenz curve for sales concentration analysis
+- Recency, Frequency, Monetary indicators per customer
+- Statistical tests: Spearman correlations
+- Lorenz curve for per-customer revenue concentration analysis
 - Customer retention cohorts
 
-### Key results
+### Results and impact
 
 ::: {.key-result}
-RFM segmentation identifying 5 distinct customer profiles with revenue per segment
+Total revenue of €11,853,729 across 632,477 transactions (excluding B2B customers)
 :::
 ::: {.key-result}
-20% of products generate 80% of revenue (Pareto confirmed)
+Age negatively correlated with purchase frequency (Spearman ρ = -0.674) and average basket (ρ = -0.745), both significant (p < 0.05); no significant correlation with total revenue per customer (ρ = -0.085)
 :::
 ::: {.key-result}
-Significant M/F differences in average basket (Mann-Whitney, p < 0.05)
+Gini index of 0.446 on revenue concentration: the top 20% of spenders account for 48.4% of revenue
 :::
+
+Impact: older customers buy less often and with a smaller basket, but remain just as profitable cumulatively over time (no link with total revenue). A signal to adjust marketing outreach frequency by age rather than budget per customer.
+
+### Limits and next steps
+
+- The B2B threshold (mean + 2 standard deviations of revenue) is a simple statistical rule, not a validated business criterion (account type, order volume); to be confirmed with the sales team.
+- Next step: build a formal RFM score (quintiles or clustering) to go beyond the Gini index, which describes revenue concentration but does not segment customers into actionable profiles.
 
 [View GitHub repo](https://github.com/Elicesjo/PROJET-8-){.cta-btn style="display:inline-block;margin-top:1rem;"}
 :::

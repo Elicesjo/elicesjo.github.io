@@ -1,0 +1,87 @@
+---
+title: ""
+page-layout: full
+---
+
+::: {.page-hero}
+# Veille technologique
+
+::: {.underline-bar}
+:::
+:::
+
+::: {.section-intro}
+Détection d'anomalies de prix dans un catalogue produit : méthodes statistiques vs machine learning, comparées sur des critères explicites plutôt que sur une préférence intuitive.
+:::
+
+::: {.about-content}
+
+::: {.panel-tabset}
+## Français
+
+### Besoin
+
+Un contrôle qualité classique (Z-score, intervalle interquartile) détecte les prix aberrants **variable par variable**. Il ne peut pas repérer une anomalie *contextuelle* : un prix normal en apparence mais incohérent avec le volume de ventes ou la marge du produit. Le besoin : vérifier si une approche multivariée apporte une détection plus fine, sans sacrifier la transparence ni la reproductibilité attendues dans un contexte métier.
+
+### Panel comparé
+
+[Z-score / IQR]{.tool-badge} [Isolation Forest]{.tool-badge} [Local Outlier Factor]{.tool-badge}
+
+### Sources
+
+- [scikit-learn, Novelty and Outlier Detection](https://scikit-learn.org/stable/modules/outlier_detection.html)
+- [scikit-learn, Comparing anomaly detection algorithms](https://scikit-learn.org/stable/auto_examples/miscellaneous/plot_anomaly_comparison.html)
+
+### Critères de comparaison
+
+Qualité de détection, biais/robustesse, coût temps, reproductibilité, sécurité/conformité, maintenabilité.
+
+| Critère | Z-score / IQR | Isolation Forest | Local Outlier Factor |
+|---|---|---|---|
+| Détection | Univariée, ignore les incohérences croisées | Multivariée, robuste sur densité uniforme | Multivariée, meilleure sur densités hétérogènes |
+| Biais | Suppose une distribution proche de la normale | Aucune hypothèse de distribution | Sensible au choix de `n_neighbors` |
+| Coût temps | Très faible | Faible, quasi linéaire | Plus coûteux (k plus proches voisins) |
+| Reproductibilité | Déterministe | Reproductible via `random_state` | Déterministe à `n_neighbors` fixé |
+| Maintenabilité | Formule simple, sans dépendance | `predict()` réutilisable sur nouvelles données | Pas de `predict()` en mode détection d'outliers |
+
+### Décision
+
+Le Z-score/IQR est conservé comme référence simple et transparente. Isolation Forest est ajouté en complément multivarié : sur un cas réel testé (catalogue de 711 produits), **7 anomalies sur 31 sont détectées par les trois méthodes à la fois** et **28 le sont uniquement par une méthode multivariée**, preuve empirique que le contrôle univarié seul laisse passer des incohérences. Local Outlier Factor est implémenté à titre comparatif plutôt qu'écarté sans vérification.
+
+[Voir le projet appliqué](projets/detection-anomalies-prix/){.cta-btn style="display:inline-block;margin-top:1rem;"}
+
+## English
+
+### Need
+
+A classic quality check (Z-score, interquartile range) flags price outliers **one variable at a time**. It cannot catch a *contextual* anomaly: a price that looks normal in isolation but is inconsistent with the product's sales volume or margin. The need: check whether a multivariate approach catches more without sacrificing transparency or reproducibility.
+
+### Panel compared
+
+[Z-score / IQR]{.tool-badge} [Isolation Forest]{.tool-badge} [Local Outlier Factor]{.tool-badge}
+
+### Sources
+
+- [scikit-learn, Novelty and Outlier Detection](https://scikit-learn.org/stable/modules/outlier_detection.html)
+- [scikit-learn, Comparing anomaly detection algorithms](https://scikit-learn.org/stable/auto_examples/miscellaneous/plot_anomaly_comparison.html)
+
+### Comparison criteria
+
+Detection quality, bias/robustness, time cost, reproducibility, security/compliance, maintainability.
+
+| Criterion | Z-score / IQR | Isolation Forest | Local Outlier Factor |
+|---|---|---|---|
+| Detection | Univariate, misses cross-variable inconsistencies | Multivariate, robust on uniform density | Multivariate, better on heterogeneous densities |
+| Bias | Assumes near-normal distribution | No distribution assumption | Sensitive to `n_neighbors` choice |
+| Time cost | Very low | Low, near-linear | Higher (k-nearest-neighbor lookups) |
+| Reproducibility | Deterministic | Reproducible via `random_state` | Deterministic at fixed `n_neighbors` |
+| Maintainability | Simple formula, no dependency | Reusable `predict()` on new data | No `predict()` in outlier-detection mode |
+
+### Decision
+
+Z-score/IQR stays as the simple, transparent baseline. Isolation Forest is added as a multivariate complement: on a real case (a 711-product catalog), **7 out of 31 anomalies are flagged by all three methods**, and **28 are caught only by a multivariate method**, empirical proof that the univariate check alone misses real inconsistencies. Local Outlier Factor is implemented for comparison rather than dismissed without evidence.
+
+[See the applied project](projets/detection-anomalies-prix/){.cta-btn style="display:inline-block;margin-top:1rem;"}
+:::
+
+:::

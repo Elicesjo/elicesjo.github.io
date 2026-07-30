@@ -1,5 +1,5 @@
 ---
-title: "Pipeline dbt — Profils socio-démographiques"
+title: "Pipeline dbt : profils socio-démographiques"
 description: "Modéliser un pipeline dbt end-to-end pour comparer les profils des apprenants OpenClassrooms au marché du travail national"
 categories: [Python, SQL, dbt, Data Engineering]
 image: thumbnail.png
@@ -13,6 +13,12 @@ order: 6
 
 Analyse de l'évolution des profils socio-démographiques des apprenants OpenClassrooms en les confrontant aux données nationales du marché du travail (chômage, emploi, population active).
 
+### Données
+
+- **Source** : seeds dbt (population, chômage, taux d'emploi, apprenants OpenClassrooms), granularité harmonisée entre sources (tranches d'âge de 5 ans regroupées en tranches de 10 ans pour aligner le seed population avec les autres sources).
+- **Qualité** : validation systématique à chaque transformation seed → staging (comparaison de volumétrie, contrôle des valeurs nulles sur les colonnes clés, détection de doublons sur la clé fonctionnelle genre/année/région/tranche d'âge).
+- **Limites** : mart final de 4 647 lignes croisant profils apprenants et indicateurs nationaux ; granularité limitée à la région et à la tranche d'âge, pas de niveau individuel au-delà.
+
 ### Outils
 
 [Python]{.tool-badge} [dbt]{.tool-badge} [SQL]{.tool-badge} [Pandas]{.tool-badge} [Matplotlib]{.tool-badge} [Quarto]{.tool-badge}
@@ -24,17 +30,22 @@ Analyse de l'évolution des profils socio-démographiques des apprenants OpenCla
 - Scripts Python pour l'analyse exploratoire et les visualisations
 - Rapport Quarto et présentation des résultats
 
-### Résultats clés
+### Résultats et impact
 
 ::: {.key-result}
-Pipeline dbt structuré en 2 couches (staging + marts) avec schémas documentés
+Pipeline dbt en 2 couches (staging + marts) avec validation systématique à chaque étape de transformation
 :::
 ::: {.key-result}
-Écarts H/F et taux de pénétration OC visualisés par région et tranche d'âge
+Mart final de 4 647 lignes croisant profils apprenants (domaine, genre, tranche d'âge, région) et indicateurs nationaux (taux de chômage, taux d'emploi)
 :::
-::: {.key-result}
-Pyramide des âges et répartition géographique des apprenants vs population nationale
-:::
+
+Impact : permet de comparer directement le profil des apprenants OpenClassrooms aux tendances du marché du travail national par région et tranche d'âge, plutôt que des analyses séparées non comparables.
+
+### Limites et prochaines pistes
+
+- Le regroupement des tranches d'âge de 5 à 10 ans (pour aligner les sources) fait perdre de la granularité présente dans les seeds d'origine.
+- La validation de qualité actuelle couvre volumétrie, valeurs nulles et doublons, mais pas de règles métier plus fines (cohérence temporelle, plages de valeurs).
+- Prochaine piste : étendre les tests dbt à ces règles métier et documenter les écarts H/F avec des chiffres consolidés dans le mart plutôt que dans des scripts de visualisation séparés.
 
 [Voir le repo GitHub](https://github.com/Elicesjo/PROJET-7-){.cta-btn style="display:inline-block;margin-top:1rem;"}
 
@@ -43,6 +54,12 @@ Pyramide des âges et répartition géographique des apprenants vs population na
 ### Context
 
 Analysis of the sociodemographic profile evolution of OpenClassrooms learners, benchmarked against national labour market data (unemployment, employment rates, active population).
+
+### Data
+
+- **Source**: dbt seeds (population, unemployment, employment rate, OpenClassrooms learners), granularity harmonized across sources (5-year age brackets grouped into 10-year brackets to align the population seed with the other sources).
+- **Quality**: systematic validation at each seed → staging transformation (row-count comparison, null checks on key columns, duplicate detection on the gender/year/region/age-bracket functional key).
+- **Limits**: final mart of 4,647 rows cross-referencing learner profiles and national indicators; granularity limited to region and age bracket, no individual-level detail beyond that.
 
 ### Tools
 
@@ -55,17 +72,22 @@ Analysis of the sociodemographic profile evolution of OpenClassrooms learners, b
 - Python scripts for exploratory analysis and visualizations
 - Quarto report and results presentation
 
-### Key results
+### Results and impact
 
 ::: {.key-result}
-Structured dbt pipeline with 2 layers (staging + marts) and documented schemas
+Two-layer dbt pipeline (staging + marts) with systematic validation at each transformation step
 :::
 ::: {.key-result}
-Gender gaps and OC penetration rates visualized by region and age group
+Final mart of 4,647 rows cross-referencing learner profiles (field, gender, age bracket, region) and national indicators (unemployment rate, employment rate)
 :::
-::: {.key-result}
-Age pyramid and geographic distribution of learners vs. national population
-:::
+
+Impact: enables a direct comparison between OpenClassrooms learner profiles and national labor market trends by region and age bracket, rather than separate, non-comparable analyses.
+
+### Limits and next steps
+
+- Grouping age brackets from 5 to 10 years (to align sources) loses granularity present in the original seeds.
+- Current quality validation covers row counts, nulls, and duplicates, but not finer business rules (temporal consistency, value ranges).
+- Next step: extend dbt tests to these business rules, and document gender gaps with consolidated figures in the mart rather than in separate visualization scripts.
 
 [View GitHub repo](https://github.com/Elicesjo/PROJET-7-){.cta-btn style="display:inline-block;margin-top:1rem;"}
 :::

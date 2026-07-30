@@ -1,5 +1,5 @@
 ---
-title: "Dashboard santé entreprise — Power BI"
+title: "Dashboard santé entreprise : Power BI"
 description: "Tableau de bord interactif (filtres dynamiques, drill-down, DAX) pour le suivi des KPIs santé de 1 200 collaborateurs"
 categories: [Power BI, Dashboard, DAX]
 image: thumbnail.png
@@ -11,7 +11,13 @@ order: 5
 
 ### Contexte
 
-Conception d'un tableau de bord dynamique sous Power BI pour un suivi des indicateurs de santé d'une entreprise (Sanitoral). Le dashboard permet au management de piloter les KPIs clés en temps réel.
+Conception d'un tableau de bord dynamique sous Power BI pour un suivi des indicateurs de santé d'une entreprise (Sanitoral, 1 200 collaborateurs). Le dashboard permet au management de piloter les KPIs clés en temps réel.
+
+### Données
+
+- **Source** : données RH de Sanitoral (absentéisme, accidents du travail, suivi médical) fournies par l'entreprise, pas de collecte terrain.
+- **Modèle** : schéma en étoile Power BI (tables de faits et dimensions), mesures DAX pour le taux d'absentéisme et l'évolution N-1.
+- **Limites** : le fichier `.pbix` est binaire et ne documente pas séparément de règles de nettoyage ou de contrôle qualité sur les données sources, contrairement aux projets Python de ce portfolio.
 
 ### Outils
 
@@ -25,14 +31,21 @@ Conception d'un tableau de bord dynamique sous Power BI pour un suivi des indica
 - Design du tableau de bord : filtres dynamiques, drill-down, segments
 - Documentation utilisateur
 
-### Résultats clés
+### Résultats et impact
 
 ::: {.key-result}
-Dashboard interactif avec filtres temporels, géographiques et par catégorie
+Dashboard multi-pages opérationnel (absentéisme, accidents, suivi médical) avec filtres temporels, géographiques et par service
 :::
 ::: {.key-result}
-Visualisations claires permettant l'identification rapide des tendances
+Indicateurs comparatifs N-1 calculés en DAX pour le suivi de tendance
 :::
+
+Impact : un outil de pilotage RH permettant au management de suivre les KPIs santé en continu, plutôt que via des rapports ponctuels.
+
+### Limites et prochaines pistes
+
+- Le format `.pbix` ne permet pas d'auditer les règles de qualité des données en dehors de l'outil Power BI Desktop.
+- Prochaine piste : ajouter des alertes automatiques sur les seuils d'absentéisme critiques.
 
 [Voir le repo GitHub](https://github.com/Elicesjo/PROJET-6-){.cta-btn style="display:inline-block;margin-top:1rem;"}
 
@@ -40,7 +53,13 @@ Visualisations claires permettant l'identification rapide des tendances
 
 ### Context
 
-Design of a dynamic Power BI dashboard for monitoring health indicators at a company (Sanitoral). The dashboard enables management to track key KPIs in real time.
+Design of a dynamic Power BI dashboard for monitoring health indicators at a company (Sanitoral, 1,200 employees). The dashboard enables management to track key KPIs in real time.
+
+### Data
+
+- **Source**: Sanitoral HR data (absenteeism, workplace accidents, medical follow-up) provided by the company, no field collection.
+- **Model**: Power BI star schema (fact and dimension tables), DAX measures for the absenteeism rate and year-over-year change.
+- **Limits**: the `.pbix` file is binary and does not separately document cleaning or quality control rules on the source data, unlike the Python projects in this portfolio.
 
 ### Tools
 
@@ -54,14 +73,21 @@ Design of a dynamic Power BI dashboard for monitoring health indicators at a com
 - Dashboard design: dynamic filters, drill-down, slicers
 - User documentation
 
-### Key results
+### Results and impact
 
 ::: {.key-result}
-Interactive dashboard with time, geographic, and category filters
+Operational multi-page dashboard (absenteeism, accidents, medical follow-up) with time, geographic, and department filters
 :::
 ::: {.key-result}
-Clear visualizations enabling quick identification of trends
+Year-over-year comparative indicators computed in DAX for trend tracking
 :::
+
+Impact: an HR management tool enabling continuous tracking of health KPIs, rather than one-off reports.
+
+### Limits and next steps
+
+- The `.pbix` format cannot be audited for data quality rules outside Power BI Desktop.
+- Next step: add automated alerts on critical absenteeism thresholds.
 
 [View GitHub repo](https://github.com/Elicesjo/PROJET-6-){.cta-btn style="display:inline-block;margin-top:1rem;"}
 :::

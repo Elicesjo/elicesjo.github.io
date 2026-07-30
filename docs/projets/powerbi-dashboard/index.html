@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="description" content="Tableau de bord interactif (filtres dynamiques, drill-down, DAX) pour le suivi des KPIs santé de 1 200 collaborateurs">
 
-<title>Dashboard santé entreprise — Power BI – PORTFOLIO 2026</title>
+<title>Dashboard santé entreprise : Power BI – PORTFOLIO 2026</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -40,7 +40,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-ee089b5cd8c331d37006e611d21b4011.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
@@ -102,6 +102,10 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Projets Data</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="../../veille.html"> 
+<span class="menu-text">Veille</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="https://www.linkedin.com/in/josy-elices-diez-03523225a/"> 
 <span class="menu-text">LinkedIn</span></a>
   </li>  
@@ -126,7 +130,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Dashboard santé entreprise — Power BI</h1>
+<h1 class="title">Dashboard santé entreprise : Power BI</h1>
   <div class="quarto-categories">
     <div class="quarto-category">Power BI</div>
     <div class="quarto-category">Dashboard</div>
@@ -159,7 +163,15 @@ ul.task-list li input[type="checkbox"] {
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <section id="contexte" class="level3">
 <h3 class="anchored" data-anchor-id="contexte">Contexte</h3>
-<p>Conception d’un tableau de bord dynamique sous Power BI pour un suivi des indicateurs de santé d’une entreprise (Sanitoral). Le dashboard permet au management de piloter les KPIs clés en temps réel.</p>
+<p>Conception d’un tableau de bord dynamique sous Power BI pour un suivi des indicateurs de santé d’une entreprise (Sanitoral, 1 200 collaborateurs). Le dashboard permet au management de piloter les KPIs clés en temps réel.</p>
+</section>
+<section id="données" class="level3">
+<h3 class="anchored" data-anchor-id="données">Données</h3>
+<ul>
+<li><strong>Source</strong> : données RH de Sanitoral (absentéisme, accidents du travail, suivi médical) fournies par l’entreprise, pas de collecte terrain.</li>
+<li><strong>Modèle</strong> : schéma en étoile Power BI (tables de faits et dimensions), mesures DAX pour le taux d’absentéisme et l’évolution N-1.</li>
+<li><strong>Limites</strong> : le fichier <code>.pbix</code> est binaire et ne documente pas séparément de règles de nettoyage ou de contrôle qualité sur les données sources, contrairement aux projets Python de ce portfolio.</li>
+</ul>
 </section>
 <section id="outils" class="level3">
 <h3 class="anchored" data-anchor-id="outils">Outils</h3>
@@ -175,21 +187,37 @@ ul.task-list li input[type="checkbox"] {
 <li>Documentation utilisateur</li>
 </ul>
 </section>
-<section id="résultats-clés" class="level3">
-<h3 class="anchored" data-anchor-id="résultats-clés">Résultats clés</h3>
+<section id="résultats-et-impact" class="level3">
+<h3 class="anchored" data-anchor-id="résultats-et-impact">Résultats et impact</h3>
 <div class="key-result">
-<p>Dashboard interactif avec filtres temporels, géographiques et par catégorie</p>
+<p>Dashboard multi-pages opérationnel (absentéisme, accidents, suivi médical) avec filtres temporels, géographiques et par service</p>
 </div>
 <div class="key-result">
-<p>Visualisations claires permettant l’identification rapide des tendances</p>
+<p>Indicateurs comparatifs N-1 calculés en DAX pour le suivi de tendance</p>
 </div>
+<p>Impact : un outil de pilotage RH permettant au management de suivre les KPIs santé en continu, plutôt que via des rapports ponctuels.</p>
+</section>
+<section id="limites-et-prochaines-pistes" class="level3">
+<h3 class="anchored" data-anchor-id="limites-et-prochaines-pistes">Limites et prochaines pistes</h3>
+<ul>
+<li>Le format <code>.pbix</code> ne permet pas d’auditer les règles de qualité des données en dehors de l’outil Power BI Desktop.</li>
+<li>Prochaine piste : ajouter des alertes automatiques sur les seuils d’absentéisme critiques.</li>
+</ul>
 <p><a href="https://github.com/Elicesjo/PROJET-6-" class="cta-btn" style="display:inline-block;margin-top:1rem;">Voir le repo GitHub</a></p>
 </section>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <section id="context" class="level3">
 <h3 class="anchored" data-anchor-id="context">Context</h3>
-<p>Design of a dynamic Power BI dashboard for monitoring health indicators at a company (Sanitoral). The dashboard enables management to track key KPIs in real time.</p>
+<p>Design of a dynamic Power BI dashboard for monitoring health indicators at a company (Sanitoral, 1,200 employees). The dashboard enables management to track key KPIs in real time.</p>
+</section>
+<section id="data" class="level3">
+<h3 class="anchored" data-anchor-id="data">Data</h3>
+<ul>
+<li><strong>Source</strong>: Sanitoral HR data (absenteeism, workplace accidents, medical follow-up) provided by the company, no field collection.</li>
+<li><strong>Model</strong>: Power BI star schema (fact and dimension tables), DAX measures for the absenteeism rate and year-over-year change.</li>
+<li><strong>Limits</strong>: the <code>.pbix</code> file is binary and does not separately document cleaning or quality control rules on the source data, unlike the Python projects in this portfolio.</li>
+</ul>
 </section>
 <section id="tools" class="level3">
 <h3 class="anchored" data-anchor-id="tools">Tools</h3>
@@ -205,14 +233,22 @@ ul.task-list li input[type="checkbox"] {
 <li>User documentation</li>
 </ul>
 </section>
-<section id="key-results" class="level3">
-<h3 class="anchored" data-anchor-id="key-results">Key results</h3>
+<section id="results-and-impact" class="level3">
+<h3 class="anchored" data-anchor-id="results-and-impact">Results and impact</h3>
 <div class="key-result">
-<p>Interactive dashboard with time, geographic, and category filters</p>
+<p>Operational multi-page dashboard (absenteeism, accidents, medical follow-up) with time, geographic, and department filters</p>
 </div>
 <div class="key-result">
-<p>Clear visualizations enabling quick identification of trends</p>
+<p>Year-over-year comparative indicators computed in DAX for trend tracking</p>
 </div>
+<p>Impact: an HR management tool enabling continuous tracking of health KPIs, rather than one-off reports.</p>
+</section>
+<section id="limits-and-next-steps" class="level3">
+<h3 class="anchored" data-anchor-id="limits-and-next-steps">Limits and next steps</h3>
+<ul>
+<li>The <code>.pbix</code> format cannot be audited for data quality rules outside Power BI Desktop.</li>
+<li>Next step: add automated alerts on critical absenteeism thresholds.</li>
+</ul>
 <p><a href="https://github.com/Elicesjo/PROJET-6-" class="cta-btn" style="display:inline-block;margin-top:1rem;">View GitHub repo</a></p>
 </section>
 </div>
